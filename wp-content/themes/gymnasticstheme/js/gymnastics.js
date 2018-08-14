@@ -21,6 +21,16 @@
 /*Smooth Scrolling Effect START*/
 
 
+
+
+
+/*Smooth Scrolling Effect END*/
+
+
+
+
+
+
 /*grid row cards START*/
 $(function() {
     var selectedClass = "";

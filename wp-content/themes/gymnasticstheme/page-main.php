@@ -6,7 +6,7 @@ get_header(); ?>
 	<section id="cover">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/silhouette.jpg" class="image" />
 		
-			<h1>Sveiki prisijunge prie gimnastikos svetaines</h1>
+			<h1>Sveiki prisijungę prie gimnastikos svetainės</h1>
 		<div id="cover-caption">
 			<div class="container">
 				<div class="col-sm-12">
@@ -57,21 +57,19 @@ get_header(); ?>
 				<!-- 2 trumpesnis variantas php POST content START -->
 				<!-- per wordpress postuose susikurti nauja posta, isijungti custom field. Tada add new category ir pasirinkt video -->
 				<?php
-	                    $args  = array('category_name' => 'video','posts_per_page' => "1");
+                    $args  = array('category_name' => 'video','posts_per_page' => "1");
 
-	                    $lastBlog = new WP_Query ($args);
+                    $lastBlog = new WP_Query ($args);
 
-	                 if ( $lastBlog->have_posts() ) : ?>
-	                    <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
+                 if ( $lastBlog->have_posts() ) : ?>
+                    <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
 
-							<?php get_template_part('contents/content','video'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->
+						<?php get_template_part('contents/content','video'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->
 
-	                    <?php endwhile; ?>
-	                <?php endif; ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
 
-	                <?php 
-	                    wp_reset_postdata();
-	            ?>
+	                <?php wp_reset_postdata(); ?>
 				<!-- php POST content END -->		
 				
 				
@@ -82,10 +80,26 @@ get_header(); ?>
 
 	<section id="multi-gallery">
 		<div class="container">
+
+			<?php
+                $args  = array('category_name' => 'mini-gallery','posts_per_page' => "1");
+
+                $lastBlog = new WP_Query ($args);
+
+            if ( $lastBlog->have_posts() ) : ?>
+                <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
+
+					<?php get_template_part('contents/content','mini-gallery'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php wp_reset_postdata(); ?>
+
 			<h3 class="display-3">Mažoji Galerija</h3>
 			<!-- Grid row -->
-			<!-- <div class="row col-md-12">
- -->				<!-- Grid column -->
+			<!-- <div class="row col-md-12"> -->
+				<!-- Grid column -->
 				<!-- <div class="col-md-6"> --><!-- d-flex justify-content-center mb-5 -->
 				    <!-- <button type="button" class="btn btn-outline-black waves-effect filter mr-1" data-rel="all">Visi</button>
 				    <button type="button" class="btn btn-outline-black waves-effect filter mr-1" data-rel="1">Sportinė gimnastika</button>
@@ -182,21 +196,19 @@ get_header(); ?>
 				                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 										    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 										    <span class="sr-only">Previous</span> -->
-										    <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
-				                        </button>
+										    <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i></button>
 										</a>
 										<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
 										    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
 										    <span class="sr-only">Next</span> -->
-										     <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
-				                        </button>
+										    <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i></button>
 										</a>
 				                    </div>
 				                    
 				                </div>
 				            </div>
 
-		        </div>
+		        		</div>
 
 					</div>
 					<!-- Grid row -->
@@ -219,33 +231,39 @@ get_header(); ?>
 					    <!--Slides-->
 					    <div class="carousel-inner" role="listbox">
 					        <div class="carousel-item active pics-gallery"> <!--susikurti nauja klase ir ideti i css-->
-					            <video class="video-fluid" autoplay loop>
-					                <!-- <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />  -->
-					                <!--<iframe width="100%" height="320" src="https://www.youtube.com/embed/4h02IJMTvFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-					                <iframe width="560" height="315" src="https://www.youtube.com/embed/9z6wT-KB5jM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					            <video class="video-fluid autoplay loop">
+					                
+					                <source src="wp-content/themes/gymnasticstheme/video/gymnastics-video-1.mp4" type="video/mp4" />
+					                
 					            </video>
 					        </div>
 					        <div class="carousel-item pics-gallery">
-					            <video class="video-fluid" autoplay loop>
-					                <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+					            <video class="video-fluid autoplay loop">
+					                <!-- <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" /> -->
+					                <source src="wp-content/themes/gymnasticstheme/video/gymnastics-video-2.mp4" type="video/mp4" /><!-- pataisyti -->
 					            </video>
 					        </div>
 					        <div class="carousel-item pics-gallery">
-					            <video class="video-fluid" autoplay loop>
-					                <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" />
+					            <video class="video-fluid autoplay loop">
+					                <!-- <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" /> -->
+					                <source src="wp-content/themes/gymnasticstheme/video/gymnastics-video-3.mp4" type="video/mp4" /><!-- pataisyti -->
 					            </video>
 					        </div>
 					    </div>
 					    <!--/.Slides-->
 					    <!--Controls-->
-					    <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
-					        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					        <span class="sr-only">Ankstesnis</span>
-					    </a>
-					    <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
-					        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-					        <span class="sr-only">Kitas</span>
-					    </a>
+					    <div class="modal-body">
+						    <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
+						        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						        <span class="sr-only">Ankstesnis</span> -->
+						        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i></button>
+						    </a>
+						    <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
+						        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						        <span class="sr-only">Kitas</span> -->
+						        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i></button>
+						    </a>
+						</div>
 					    <!--/.Controls-->
 					</div>
 					<!--Carousel Wrapper-->

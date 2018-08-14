@@ -35,7 +35,6 @@
 <!-- Makes inside pages navbar titles disappear END -->
 	
 
-<!--  -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
 			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#gymnasticsNavbar" aria-controls="gymnasticsNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -49,15 +48,19 @@
 				    </li>
 				    <li class="nav-item mr-3">
 						<!-- <a class="nav-link" href="#feature-one">Apie mus</a> -->
-						<a class="<?php
 
-							if (is_page( 'events' ) ) {
-							echo 'isjungtas nav-link';
-							} else {
-							echo 'ijungtas nav-link';
-							}
+						<!-- //<a class="<?php
 
-						?>" href="<?php echo home_url(); ?>#feature-one">Apie mus</a>
+							//if (is_page( 'events' ) ) {
+							//echo 'isjungtas nav-link';
+							//} else {
+							//echo 'ijungtas nav-link';
+							//}
+
+						//?>" href="<?php //echo home_url(); ?>#feature-one">Apie mus</a> -->
+
+						<a class="nav-link" href="<?php echo site_url();?>#feature-one">Apie mus</a>
+						
 				    </li>
 				    <li class="nav-item mr-3">
 						<!-- <a class="nav-link" href="#contacts">Kontaktai</a> -->
@@ -73,6 +76,6 @@
 		</nav>
 
 
-<!-- <button onclick="myFunction()" ><a class="nav-link" href="<?php echo home_url(); ?>#feature-one">Apie mus</a></button> -->
+<!-- <button onclick="myFunction()" ><a class="nav-link" href="<?php //echo home_url(); ?>#feature-one">Apie mus</a></button> -->
 
 

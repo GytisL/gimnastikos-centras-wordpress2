@@ -46,26 +46,28 @@
 	<footer id="footer-main">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-5">
+					<h4 class="title">LOREM</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-4">
+					<h4 class="title">VIRŠUTINĖ JUOSTA</h4>
 					<ul class="list-unstyled">
 						<li><a href="">Įvykiai</a></li>
 						<li><a href="">Kontaktai</a></li>
 						<li><a href="">Apie mus</a></li>
-						<li><a href="">Galerija</a></li>
+						<li><a href=""></i>Galerija</a></li>
 					</ul>
 				</div>
-				<div class="col-sm-3">
+				<!-- <div class="col-sm-3">
 					<ul class="list-unstyled">
 						<li><a href="">Facebook</a></li>
 						<li><a href="">LinkedIn</a></li>
 						<li><a href="">Twitter</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<div class="col-sm-3">
-					<h6> Header </h6>
+					<h4 class="title">LOREM</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -76,8 +78,10 @@
 
 			</div>
 
+			<div id="line-pulse"></div>
+
 			<div class="col-lg-12">
-				<p class="text-center mb-0">Visos teisės saugomos &copy; Gimnastikos centras 2018</p>
+				<p class="rights">Visos teisės saugomos &copy; Gimnastikos centras 2018</p>
 			</div>
 		</div>
 

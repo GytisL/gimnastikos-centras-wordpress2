@@ -5,6 +5,7 @@ body {
 	color: #333;
 	/*font: sans-serif;*/
   font-family: roboto;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
   height: 100%;
+  overflow-x: hidden;
 }
 
 /*
@@ -27,8 +29,9 @@ HEADER START
 	background-position: center;
   color: #FEF9E7;
   text-align: center;
-  height: 250px;
+  height: 259px;
 }
+
 #cover .image{
   width: 100%;
 	height: 100%;
@@ -36,8 +39,11 @@ HEADER START
 }
 
 #cover h1{
+  text-transform: uppercase;
 	position: relative;
   top: -5em;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 #cover #cover-caption .container .col-sm-12 .btn{
@@ -78,7 +84,7 @@ SOCIAL SITES START
   width: 200px;
   height: 220px;
   position: fixed;
-  margin-top: 13px;
+  margin-top: 1px;
   padding: 0;
   perspective: 1000px;
   list-style-type: none;
@@ -273,7 +279,7 @@ PAGRINDINIO PSL GALERIJA START
   padding: 10px;
   text-align: center;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: .5s;
   background-size: 200% auto;
   color: white;
   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
@@ -398,7 +404,7 @@ PAGRINDINIO PSL GALERIJA START
 }
 
 #gallery .row a img {
-  transition: 0.5s all;
+  transition: .5s all;
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -413,15 +419,34 @@ PAGRINDINIO PSL GALERIJA START
   transform: scale(1.1);
 }
 
-
+#video-carousel-example{
+  background-color: #fff;
+  padding: .25em;
+  margin: 1em;
+  border-radius: .25em;
+}
 
 #video-carousel-example .carousel-inner {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-radius: .25em;
 }
 
+#video-carousel-example .carousel-inner .carousel-item .video-fluid {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+#video-carousel-example .modal-body {
+  padding: 0;
+}
+
+#video-carousel-example .modal-body .carousel-control-next .btn,
+#video-carousel-example .modal-body .carousel-control-prev .btn {
+  position: absolute;
+  bottom: 11rem;
+}
 
 /*page-main.php*/
 
@@ -522,6 +547,7 @@ CONTACT-BAR START
   color: #000000;
   background-color: transparent;
   text-transform: uppercase;
+  font-size: 1.25em;
 }
 
 #contact-bar .body .button1:hover {
@@ -529,7 +555,7 @@ CONTACT-BAR START
 }
 
 #contact-bar .body .modal .modal-dialog .modal-content {
-  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, .2);
   /*background: linear-gradient(#8CA6DB, #B993D6);*/
   background: linear-gradient(#8CA6DB, #c36ff88f);
   opacity: 0.85;
@@ -542,6 +568,7 @@ CONTACT-BAR START
 
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body {
   font-family: roboto;
+  -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
 }
 
@@ -549,15 +576,16 @@ CONTACT-BAR START
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body .wpcf7-submit {
     cursor: pointer;
     background: none;
-    border: 1px solid rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, .65);
     border-radius: 25px;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, .65);
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
     font-size: 19px;
     font-size: 1.2rem;
     font-family: roboto;
+    -webkit-font-smoothing: antialiased;
     font-weight: 300;
     line-height: 2.5em;
     margin-top: auto;
@@ -569,7 +597,7 @@ CONTACT-BAR START
 } 
 
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body .wpcf7-form-control:hover{
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, .15);
   color: #fff;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -584,12 +612,13 @@ CONTACT-BAR START
   line-height: 2.4em;
   color: #fff;
   font-family: roboto;
+  -webkit-font-smoothing: antialiased;
   font-weight: 300;
   letter-spacing: 0px;
-  letter-spacing: 0.02rem;
+  letter-spacing: .02rem;
   font-size: 19px;
   font-size: 1.2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+  border-bottom: 1px solid rgba(255, 255, 255, .65);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   width: 400px;
@@ -602,7 +631,7 @@ CONTACT-BAR START
 }
 
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body #wpcf7-f38-o1 .wpcf7-form .wpcf7-response-output {
-  margin: 1.5em 0.5em 1em;
+  margin: 1.5em .5em 1em;
   z-index: 1;
 }
 
@@ -642,11 +671,11 @@ FOOTER START
 ===============================================
 */
 #footer-main {
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255, .40) 0%, rgba(0,0,0, .25) 200%);
   background-blend-mode: multiply;
 	color: white;
-	font-size: 0.8rem;
-	padding: 2.5rem 0 0;
+	font-size: .8rem;
+	padding: 2rem 0 0;
 }
 @media only screen and (min-width: 768px){
     .arrow-up {
@@ -661,7 +690,6 @@ FOOTER START
     height: 30px;
     width: 30px;
     border-radius: 8px;
-    
   }
 
   .arrow-up .btn:hover{
@@ -669,7 +697,40 @@ FOOTER START
   }
 }
 
+#footer-main .container {
+  padding-left: 2.5em;
+}
 
+#footer-main .container #line-pulse {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  height: 1px;
+  /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));*/
+  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+  box-shadow: 0 0 20px #fff;
+}
+
+#footer-main .container .row .title {
+  font-size:25px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+} 
+
+#footer-main .container .row .col-sm-4 .list-unstyled li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+#footer-main .container .row .col-sm-4 .list-unstyled li a:hover{
+  color: #ccb8b8;
+}
+
+#footer-main .container .col-lg-12 .rights{
+  text-align: center;
+  margin-bottom: 0;
+}
 
 /*
 ===============================================
