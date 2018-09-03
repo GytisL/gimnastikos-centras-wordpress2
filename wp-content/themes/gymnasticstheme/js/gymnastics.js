@@ -21,14 +21,59 @@
 /*Smooth Scrolling Effect START*/
 
 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+    });
+  });
+
 
 
 
 /*Smooth Scrolling Effect END*/
 
 
+/*sipwer slides gallery START*/
+// jQuery(document).ready(function($){
+//   var swiper = new Swiper('.swiper-container', {
+//     slidesPerView: 1,
+//     spaceBetween: 0,
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//     autoplay: {
+//       delay: 3000,
+//       disableOnInteraction: false,
+//     },
+//   });
+// });
+
+jQuery(document).ready(function($){
+var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+});
+/*sipwer slides gallery END*/
 
 
+ $(function(){//Remove inline css of an HTML elements
+    $('* [style]').removeAttr('style');
+ });
 
 
 /*grid row cards START*/
@@ -67,23 +112,6 @@ $('.pics').hover(function() {
 /*index.html multi-gallery END*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*#id map GOOGLE MAPS START*/
 function initMap() {
 	var location = {lat: 54.892813, lng: 23.916402};
@@ -100,10 +128,7 @@ function initMap() {
 //*#id map GOOGLE MAPS END*/
 
 
-
-
-
-/*gallery.html picture gallery START*/
+/*page-gallery.php picture gallery START*/
 
 let modalId = $('#image-gallery');
 
@@ -199,3 +224,88 @@ $(document).keydown(function (e) {
 
 
 /*gallery.html picture gallery END*/
+
+
+
+/* Ajax functions page-events.php START */
+
+
+ /*Ajax functions 
+jQuery(document).ready( function($){
+  $(document).on('click','.gymnastics-load-more', function(){
+    
+    var that = $(this);
+    var page = $(this).data('page');
+    var newPage = page+1;
+    var ajaxurl = that.data('url');
+    
+    $.ajax({
+      
+      url : ajaxurl,
+      type : 'post',
+      data : {
+        
+        page : page,
+        action: 'gymnastics_load_more'
+        
+      },
+      error : function( response ){
+        console.log(response);
+      },
+      success : function( response ){
+        
+        that.data('page', newPage);
+        $('.gymnastics-posts-container').append( response );
+
+      }
+      
+    });
+    
+  });
+
+});*/
+
+
+
+//jQuery.noConflict($);
+/* Ajax functions */
+$(document).ready(function() {
+    //onclick
+    $(".gymnastics-load-more").on('click', function(e) {
+        //init
+        var that = $(this);
+        var page = $(this).data('page');
+        var newPage = page + 1;
+        var ajaxurl = that.data('url');
+        //ajax call
+        $.ajax({
+            url: ajaxurl,
+            type: 'post',
+            data: {
+                page: page,
+                action: 'ajax_script_load_more'
+ 
+            },
+            error: function(response) {
+                console.log(response);
+            },
+            success: function(response) {
+                //check
+                if (response == 0) {
+                    $('#gymnastics-posts').append('<div class="text-center"><h3>You reached the end of the line!</h3><p>No more posts to load.</p></div>');
+                    //mygtukas. Nemeta posto.
+                    $('.gymnastics-load-more').hide();
+                } else {
+                    that.data('page', newPage);
+                    $('#gymnastics-posts').append(response);
+                }
+            }
+        });
+    });
+});
+
+
+
+/* Ajax functions page-events.php END */
+
+

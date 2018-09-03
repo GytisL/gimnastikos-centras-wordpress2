@@ -1,5 +1,8 @@
 html,
 body {
+  width: 100%;
+  height: 100%;
+
 	padding: 0;
 	margin: 0;
 	color: #333;
@@ -9,64 +12,206 @@ body {
 }
 
 body {
+  width: 100%;
+  height: 100%;
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-  height: 100%;
   overflow-x: hidden;
 }
 
+
 /*
 ===============================================
-HEADER START
+NAVBAR START
 ===============================================
 */
 
-#cover{
-	background: no-repeat;
-	background-size: cover;
-	background-position: center;
+.navbar #gymnasticsNavbar .nav {
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+
+/*sliding background exxect
+#menu-gimnastikos-menu .nav-item1 a{
+  margin:0.4em;
+  padding:1em;
+  cursor:pointer;
+  background:#e1e1e1;  color:#000; 
+  z-index:0;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px #333 dotted;
+  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .2s ease-in;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+}
+
+
+#menu-gimnastikos-menu .nav-item1 a:hover {
+  color: #006600;
+  background-position: 0 0;
+}
+*/
+
+#menu-gimnastikos-menu .nav-item1 a{
+  text-decoration: none;
+  margin-right: 1em;
+  color: #3F3F3F;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#menu-gimnastikos-menu .nav-item1 a:hover{
+  /*-webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  box-shadow: 10px 15px 7px #C7C7C7;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);*/
+  box-shadow: 0 0 20px rgba(33,33,33,.2);
+}
+
+/*header.php navbar item turn off*/
+/*.isjungtas{
+  display: none;
+}*/
+
+/*
+===============================================
+SWIPER SLIDER START
+===============================================
+*/
+#cover {
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #FEF9E7;
   text-align: center;
-  height: 259px;
+  /*height: 259px;*/
+  height: 87%;
 }
 
-#cover .image{
+#cover .swiper-container {
+  margin: 0;
   width: 100%;
-	height: 100%;
-  object-fit: cover;
+  height: 100%;
+  max-height: 600px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-#cover h1{
+#cover .swiper-container h1 {
   text-transform: uppercase;
-	position: relative;
-  top: -5em;
+  position: relative;
+  top: 2em;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-#cover #cover-caption .container .col-sm-12 .btn{
+#cover .swiper-container #cover1 {
+  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
+  width: 100%;
+  max-height: 570px;
+  object-fit: cover;
+}
+
+#cover .swiper-container #cover2 {
+  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg) no-repeat;
+  background-position: center;
+  width: 100%;
+  max-height: 570px;
+  object-fit: cover;
+}
+
+#cover .swiper-container #cover3 {
+  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
+  width: 100%;
+  max-height: 570px;
+  object-fit: cover;
+}
+
+#cover .swiper-container #cover4 {
+  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
+  width: 100%;
+  max-height: 570px;
+  object-fit: cover;
+}
+
+#cover .swiper-container #cover5 {
+  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
+  width: 100%;
+  max-height: 570px;
+  object-fit: cover;
+}
+
+#cover .swiper-container .swiper-button-prev {
+  left: 200px;
+  background-color: #fff;
+  border: 1px solid #007bff;
+  border-style: solid;
+  height: 70px;
+  width: 50px;
+  opacity: 0.2;
+}
+
+#cover .swiper-container .swiper-button-next {
+  right: 200px;
+  background-color: #fff;
+  border: 1px solid #007bff;
+  border-style: solid;
+  height: 70px;
+  width: 50px;
+  opacity: 0.2;
+}
+
+#cover .swiper-container .swiper-button-next:hover,
+#cover .swiper-container .swiper-button-prev:hover {
+  background-color: #a5f3ff;
+}
+
+#cover #cover-caption .container .col-sm-12 .btn {
 	position: absolute;
-	top: -6rem;
-	color: whitesmoke;
-	border-color: antiquewhite;
-	text-align: center;
+  top: -7rem;
+  right: -11rem;
+  color: whitesmoke;
+  border-color: antiquewhite;
+  text-align: center;
   height: 30px;
   width: 30px;
   border-radius: 8px;
+  z-index: 1;
 }
 
 #cover #cover-caption .container .col-sm-12 .btn:hover {
   background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
 }
 
-
 /*
 ===============================================
-HEADER END
+SWIPER SLIDER END
 ===============================================
 */
+
 
 /*
 ===============================================
@@ -84,7 +229,7 @@ SOCIAL SITES START
   width: 200px;
   height: 220px;
   position: fixed;
-  margin-top: 1px;
+  margin-top: 26px;
   padding: 0;
   perspective: 1000px;
   list-style-type: none;
@@ -108,9 +253,11 @@ SOCIAL SITES START
 #sticky-social .social li:first-child a:hover { 
   background: #3b5998;
 }
+
 #sticky-social .social li:nth-child(2) a:hover { 
   background: #00aced;
 }
+
 #sticky-social .social li:nth-child(3) a:hover { 
 background: #f09433; 
 background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
@@ -118,9 +265,11 @@ background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#c
 background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
+
 #sticky-social .social li:nth-child(4) a:hover { 
   background: #4875B4;
 }
+
 #sticky-social .social li:nth-child(5) a:hover { 
   background: #dd4b39;
 }
@@ -167,16 +316,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   opacity: 1;
   transform: rotateY(0);
 }
-
-
 /*
 ===============================================
 SOCIAL SITES END
 ===============================================
 */
-
-
-
 
 
 /*
@@ -190,7 +334,6 @@ APIE MUS START
 	display: inline-block;
 }
 */
-
 #contacts .container h3,
 .services .container h3,
 #multi-gallery .container h3,
@@ -202,7 +345,6 @@ APIE MUS START
 #multi-gallery .container .section {
 	padding-bottom: 2rem;
 }
-
 /*#feature-one{
   background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg) no-repeat;
   background-size: cover;
@@ -212,12 +354,6 @@ APIE MUS START
   height:600px;
   z-index: -1;
 }*/
-
-
-#feature-one .container .feature-row .feature-content {
-	padding: 5rem 0;
-	/*overflow: hidden;*/
-}
 
 #feature-one .container .feature-row {
 	margin-bottom: 1rem;
@@ -233,15 +369,31 @@ APIE MUS START
   margin: 0 .2em;
 }
 
+#feature-one .container .feature-row .feature-content {
+  padding: 1rem 0;
+  /*overflow: hidden;*/
+}
+
+
+
+@media (min-width: 992px){
+  #feature-one .container .feature-row .col-lg-5 {
+    max-width: 49.666667%;
+  }
+
+  #feature-one .container .feature-row .feature-content .video-content {
+    padding: 0;
+    max-width: 48%;
+    max-height: 45%;
+  }
+}
+
 
 /*
 ===============================================
 APIE MUS END
 ===============================================
 */
-
-
-
 
 
 /*
@@ -260,18 +412,29 @@ PAGRINDINIO PSL GALERIJA START
   z-index: -1;
 }
 
-
 /*Grid row cards START*/
-#multi-gallery .container .col-md-12 .col-md-6 {
+/*#multi-gallery .container .col-md-12 .col-md-6 {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
-}
+}*/
 
 #multi-gallery .container a {
   text-decoration: none;
 }
 
+#multi-gallery .container h3 {
+  color: rgba(0,0,0,0.7);
+}
+
+#multi-gallery .container .section {
+  padding-right: 0;
+}
+
+#multi-gallery .container .section .video-gallery {
+  padding: 0;
+  margin-right: 0;
+}
 
 #multi-gallery .container .to-gallery {
   cursor: pointer;
@@ -281,7 +444,7 @@ PAGRINDINIO PSL GALERIJA START
   text-transform: uppercase;
   transition: .5s;
   background-size: 200% auto;
-  color: white;
+  color: #fff;
   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
   box-shadow: 0 0 20px #eee;
   border-radius: 50px;
@@ -335,7 +498,6 @@ PAGRINDINIO PSL GALERIJA START
 	}
 }
 
-
 .pics-gallery {
 	height: 400px;
 }
@@ -346,12 +508,10 @@ PAGRINDINIO PSL GALERIJA START
   height: auto;
 }*/
 
-
 /* turns off image flickering
  -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
     transform: translateZ(0);*/
-
 
 /*#gallery .pics .img-fluid {
   position: relative;
@@ -394,18 +554,16 @@ PAGRINDINIO PSL GALERIJA START
     opacity: 1;
 }*/
 
-
 #gallery .row {
   display: flex;
 }
 
 #gallery .row .image {
-  margin: 1em;
+  margin: 1em 2em 1em .8em;
 }
 
 #gallery .row a img {
   transition: .5s all;
-  width: 100%;
   height: 150px;
   object-fit: cover;
   padding: .25rem;
@@ -422,7 +580,7 @@ PAGRINDINIO PSL GALERIJA START
 #video-carousel-example{
   background-color: #fff;
   padding: .25em;
-  margin: 1em;
+  margin: 1em .4em 1em .4em;
   border-radius: .25em;
 }
 
@@ -432,7 +590,7 @@ PAGRINDINIO PSL GALERIJA START
   overflow: hidden;
 }
 
-#video-carousel-example .carousel-inner .carousel-item .video-fluid {
+#video-carousel-example .carousel-inner .carousel-item video {
   object-fit: cover;
   width: 100%;
   height: 400px;
@@ -458,8 +616,6 @@ PAGRINDINIO PSL GALERIJA START
   transition: all .2s ease-in-out;
 }
 
-
-
 #picture-gallery .container .row .row .thumb .thumbnail .img-thumbnail:hover { 
   transform: scale(1.1); 
 }
@@ -470,9 +626,6 @@ PAGRINDINIO PSL GALERIJA START
 PAGRINDINIO PSL GALERIJA END
 ===============================================
 */
-
-
-
 
 
 /*
@@ -510,10 +663,22 @@ KONTAKTAI START
 }*/
 
 #contacts .container .row .col-lg-7 .list-unstyled .block img {
-  max-width: 100%;
+  max-width: 96.6%;
   max-height: 30em;
   margin: 2.5em auto;
   border-radius: .25em;
+}
+
+#contacts .container .row .col-lg-5 table {
+  border: none;
+  height: 310px;
+  width: 450px;
+  margin: 2em 1em;
+  text-align: left;
+}
+
+#contacts .container .row .col-lg-5 table {
+  border: #fff;
 }
 
 /*
@@ -523,35 +688,66 @@ KONTAKTAI END
 */
 
 
-
 /*
 ===============================================
 CONTACT-BAR START
 ===============================================
 */
 
-
 #contact-bar .body {
-  /*background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);*/
-  background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);
+  /*background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+  background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);*/
   text-align: center;
-  padding: 5em 0;
+  /*background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);*/
+  padding: 1em 0;
 }
 
 #contact-bar .body i {
-  margin: 0 1em;
+  margin-right: 0.5em;
 }
 
-#contact-bar .body .button1 {
+#contact-bar .body .contact-btn {
+  background-color: #fff;
+}
+
+#contact-bar .body .contact-btn .button1{
+  /*background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);
+  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);*/
+  border: none;
   text-decoration: none;
-  color: #000000;
+  color: #3F3F3F;
   background-color: transparent;
   text-transform: uppercase;
-  font-size: 1.25em;
+  font-size: 2em;
+  border: 1px solid #777373;
+  /* display: block; */
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+  background-size: 200% auto;
+  color: #fff;
+  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  /* display: block; */
+  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
 }
 
-#contact-bar .body .button1:hover {
-  color: rgba(0,0,0,.5);
+#contact-bar .body .contact-btn .button1:hover {
+  /*color: rgba(0,0,0,.5);*/
+  background-position: right center;
+}
+
+#contact-bar .body a:hover{
+  text-decoration: none;
+}
+
+#contact-bar .body .button1:focus {
+  border: none !important;
+  outline: none !important;
 }
 
 #contact-bar .body .modal .modal-dialog .modal-content {
@@ -603,7 +799,6 @@ CONTACT-BAR START
   transition: all .2s ease;
 }
 /*button style*/
-
 
 /*form style*/
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body .wpcf7-form-control{
@@ -662,9 +857,6 @@ CONTACT-BAR END
 */
 
 
-
-
-
 /*
 ===============================================
 FOOTER START
@@ -676,15 +868,17 @@ FOOTER START
 	color: white;
 	font-size: .8rem;
 	padding: 2rem 0 0;
+  overflow: hidden;
 }
+
 @media only screen and (min-width: 768px){
-    .arrow-up {
-    position: relative;
-    left: 95rem;
-    bottom: -16rem;
+    .col-sm-2 .arrow-up {
+    position: absolute;
+    left: 79rem;
+    top: -16rem;
   }
 
-  .arrow-up .btn{
+  .arrow-up .btn {
     color: whitesmoke;
     border-color: antiquewhite;
     height: 30px;
@@ -692,7 +886,7 @@ FOOTER START
     border-radius: 8px;
   }
 
-  .arrow-up .btn:hover{
+  .arrow-up .btn:hover {
     background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
   }
 }
@@ -717,20 +911,57 @@ FOOTER START
   -webkit-font-smoothing: antialiased;
 } 
 
-#footer-main .container .row .col-sm-4 .list-unstyled li a{
+#footer-main .container .row .col-sm-5 #logo img {
+  width: 50%;
+  margin-top: 4em;
+}
+
+#footer-main .container .row .col-sm-4 .list-unstyled li a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
 }
 
-#footer-main .container .row .col-sm-4 .list-unstyled li a:hover{
+#footer-main .container .row .col-sm-4 .list-unstyled li a:hover {
   color: #ccb8b8;
 }
 
-#footer-main .container .col-lg-12 .rights{
+#footer-main .container .row .col-sm-3 {
+  padding-right: 2em;
+}
+
+#footer-main .container .row .col-sm-3 h3 {
+  text-transform: uppercase;
+}
+
+#footer-main .container .col-lg-12 .rights {
   text-align: center;
   margin-bottom: 0;
+  padding-bottom: 20px;
+  font-size: 16px;
 }
+
+#menu-footer-menu {
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+#menu-footer-menu .list-unstyled a {
+  text-decoration: none;
+  margin-right: 1em;
+  color: #0f0f0f;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#menu-footer-menu .list-unstyled a:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  /*box-shadow: 10px 15px 7px #C7C7C7;*/
+  box-shadow: 0 0 20px rgba(33,33,33,.2);
+}
+
 
 /*
 ===============================================
@@ -798,45 +1029,64 @@ gallery.html galerija END
 
 /*
 ===============================================
-events.html galerija START
-===============================================
-*/
-
-#events {
-	margin-bottom: 2rem;
-}
-
-
-
-/*
-===============================================
-gallery.html galerija END
-===============================================
-*/
-
-/*
-===============================================
 page-events.php
 ===============================================
 */
-
-#events .container {
-  display: flex;
+#events {
+  margin-bottom: 2rem;
 }
 
-#events .container .col-lg-8,
-#events .container .col-lg-4{
-  display: inline-block;
+@media (min-width: 992px){
+  #events .container {
+    display: flex;
+  }
+
+  #events .container .col-lg-8,
+  #events .container .col-lg-4 {
+    display: inline-block;
+  }
+
+  #events .container .col-lg-4 .join {
+    text-align: center;
+  }
+
+  #events .container .col-lg-4 .btn:hover {
+    background-position: right center;
+  }
+
+  #events .container .col-lg-4 .btn {
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .5s;
+    background-size: 200% auto;
+    color: #fff;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+    box-shadow: 0 0 20px #eee;
+    border-radius: 50px;
+    display: block;
+    background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+  }
+
+  #events .container .col-lg-4 .search-form-container {
+    margin: 1em 0;
+  }
+
+  #events .container .col-lg-8 ol {
+    padding: 0;
+  }
 }
 
-#events .container .col-lg-4 .search-form-container {
-  margin: 1em 0;
-}
+  #events .container .col-lg-8 ol .event-pic img {
+    max-height: 165px;
+    max-width: 40%;
+    padding: 0 2em 0 0;
+  }
+
+  
 
 
-
-
-/*header.php navbar item turn off*/
-/*.isjungtas{
-  display: none;
-}*/

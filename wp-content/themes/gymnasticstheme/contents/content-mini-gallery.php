@@ -52,37 +52,37 @@
 					    </div> -->
 					    <!-- Grid column -->
 						
-						<div class="row">
+						<div class="row column1">
 						  <div class="image pics all 2">
 						    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Gimnastika1" data-image="<?php echo get_stylesheet_directory_uri(); ?>/pictures/woman3.jpg" data-target="#image-gallery">
-						    	<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/woman3.jpg" alt="Nepavyko atvaizduoti nuotraukos" />
+						    	<?php echo get_post_meta( get_the_ID(), 'image-1', true); ?>
 						    </a>
 						  </div>
 						  <div class="image pics all 2">
 						    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Gimnastika2" data-image="<?php echo get_stylesheet_directory_uri(); ?>/pictures/dance-1.jpg" data-target="#image-gallery">
-						    	<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/dance-1.jpg" alt="Nepavyko atvaizduoti nuotraukos" />
+						    	<?php echo get_post_meta( get_the_ID(), 'image-2', true); ?>
 						    </a>
 						  </div>
 						  <div class="image pics all 2">
 						    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Gimnastika3" data-image="<?php echo get_stylesheet_directory_uri(); ?>/pictures/woman5.jpg" data-target="#image-gallery">
-						    	<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/woman5.jpg" alt="Nepavyko atvaizduoti nuotraukos" />
+						    	<?php echo get_post_meta( get_the_ID(), 'image-3', true); ?>
 						    </a>
 						  </div>
 						</div>
-						<div class="row">
+						<div class="row column2">
 						  <div class="image pics all 1">
 						    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Gimnastika4" data-image="<?php echo get_stylesheet_directory_uri(); ?>/pictures/sport-gymnastics.jpg" data-target="#image-gallery">
-						    	<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/sport-gymnastics.jpg" alt="Nepavyko atvaizduoti nuotraukos" />
+						    	<?php echo get_post_meta( get_the_ID(), 'image-4', true); ?>
 						    </a>
 						  </div>
 						  <div class="image pics all 2">
 						    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Gimnastika5" data-image="<?php echo get_stylesheet_directory_uri(); ?>/pictures/sport-gymnastics2.jpg" data-target="#image-gallery">
-						    	<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/sport-gymnastics2.jpg" alt="Nepavyko atvaizduoti nuotraukos" />
+						    	<?php echo get_post_meta( get_the_ID(), 'image-5', true); ?>
 						    </a>
 						  </div>
 						  <div class="image pics all 1">
 						    <a  class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Gimnastika7" data-image="<?php echo get_stylesheet_directory_uri(); ?>/pictures/woman.jpg" data-target="#image-gallery">
-						    	<img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/woman.jpg" alt="Nepavyko atvaizduoti nuotraukos" />
+						    	<?php echo get_post_meta( get_the_ID(), 'image-5', true); ?>
 						    </a>
 						  </div>
 						</div>
@@ -120,7 +120,7 @@
 					
 				</div>
 					
-				<div class="col-lg-6">
+				<div class="col-lg-6 video-gallery">
 					<!--Carousel Wrapper-->
 					<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
 					    <!--Indicators-->
@@ -133,22 +133,21 @@
 					    <!--Slides-->
 					    <div class="carousel-inner" role="listbox">
 					        <div class="carousel-item active pics-gallery"> <!--susikurti nauja klase ir ideti i css-->
-					            <video class="video-fluid autoplay loop">
-					                
-					                <source src="wp-content/themes/gymnasticstheme/video/gymnastics-video-1.mp4" type="video/mp4" />
-					                
+					            <video loop="" muted="" autoplay="" playsinline="">
+						            <?php echo get_post_meta( get_the_ID(), 'video-1', true); ?> <!-- video  -  custom field'o name --> 
+
+						<!-- <iframe width="100%" height="360" src="https://player.vimeo.com/video/253404002"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<iframe width="100%" height="320" src="https://www.youtube.com/embed/4h02IJMTvFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+						        </video>
+					        </div>
+					        <div class="carousel-item pics-gallery">
+					            <video loop="" muted="" autoplay="" playsinline="">
+					                <?php echo get_post_meta( get_the_ID(), 'video-2', true); ?>
 					            </video>
 					        </div>
 					        <div class="carousel-item pics-gallery">
-					            <video class="video-fluid autoplay loop">
-					                <!-- <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" /> -->
-					                <source src="wp-content/themes/gymnasticstheme/video/gymnastics-video-2.mp4" type="video/mp4" /><!-- pataisyti -->
-					            </video>
-					        </div>
-					        <div class="carousel-item pics-gallery">
-					            <video class="video-fluid autoplay loop">
-					                <!-- <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" /> -->
-					                <source src="wp-content/themes/gymnasticstheme/video/gymnastics-video-3.mp4" type="video/mp4" /><!-- pataisyti -->
+					            <video loop="" muted="" autoplay="" playsinline="">
+					                <?php echo get_post_meta( get_the_ID(), 'video-3', true); ?>
 					            </video>
 					        </div>
 					    </div>
