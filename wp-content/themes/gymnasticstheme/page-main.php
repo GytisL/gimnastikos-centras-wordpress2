@@ -54,7 +54,6 @@ get_header(); ?>
 	                <?php wp_reset_postdata(); ?>
 				<!-- php POST content END -->		
 				
-				
 			</div>
 		</div>
 	</section>

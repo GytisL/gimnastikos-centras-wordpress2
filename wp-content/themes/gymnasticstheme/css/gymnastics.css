@@ -2,7 +2,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-
 	padding: 0;
 	margin: 0;
 	color: #333;
@@ -21,10 +20,22 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  outline: 1px solid #cccccc;
+}
 
 /*
 ===============================================
-NAVBAR START
+header.php NAVBAR START
 ===============================================
 */
 
@@ -33,49 +44,79 @@ NAVBAR START
   text-transform: uppercase;
 }
 
+/*NAVBAR EFFEXT ON HOVER START*/
 
-/*sliding background exxect
-#menu-gimnastikos-menu .nav-item1 a{
-  margin:0.4em;
-  padding:1em;
-  cursor:pointer;
-  background:#e1e1e1;  color:#000; 
-  z-index:0;
-  font-size: 16px;
-  color: #333;
+#gymnasticsNavbar {
+  display: flex;
+}
+
+#gymnasticsNavbar #menu-gimnastikos-menu { 
+  display: flex;
+  flex-direction: row;
+}
+
+
+@media (max-width: 768px) {
+  #gymnasticsNavbar #menu-gimnastikos-menu {
+    flex-direction: row;
+  }
+    }
+/*
+@media (max-width: 768px) {
+    #menu-gimnastikos-menu > li:not(:last-child) {
+      margin-right: 40px;
+    }
+  }*/
+
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 {
+  padding: 0 .5em;
+}
+
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  color: #666;
+  transition: color .2s ease;
+  padding: 3px 0;
+  margin-bottom: 5px;
   text-decoration: none;
-  border-bottom: 1px #333 dotted;
-  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
-  background-position: 100% 0;
-  background-size: 200% 100%;
-  transition: all .2s ease-in;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 50px;
 }
 
-
-#menu-gimnastikos-menu .nav-item1 a:hover {
-  color: #006600;
-  background-position: 0 0;
-}
-*/
-
-#menu-gimnastikos-menu .nav-item1 a{
-  text-decoration: none;
-  margin-right: 1em;
-  color: #3F3F3F;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover {
+  color: #aaa;
 }
 
-#menu-gimnastikos-menu .nav-item1 a:hover{
-  /*-webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  box-shadow: 10px 15px 7px #C7C7C7;
-  box-shadow: 0 0 11px rgba(33,33,33,.2);*/
-  box-shadow: 0 0 20px rgba(33,33,33,.2);
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::after,
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::before {
+  width: 100%;
+  left: 0;
 }
+
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::after,
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::before {
+  content: ''; 
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 0;
+  right: 0;
+  height: 3px;
+}
+
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::before {
+  transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+  background: #2196f3;
+}
+
+#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::after {
+  transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: #F44336;
+}
+/*header.php NAVBAR EFFEXT ON HOVER END*/
+
+
+
 
 /*header.php navbar item turn off*/
 /*.isjungtas{
@@ -95,6 +136,7 @@ SWIPER SLIDER START
   text-align: center;
   /*height: 259px;*/
   height: 87%;
+  margin-bottom: -4em;
 }
 
 #cover .swiper-container {
@@ -105,7 +147,6 @@ SWIPER SLIDER START
   text-align: center;
   font-size: 18px;
   background: #fff;
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -205,7 +246,6 @@ SWIPER SLIDER START
 #cover #cover-caption .container .col-sm-12 .btn:hover {
   background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
 }
-
 /*
 ===============================================
 SWIPER SLIDER END
@@ -218,7 +258,6 @@ SWIPER SLIDER END
 SOCIAL SITES START
 ===============================================
 */
-
 #sticky-social {
   position: absolute;
   top: 14.1em;
@@ -343,17 +382,12 @@ APIE MUS START
 }
 
 #multi-gallery .container .section {
-	padding-bottom: 2rem;
+	padding-bottom: 0rem;
 }
-/*#feature-one{
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
-  height:600px;
-  z-index: -1;
-}*/
+#feature-one{
+  background-color: #fff;
+  margin-bottom: -1em;
+}
 
 #feature-one .container .feature-row {
 	margin-bottom: 1rem;
@@ -366,15 +400,17 @@ APIE MUS START
 #contacts .container h3,
 #multi-gallery .container h3,
 #feature-one .container .feature-row h3 {
-  margin: 0 .2em;
+  margin: 0 .4em;
+}
+
+#feature-one .container .feature-row .title {
+  font-size: 3rem;
 }
 
 #feature-one .container .feature-row .feature-content {
-  padding: 1rem 0;
+  padding: 1rem ;
   /*overflow: hidden;*/
 }
-
-
 
 @media (min-width: 992px){
   #feature-one .container .feature-row .col-lg-5 {
@@ -385,10 +421,9 @@ APIE MUS START
     padding: 0;
     max-width: 48%;
     max-height: 45%;
+    margin-left: 6em;
   }
 }
-
-
 /*
 ===============================================
 APIE MUS END
@@ -401,7 +436,6 @@ APIE MUS END
 PAGRINDINIO PSL GALERIJA START
 ===============================================
 */
-
 #multi-gallery {
   background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/gymnast.jpg) no-repeat;
   background-size: cover;
@@ -423,8 +457,9 @@ PAGRINDINIO PSL GALERIJA START
   text-decoration: none;
 }
 
-#multi-gallery .container h3 {
+#multi-gallery .container .title {
   color: rgba(0,0,0,0.7);
+  font-size: 3rem;
 }
 
 #multi-gallery .container .section {
@@ -610,6 +645,10 @@ PAGRINDINIO PSL GALERIJA START
 
 
 /*page-gallery.php*/
+#picture-gallery{
+  background-color: #fff;
+}
+
 #picture-gallery .container .row .row  .thumb .thumbnail .img-thumbnail {
   max-height: 175px;
   width: 100%;
@@ -652,15 +691,9 @@ KONTAKTAI START
 }
 /*GOOGLE MAPS END*/
 
-/*#contacts{
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/gymnast.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
-  height:600px;
-  z-index: -1;
-}*/
+#contacts {
+  background-color: #fff;
+}
 
 #contacts .container .row .col-lg-7 .list-unstyled .block img {
   max-width: 96.6%;
@@ -675,10 +708,15 @@ KONTAKTAI START
   width: 450px;
   margin: 2em 1em;
   text-align: left;
+  border: #fff;
 }
 
-#contacts .container .row .col-lg-5 table {
-  border: #fff;
+#contacts .container .row .col-lg-5 table tbody tr td p {
+  font-size: 1.25rem;
+}
+
+#contacts .container .title {
+  font-size: 3rem;
 }
 
 /*
@@ -694,12 +732,19 @@ CONTACT-BAR START
 ===============================================
 */
 
+#contact-bar { 
+  position: relative;
+  background: #fff;
+  margin-bottom: 392px;
+  overflow: hidden;
+}
+
 #contact-bar .body {
   /*background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
   background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);*/
   text-align: center;
   /*background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);*/
-  padding: 1em 0;
+  /*padding: 1em 0;*/
 }
 
 #contact-bar .body i {
@@ -718,12 +763,12 @@ CONTACT-BAR START
   color: #3F3F3F;
   background-color: transparent;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.5em;
   border: 1px solid #777373;
   /* display: block; */
   cursor: pointer;
   margin: 0 auto;
-  padding: 7px;
+  padding: 7px 17px;
   text-align: center;
   text-transform: uppercase;
   transition: .5s;
@@ -739,6 +784,13 @@ CONTACT-BAR START
 #contact-bar .body .contact-btn .button1:hover {
   /*color: rgba(0,0,0,.5);*/
   background-position: right center;
+}
+
+#contact-bar .body .contact-btn {
+  cursor: default;
+  border: none;
+  padding: 2em 0;
+  background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);
 }
 
 #contact-bar .body a:hover{
@@ -849,7 +901,6 @@ CONTACT-BAR START
 #wpcf7-f38-o1 .wpcf7-form .wpcf7-textarea{
   height: 200px;
 }
-
 /*
 ===============================================
 CONTACT-BAR END
@@ -865,10 +916,15 @@ FOOTER START
 #footer-main {
   background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255, .40) 0%, rgba(0,0,0, .25) 200%);
   background-blend-mode: multiply;
-	color: white;
+	color: #fff;
 	font-size: .8rem;
 	padding: 2rem 0 0;
   overflow: hidden;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 @media only screen and (min-width: 768px){
@@ -888,6 +944,28 @@ FOOTER START
 
   .arrow-up .btn:hover {
     background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  }
+
+   .solution .logo {
+    position: absolute;
+    bottom: -5em;
+    left: 92em;
+    opacity: 0.3;
+    padding: 0;
+    margin: 0;
+  }
+
+  #footer-main .container .row .solution .logo p {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #footer-main .container .row .solution .logo p img {
+    height: 70px;
+    width: 70px;
   }
 }
 
@@ -961,8 +1039,6 @@ FOOTER START
   /*box-shadow: 10px 15px 7px #C7C7C7;*/
   box-shadow: 0 0 20px rgba(33,33,33,.2);
 }
-
-
 /*
 ===============================================
 FOOTER END
@@ -970,14 +1046,11 @@ FOOTER END
 */
 
 
-
-
 /*
 ===============================================
 gallery.html, page-gallery.php galerija START
 ===============================================
 */
-
 .btn:focus, .btn:active, button:focus, button:active {
   outline: none !important;
   box-shadow: none !important;
@@ -1029,11 +1102,11 @@ gallery.html galerija END
 
 /*
 ===============================================
-page-events.php
+page-events.php START
 ===============================================
 */
 #events {
-  margin-bottom: 2rem;
+  background-color: #fff;
 }
 
 @media (min-width: 992px){
@@ -1084,9 +1157,193 @@ page-events.php
   #events .container .col-lg-8 ol .event-pic img {
     max-height: 165px;
     max-width: 40%;
-    padding: 0 2em 0 0;
+    margin: 0 2em 0 0;
+
+    background: #fff;
+    padding: 4px;
+    position: relative;
+    content: "";
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+
+    box-shadow: 
+      /* The top layer shadow */ 
+      1px 1px 1px rgba(0,0,0,0.25), 
+      /* The second layer 
+      -6px -6px 0px 0px #D3D3D3, */ 
+      /* The second layer shadow */
+      1px 1px 1px rgba(0,0,0,0.15);
   }
+/*
+===============================================
+page-events.php END
+===============================================
+*/
 
+
+/*
+===============================================
+page-event-gallery.php START
+===============================================
+*/
+#event-gallery{
+  background-color: #fff;
+  padding: 4em 0;
+}
+
+#event-gallery .container .slider{
+  width: 640px;
+  position: relative;
+  padding-top: 320px; 
+  margin: 100px auto;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+#event-gallery .container .slider>img{
+  position: absolute;
+  left: 0; top: 0;
+  transition: all 0.5s;
+}
+
+#event-gallery .container .slider input[name='slide_switch'] {
+  display: none;
+}
+
+#event-gallery .container .slider label {
+  margin: 18px 0 0 18px;
+  border: 3px solid #999;
   
+  float: left;
+  transition: all 0.5s;
+  
+  /*Default style = low opacity*/
+  opacity: 0.6;
+}
+
+#event-gallery .container .slider label img{
+  display: block;
+}
+
+/*Time to add the click effects*/
+#event-gallery .container .slider input[name='slide_switch']:checked+label {
+  border-color: #666;
+  opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Main images*/
+#event-gallery .container .slider input[name='slide_switch'] ~ img {
+  opacity: 0;
+  transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+#event-gallery .container .slider input[name='slide_switch']:checked+label+img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*
+===============================================
+page-event-gallery.php END
+===============================================
+*/
 
 
+/*
+===============================================
+page-trainer.php START
+===============================================
+*/
+#trainers {
+  background-color: #fff;
+  margin-bottom: -1em;
+}
+
+#trainers .container #trainer-posts .event-pic2,
+#trainers .container #trainer-posts .event-pic {
+  padding-bottom: 1.5em;
+  flex-wrap: nowrap;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#trainers .container #trainer-posts .event-pic img {
+  max-height: 230px;
+  max-width: 270px;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+#trainers .container #trainer-posts .event-pic p,
+#trainers .container #trainer-posts .event-pic2 p{
+  margin: 0;
+  padding: 0;
+}
+
+#trainers .container #trainer-posts .event-pic2 img {
+  max-height: 230px;
+  max-width: 270px;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+/*
+#trainers .container #trainer-posts .event-pic .button,
+#trainers .container #trainer-posts .event-pic2 .button {
+  overflow-y: scroll;
+}
+
+#trainers .container #trainer-posts .event-pic .button::-webkit-scrollbar,
+#trainers .container #trainer-posts .event-pic2 .button::-webkit-scrollbar { 
+    display: none; 
+}
+*/
+
+#text{
+      display:none;
+}
+
+#trainers .container #trainer-posts .event-pic2 .button #text2 .btn-container{
+  margin:auto;
+  height:44px;
+  width:166.23px;
+}
+
+#change{
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  cursor:pointer;
+  border:none;
+  padding:8px;
+  font-size:20px;
+  background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color:#000;
+  font-family:cursive;
+  box-sizing:border-box;
+}
+
+#change2{
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  cursor:pointer;
+  border:none;
+  padding:8px;
+  font-size:20px;
+  background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color:#000;
+  font-family:cursive;
+  box-sizing:border-box;
+}
+/*
+===============================================
+page-trainer.php END
+===============================================
+*/

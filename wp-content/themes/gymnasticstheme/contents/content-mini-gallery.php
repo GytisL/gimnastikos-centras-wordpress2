@@ -1,4 +1,4 @@
-		<h3 class="display-3">Mažoji Galerija</h3>
+		<h3 class="title"><?php the_title(); ?></h3>
 			<!-- Grid row -->
 			<!-- <div class="row col-md-12"> -->
 				<!-- Grid column -->

@@ -108,9 +108,9 @@
 
 		<div id="cover-caption">
 			<div class="container">
-				<div class="col-sm-12">
+				<!-- <div class="col-sm-12">
 					<a href="#footer-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>

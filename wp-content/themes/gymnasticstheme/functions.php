@@ -17,6 +17,7 @@ function awesome_script_enqueue() {
 }
 add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
 
+
 /*
 	==========================================
 	 Activate menus START
@@ -129,20 +130,8 @@ function wcr_share_buttons() {
 	==========================================
 */
 
-/*
-	==========================================
-	 Smooth Scrollspy Scrolling Effect START
-	==========================================
-*/
 
-//wp_enqueue_script( 'feature-one', get_template_directory_uri() . '/js/gymnastics.js', array( 'jquery' ), '', true );
-// header.php 'apie mus' ir gymnastics.js failai
 
-/*
-	==========================================
-	 Smooth Scrollspy Scrolling Effect END
-	==========================================
-*/
 
 
 
@@ -152,126 +141,104 @@ function wcr_share_buttons() {
 	==========================================
 */
 
-
-// add_action( 'wp_ajax_nopriv_gymnastics_load_more', 'gymnastics_load_more' );
-// add_action( 'wp_ajax_gymnastics_load_more', 'gymnastics_load_more' );
-// 	function gymnastics_load_more() {
-		
-// 		$paged = $_POST["page"]+1;
-		
-// 		$query = new WP_Query( array(
-// 			'post_type' => 'post',
-// 			'paged' => $paged
-// 		) );
-		
-// 		if( $query->have_posts() ):
-
-// 			while( $query->have_posts() ): $query->the_post();
-
-// 				get_template_part( '/contents/content', get_post_format() );
-
-// 			endwhile;
-
-// 		endif;
-
-// 		wp_reset_postdata();
-
-// 		die();
-
-// 	}
-
 /*
 * initial posts display
  */
-function script_load_more($args = array()) {
-    //initial posts load
-    echo '<div id="ajax-primary" class="content-area">';
-        echo '<div id="ajax-content" class="content-area">';
-            ajax_script_load_more($args);
-        echo '</div>';
-        echo '<a href="#" id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Load More</a>';
-    echo '</div>';
+
+/*function load_more_posts(){
+	$page = $_POST['page'];
+
+	$query = new WP_Query( array(
+			'post_type' => 'post',
+			'post_per_page' =>'6',
+			'paged' => $paged,
+		));
+	if ( $query-> have_posts() ) : 
+       	while ( $query-> have_posts() ) : $query->the_post();
+
+			get_template_part('content-eventsmain');
+
+	    endwhile;
+	endif; 
+  	wp_reset_postdata();
+	wp_die();
 }
 
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_priv_load_more_posts', 'load_more_posts');
+*/
 
 /*
- * create short code.
- */
-add_shortcode('ajax_posts', 'script_load_more');
+ load more script call back
+ 
+function load_more_articles_posts(){
+	$page = $_POST['page'];
+	//echo $page;
 
-/*
-* load more script call back
- */
-// function ajax_script_load_more($args) {
-//     //init ajax
-//     $ajax = false;
-//     //check ajax call or not
-//     if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
-//         strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-//         $ajax = true;
-//     }
-//     //number of posts per page default
-//     $num = 5;
-//     //page number
-//     $paged = $_POST['page'] + 1;
-//     //args
-//     $args = array(
-//         'post_type' => 'post',
-//         'post_status' => 'publish',
-//         'posts_per_page' =>$num,
-//         'paged'=>$paged
-//     );
-//     //query
-//     $query = new WP_Query($args);
-//     //check
-
-//     // if ($query->have_posts()):
-//     //     //loop articales
-//     //     while ($query->have_posts()): $query->the_post();
-//     //         //include articles template
-//     //         include 'ajax-content.php';
-//     //     endwhile;
-//     // else:
-//     //     echo 0;
-//     // endif;
-//     // //reset post data
-//     // wp_reset_postdata();
-//     //check ajax call
-
-
-//     if($ajax) die();
-// }
-
-function ajax_script_load_more() {
-	
-	$paged = $_POST["page"]+1;
-	
 	$query = new WP_Query( array(
-		'post_type' => 'post',
-		'paged' => $paged
-	) );
-	
-	if ( $query->have_posts() ): 
-			while ( $query->have_posts() ): $query->the_post(); 
+			'post_type' => 'post',
+			'category_name' => 'events',
+			'post_per_page' =>'6',
+			'paged' => $paged
+		));
+
+	$total_pages = $the_query->max_num_pages;
+	print_r($total_pages);
+
+	if ( $query-> have_posts() ) : 
+        while ( $query-> have_posts() ) : $query->the_post();
 
 			get_template_part('contents/content', get_post_format() );
 
-			endwhile; 
-		endif; 
+		endwhile;
+    endif; 
+  	wp_die();
+  	wp_reset_postdata();
+}
 
-		wp_reset_postdata();
-		
-	die();
+/*
+ * load more script ajax hooks
+ 
+add_action('wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts');
+add_action('wp_ajax_priv_load_more_articles_posts', 'load_more_articles_posts');
+*/
+
+
+add_action( 'wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts' );
+add_action( 'wp_ajax_load_more_articles_posts', 'load_more_articles_posts' );
+function load_more_articles_posts() {
 	
+	$paged = $_POST["page"]+1;
+	
+	$args = array(
+	    	'category_name' => 'events',
+	    	'posts_per_page' => '2',
+	    	//'category_in' => array('15, 17, 30'),category by category name (post id)
+	    	'paged' => $paged 
+	    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
+	    );
+
+	$lastBlog = new WP_Query ($args);
+
+	if ( $lastBlog->have_posts() ): ?>
+		<?php while ( $lastBlog->have_posts() ): $lastBlog->the_post(); 
+
+		get_template_part('contents/content','eventsmain'); //content is in content-eventsmain.php?>
+
+		<?php endwhile; ?>
+	<?php endif; ?>
+
+	<?php
+	
+	wp_die();
+	 
+		wp_reset_postdata();
 }
 
 
 
-/*
- * load more script ajax hooks
- */
-add_action('wp_ajax_nopriv_ajax_script_load_more', 'ajax_script_load_more');
-add_action('wp_ajax_ajax_script_load_more', 'ajax_script_load_more');
+
+
 
 
 /*
@@ -279,7 +246,6 @@ add_action('wp_ajax_ajax_script_load_more', 'ajax_script_load_more');
 	 AJAX functions END
 	==========================================
 */
-
 
 
 ?>

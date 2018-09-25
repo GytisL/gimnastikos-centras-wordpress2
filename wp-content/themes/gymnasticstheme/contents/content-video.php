@@ -1,7 +1,7 @@
-		<h3 class="display-3">Apie mus</h3>
-			<div class="feature-content">
+		<h3 class="title">Apie mus</h3>
+			<div class="row feature-content">
 			 	<div class="col-lg-5 d-inline-block">
-					<h6>Pažiūrėk šį video</h6>
+					<!-- <h6>Pažiūrėk šį video</h6> -->
 					<h2><?php the_title(); ?></h2>
 					<p class="lead"><?php echo get_post_meta( get_the_ID(), 'sub-title', true); ?></p> <!-- sub-title  -  custom field'o name -->
 					<p><?php the_content(); ?></p>

@@ -18,19 +18,55 @@ get_header (); ?>
 	<section id="events">
 		<div class="container"><!-- d-flex -->
 			<div class="col-lg-8"><!-- d-inline-block -->
-				<h2 class="display-3">Įvykiai</h2>
+				<h2 class="display-3 text-center">Įvykiai</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam modi ratione ut nisi tempora quibusdam autem est numquam qui culpa eos eum commodi recusandae nihil quisquam magnam, perferendis, voluptate neque.</p>
 				
-					<div id="gymnastics-posts">
+					<!-- <div id="gymnastics-posts">
+
 						<?php
-		                    $args = array(
+		                 	// patikrina kokiame puslapyje esi
+		                 	// $paged = get_query_var( 'paged', 1 ); 
+		                 	// echo $paged;
+							// $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+						
+		                    //$args = array(
+		                    //	'category_name' => 'events',
+		                    //	'posts_per_page' => '2',
+		                    	//'category_in' => array('15, 17, 30'),category by category name (post id)
+		                    	//'paged' => $paged 
+		                    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
+		                    //);
+
+							//$lastBlog = new WP_Query ($args);
+
+						//if ( $lastBlog->have_posts() ): ?>
+							<?php //while ( $lastBlog->have_posts() ): $lastBlog->the_post(); 
+
+							//get_template_part('contents/content','eventsmain'); //content is in content-eventsmain.php?>
+
+							<?php //endwhile; ?>
+						<?php //endif; ?>
+
+						<?php 
+							//wp_reset_postdata();
+						?>
+						<!-- append here (prints this content with ajax)
+
+					</div>
+ 
+					<div class="container sunset-posts-container">-->
+					<div id="gymnastics-posts">
+						<?php 
+
+						$args = array(
 		                    	'category_name' => 'events',
 		                    	'posts_per_page' => '2',
-		                    	'category_in' => array('15, 17, 30'),//category by category name (post id) NEPRINTINA KAI DU PABRAUKIMAI
+		                    	//'category_in' => array('15, 17, 30'),category by category name (post id)
+		                    	'paged' => $paged 
 		                    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
 		                    );
 
-							$lastBlog = new WP_Query ($args);
+						$lastBlog = new WP_Query ($args);
 
 						if ( $lastBlog->have_posts() ): ?>
 							<?php while ( $lastBlog->have_posts() ): $lastBlog->the_post(); 
@@ -43,16 +79,26 @@ get_header (); ?>
 						<?php 
 							wp_reset_postdata();
 						?>
-						<!-- append here (prints this content with ajax)-->
-
+		                
+						
 					</div>
+					<!--</div> .container -->
 
-				<!-- ajax .container START-->
-					<div class="container text-center">
-						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
-							<span class="sunset-icon gymnastics-loading"></span> Daugiau
+				<!-- ajax .container START 
+	
+					
+					<div class="container text-center load-more-block">
+						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php //echo admin_url('admin-ajax.php'); ?>">
+							<span class="fa fa-spinner loader gymnastics-loading"></span> <span class="button-text">Daugiau<span>
 						</a>
 					</div><!-- .container -->
+					<!-- ideti rodykle vietoj spinerio ir uzdeti button'us -->
+					<div class="container text-center load-more-block">
+						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+							<span class="loader gymnastics-loading"></span><span class="button-text">Daugiau<span>
+						</a>
+					</div>
+
 				<!-- ajax .container END-->
 
 			</div>
@@ -96,7 +142,7 @@ get_header (); ?>
 					'type' => 'post',
 					'category_name' => 'events',
 					'posts_per_page' => 2,
-					'offset' => 0
+					'offset' => 2
 				);
 
                     $lastBlog = new WP_Query ($args);

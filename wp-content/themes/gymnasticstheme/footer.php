@@ -51,7 +51,7 @@
 					<h3 class="title">ĮMONĖ</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
-					<div id="logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/itmalogo.jpg" alt=""></div>
+					<div id="logo"><!-- <img src="<?php //echo get_stylesheet_directory_uri(); ?>/pictures/itmalogo.jpg" alt=""> --></div>
 				</div>
 				<div class="col-sm-4">
 					<h3 class="title">VIRŠUTINĖ JUOSTA</h4>
@@ -157,9 +157,15 @@
                     
 				</div>
 				
-				<div class="col-sm-2">
+				<!-- <div class="col-sm-2">
                     <div class="arrow-up">
 						<a href="#gymnasticsNavbar" class="btn btn-secondary-outline btn-sm" role="button">&uarr;</a>
+					</div>
+                </div>  -->
+
+                <div class="col-sm-2 solution row">
+                    <div class="logo">
+						<p>Sprendimas: <img src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/itma-logo-part.png"></p>
 					</div>
                 </div>
 

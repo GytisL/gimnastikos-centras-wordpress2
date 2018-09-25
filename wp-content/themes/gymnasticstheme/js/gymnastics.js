@@ -1,26 +1,55 @@
 //javascript functions
 //$.noConflict(); //jquery $ sign doesn't conflict with other javascript functions
 
+/*vertical mousewheel smooth scrolling START*/
+if (window.addEventListener) window.addEventListener('MouseScroll', wheel, false);
+window.onmousewheel = document.onmousewheel = wheel;
 
-/*Smooth Scrolling Effect START*/
+function wheel(event) {
+    var delta = 0;
+    if (event.wheelDelta) delta = event.wheelDelta / 120;
+    else if (event.detail) delta = -event.detail / 3;
 
-// jQuery(document).ready(function($){ 
-//   $(window).scroll(function(){ 
-//     if ($(this).scrollTop() < 200) { 
-//       $('#feature-one') .fadeOut(); } 
-//     else { $('#feature-one') .fadeIn(); } }); 
-//   $('#feature-one').on('click', function(){ 
-//     $('html, body').animate({scrollTop:0}, 'fast');
-//      return false; }); });
+    handle(delta);
+    if (event.preventDefault) event.preventDefault();
+    event.returnValue = false;
+}
 
-/*Smooth Scrolling Effect END*/
+var goUp = true;
+var end = null;
+var interval = null;
+
+function handle(delta) {
+  var animationInterval = 5; //lower is faster
+  var scrollSpeed = 10; //lower is faster
+
+  if (end == null) {
+    end = $(window).scrollTop();
+  }
+  end -= 20 * delta;
+  goUp = delta > 0;
+
+  if (interval == null) {
+    interval = setInterval(function () {
+      var scrollTop = $(window).scrollTop();
+      var step = Math.round((end - scrollTop) / scrollSpeed);
+      if (scrollTop <= 0 || 
+          scrollTop >= $(window).prop("scrollHeight") - $(window).height() ||
+          goUp && step > -1 || 
+          !goUp && step < 1 ) {
+        clearInterval(interval);
+        interval = null;
+        end = null;
+      }
+      $(window).scrollTop(scrollTop + step );
+    }, animationInterval);
+  }
+}
+// $.noConflict();
+/*vertical mousewheel smooth scrolling END*/
 
 
-
-
-/*Smooth Scrolling Effect START*/
-
-
+/*Smooth Scrolling Effect START
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -29,11 +58,7 @@
           behavior: 'smooth'
         });
     });
-  });
-
-
-
-
+  });*/ //SKROLINANT SOKINEJA
 /*Smooth Scrolling Effect END*/
 
 
@@ -53,7 +78,7 @@
 //   });
 // });
 
-jQuery(document).ready(function($){
+$(document).ready(function($){
 var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
       spaceBetween: 0,
@@ -227,17 +252,28 @@ $(document).keydown(function (e) {
 
 
 
-/* Ajax functions page-events.php START */
+/* AJAX functions page-events.php START */
 
 
- /*Ajax functions 
-jQuery(document).ready( function($){
-  $(document).on('click','.gymnastics-load-more', function(){
+  $(".gymnastics-load-more:not(.loading)").on('click', function(){
     
     var that = $(this);
     var page = $(this).data('page');
     var newPage = page+1;
     var ajaxurl = that.data('url');
+
+
+    var max_page = $(this).data('max-num-pages');
+    that.addClass('loading');
+      if(window.location.pathname == "/lksb/en/"){
+          that.find('.button-text').text('Loading');
+      }else{
+          that.find('.button-text').text('Kraunama');
+      }
+      that.find('.fa-spinner').addClass("fa-spin");
+      that.find('.loader').css('display','inline-block');
+        
+
     
     $.ajax({
       
@@ -246,7 +282,7 @@ jQuery(document).ready( function($){
       data : {
         
         page : page,
-        action: 'gymnastics_load_more'
+        action: 'load_more_articles_posts'
         
       },
       error : function( response ){
@@ -255,57 +291,67 @@ jQuery(document).ready( function($){
       success : function( response ){
         
         that.data('page', newPage);
-        $('.gymnastics-posts-container').append( response );
+        $('#gymnastics-posts').append( response );
 
+
+        that.removeClass('.loading');
+        that.find('.fa-spinner').removeClass("fa-spin");
+        that.find('.button-text').text('Rodyti daugiau');
+        $('.load-more-block').addClass('news-article');
+        console.log(newPage);
+        var k = newPage - 1;
+        if(max_page == k){
+          that.find('.fa-spinner').css('display','none');
+          that.css('display','none');
+          that.find('.loader').css('display','none');
+        }
+
+        
       }
       
     });
     
   });
 
-});*/
+
+/* AJAX functions page-events.php END */
 
 
+/*page-trainer.php show/hide button START*/
 
-//jQuery.noConflict($);
-/* Ajax functions */
 $(document).ready(function() {
-    //onclick
-    $(".gymnastics-load-more").on('click', function(e) {
-        //init
-        var that = $(this);
-        var page = $(this).data('page');
-        var newPage = page + 1;
-        var ajaxurl = that.data('url');
-        //ajax call
-        $.ajax({
-            url: ajaxurl,
-            type: 'post',
-            data: {
-                page: page,
-                action: 'ajax_script_load_more'
- 
-            },
-            error: function(response) {
-                console.log(response);
-            },
-            success: function(response) {
-                //check
-                if (response == 0) {
-                    $('#gymnastics-posts').append('<div class="text-center"><h3>You reached the end of the line!</h3><p>No more posts to load.</p></div>');
-                    //mygtukas. Nemeta posto.
-                    $('.gymnastics-load-more').hide();
-                } else {
-                    that.data('page', newPage);
-                    $('#gymnastics-posts').append(response);
-                }
-            }
-        });
-    });
+
+      $("#change2").on('click', function() {
+        var hide2 = $("#change2").text();
+
+        if (hide2 == "Daugiau") {
+          //Stuff to do when btn is in the read more state
+          $("#change2").text("Mažiau");
+          $("#text2").slideDown(900);
+          //$(".button").animate({marginTop: '-29px'}, 1500);
+        } else {
+          //Stuff to do when btn is in the read less state
+          $("#change2").text("Daugiau");
+          $("#text2").slideUp(900);
+
+          //$('.button').animate({marginTop: '-80px'}, 1500);
+        }
+      });
+
+      $("#change").on('click', function() {
+        var hide = $("#change").text();
+        if (hide == "Daugiau") {
+          //Stuff to do when btn is in the read more state
+          $("#change").text("Mažiau");
+          $("#text").slideDown(1000);
+          //$(".button").animate({marginTop: '-29px'}, 1500);
+        } else {
+          //Stuff to do when btn is in the read less state
+          $("#change").text("Daugiau");
+          $("#text").slideUp(1000);
+          //$('.button').animate({marginTop: '-80px'}, 1500);
+        }
+      });
 });
 
-
-
-/* Ajax functions page-events.php END */
-
-
+/*page-trainer.php show/hide button END*/
