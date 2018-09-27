@@ -118,23 +118,7 @@ $(function() {
 /* grid row cards END*/
 
 
-/*index.html multi-gallery makes image bigger START
 
-$('.pics').hover(function() {
-    $(this).data('width', $(this).width());
-    $(this).data('height', $(this).height());
-    $(this).css({
-        width: $(this).width() * 1.1,
-        height: $(this).height() * 1.1
-    });
-}, function() {
-    $(this).css({
-        width: $(this).data('width'),
-        height: $(this).data('height')
-    });
-});
-
-/*index.html multi-gallery END*/
 
 
 /*#id map GOOGLE MAPS START*/
@@ -266,15 +250,14 @@ $(document).keydown(function (e) {
     var max_page = $(this).data('max-num-pages');
     that.addClass('loading');
       if(window.location.pathname == "/lksb/en/"){
-          that.find('.button-text').text('Loading');
+          that.find('.button-text').text('Loading').slideDown(320);
       }else{
-          that.find('.button-text').text('Kraunama');
+          that.find('.button-text').text('Kraunama').slideDown(320);
       }
       that.find('.fa-spinner').addClass("fa-spin");
-      that.find('.loader').css('display','inline-block');
+      that.find('.loader').css('display','block');
         
-
-    
+        
     $.ajax({
       
       url : ajaxurl,
@@ -296,7 +279,7 @@ $(document).keydown(function (e) {
 
         that.removeClass('.loading');
         that.find('.fa-spinner').removeClass("fa-spin");
-        that.find('.button-text').text('Rodyti daugiau');
+        that.find('.button-text').text('Rodyti daugiau').slideUp(320);
         $('.load-more-block').addClass('news-article');
         console.log(newPage);
         var k = newPage - 1;
@@ -355,3 +338,4 @@ $(document).ready(function() {
 });
 
 /*page-trainer.php show/hide button END*/
+

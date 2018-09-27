@@ -130,10 +130,30 @@ function wcr_share_buttons() {
 	==========================================
 */
 
+/* 
+=================================================
+Modify the read more link on the_excerpt() START
+=================================================
+*/
+ 
+function et_excerpt_length($length) {
+    return 220;
+}
+add_filter('excerpt_length', 'et_excerpt_length');
+ 
+/* Add a link  to the end of our excerpt contained in a div for styling purposes and to break to a new line on the page.*/
+ 
+function et_excerpt_more($more) {
+    global $post;
+    return '<div class="view-full-post"><a href="'. get_permalink($post->ID) . '" class="view-full-post-btn">View Full Post</a></div>;';
+}
+add_filter('excerpt_more', 'et_excerpt_more');	
 
-
-
-
+/* 
+=================================================
+Modify the read more link on the_excerpt() END
+=================================================
+*/
 
 /*
 	==========================================
@@ -212,7 +232,7 @@ function load_more_articles_posts() {
 	
 	$args = array(
 	    	'category_name' => 'events',
-	    	'posts_per_page' => '2',
+	    	'posts_per_page' => '1',
 	    	//'category_in' => array('15, 17, 30'),category by category name (post id)
 	    	'paged' => $paged 
 	    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
@@ -246,6 +266,21 @@ function load_more_articles_posts() {
 	 AJAX functions END
 	==========================================
 */
+
+	function permalink_thingy($atts) {
+	extract(shortcode_atts(array(
+		'id' => 188,
+		'text' => ""  // default value if none supplied
+    ), $atts));
+    
+    if ($text) {
+        $url = get_permalink($id);
+        return "<a href='$url'>$text</a>";
+    } else {
+	   return get_permalink($id);
+	}
+}
+add_shortcode('permalink', 'permalink_thingy');
 
 
 ?>

@@ -115,8 +115,8 @@
 					</div>
 					<!-- Grid row -->
 					
-					<a href="gallery"><button  class="to-gallery">Į galeriją &rarr;</button></a>
-					
+					<!-- <a href="gallery"><button class="to-gallery">Į galeriją &rarr;</button></a> -->
+					<a href="<?php echo get_permalink(147); ?>"><button class="to-gallery">Į galeriją &rarr;</button></a>
 					
 				</div>
 					

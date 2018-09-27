@@ -60,7 +60,7 @@ get_header (); ?>
 
 						$args = array(
 		                    	'category_name' => 'events',
-		                    	'posts_per_page' => '2',
+		                    	'posts_per_page' => '1',
 		                    	//'category_in' => array('15, 17, 30'),category by category name (post id)
 		                    	'paged' => $paged 
 		                    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
@@ -84,20 +84,20 @@ get_header (); ?>
 					</div>
 					<!--</div> .container -->
 
-				<!-- ajax .container START 
+				<!-- ajax .container START -->
 	
 					
 					<div class="container text-center load-more-block">
-						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php //echo admin_url('admin-ajax.php'); ?>">
+						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
 							<span class="fa fa-spinner loader gymnastics-loading"></span> <span class="button-text">Daugiau<span>
 						</a>
 					</div><!-- .container -->
-					<!-- ideti rodykle vietoj spinerio ir uzdeti button'us -->
+					<!-- uzdeti button'us 
 					<div class="container text-center load-more-block">
-						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php// echo admin_url('admin-ajax.php'); ?>">
 							<span class="loader gymnastics-loading"></span><span class="button-text">Daugiau<span>
 						</a>
-					</div>
+					</div>-->
 
 				<!-- ajax .container END-->
 

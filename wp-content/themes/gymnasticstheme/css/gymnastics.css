@@ -1177,6 +1177,46 @@ page-events.php START
       /* The second layer shadow */
       1px 1px 1px rgba(0,0,0,0.15);
   }
+
+/*AJAX loading*/
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more {
+  display: block;
+  width: 200px;
+  font-size: 30px;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more:hover,
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more:focus,
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more .loading{
+  opacity: 1;
+}
+
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more .loading {
+  cursor: default;
+}
+
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more span {
+  display: block;
+}
+
+/*spinner rotation START*/
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more .fa-spin{
+  -webkit-animation: rotation 1000ms infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+/*spinner rotation END*/
+
 /*
 ===============================================
 page-events.php END
@@ -1194,58 +1234,47 @@ page-event-gallery.php START
   padding: 4em 0;
 }
 
-#event-gallery .container .slider{
-  width: 640px;
-  position: relative;
-  padding-top: 320px; 
-  margin: 100px auto;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+#myCarousel .list-inline {
+  white-space:nowrap;
+  /*overflow-x:auto;*/
 }
 
-#event-gallery .container .slider>img{
+#myCarousel .carousel-indicators {
+  position: static;
+  left: initial;
+  width: initial;
+  margin-left: initial;
+  
+  text-align: center;
+  margin: 1em;
+}
+
+#myCarousel .carousel-indicators > li {
+  width: initial;
+  height: initial;
+  text-indent: initial;
+
+  max-width: 100px;
+  max-height: 100px;
+}
+
+#myCarousel .carousel-indicators > li.active img {
+  opacity: 0.7;
+}
+
+#myCarousel .carousel-inner a .fa-chevron-left{
   position: absolute;
-  left: 0; top: 0;
-  transition: all 0.5s;
+  left: 1em;
+  bottom: 16.7em;
 }
 
-#event-gallery .container .slider input[name='slide_switch'] {
-  display: none;
-}
-
-#event-gallery .container .slider label {
-  margin: 18px 0 0 18px;
-  border: 3px solid #999;
+#myCarousel .carousel-inner a .fa-chevron-right{
   
-  float: left;
-  transition: all 0.5s;
+  position: absolute;
+  left: 44em;
+  bottom: 17em;
+}
   
-  /*Default style = low opacity*/
-  opacity: 0.6;
-}
-
-#event-gallery .container .slider label img{
-  display: block;
-}
-
-/*Time to add the click effects*/
-#event-gallery .container .slider input[name='slide_switch']:checked+label {
-  border-color: #666;
-  opacity: 1;
-}
-/*Clicking any thumbnail now should change its opacity(style)*/
-/*Main images*/
-#event-gallery .container .slider input[name='slide_switch'] ~ img {
-  opacity: 0;
-  transform: scale(1.1);
-}
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
-#event-gallery .container .slider input[name='slide_switch']:checked+label+img {
-  opacity: 1;
-  transform: scale(1);
-}
-
 /*
 ===============================================
 page-event-gallery.php END
