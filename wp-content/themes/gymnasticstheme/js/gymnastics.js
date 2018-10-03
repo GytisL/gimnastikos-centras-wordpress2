@@ -1,7 +1,7 @@
 //javascript functions
 //$.noConflict(); //jquery $ sign doesn't conflict with other javascript functions
 
-/*vertical mousewheel smooth scrolling START*/
+/*vertical mousewheel smooth scrolling START
 if (window.addEventListener) window.addEventListener('MouseScroll', wheel, false);
 window.onmousewheel = document.onmousewheel = wheel;
 
@@ -49,6 +49,8 @@ function handle(delta) {
 /*vertical mousewheel smooth scrolling END*/
 
 
+
+
 /*Smooth Scrolling Effect START
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -62,7 +64,7 @@ function handle(delta) {
 /*Smooth Scrolling Effect END*/
 
 
-/*sipwer slides gallery START*/
+/*swiper slides gallery START*/
 // jQuery(document).ready(function($){
 //   var swiper = new Swiper('.swiper-container', {
 //     slidesPerView: 1,
@@ -298,6 +300,54 @@ $(document).keydown(function (e) {
 
 
 /* AJAX functions page-events.php END */
+
+/*page-event-gallery.php multiple carousel START*/
+
+
+
+$('#carouselExample').on('slide.bs.carousel', function (e) {
+
+  
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 4;
+    var totalItems = $('.picture-item').length;
+    
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.picture-item').eq(i).appendTo('.picture-list');
+            }
+            else {
+                $('.picture-item').eq(0).appendTo('.picture-list');
+            }
+        }
+    }
+});
+
+
+  $('#carouselExample').carousel({ 
+                interval: 2000
+        });
+
+
+  $(document).ready(function() {
+/* show lightbox when clicking a thumbnail */
+    $('a.thumb').click(function(event){
+      event.preventDefault();
+      var content = $('.modal-body');
+      content.empty();
+        var title = $(this).attr("title");
+        $('.modal-title').html(title);        
+        content.html($(this).html());
+        $(".modal-profile").modal({show:true});
+    });
+
+  });
+
+/*page-event-gallery.php multiple carousel END*/
 
 
 /*page-trainer.php show/hide button START*/

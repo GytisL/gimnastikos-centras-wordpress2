@@ -157,7 +157,7 @@ Modify the read more link on the_excerpt() END
 
 /*
 	==========================================
-	 AJAX functions START
+	 AJAX functions page-events.php START
 	==========================================
 */
 
@@ -232,10 +232,10 @@ function load_more_articles_posts() {
 	
 	$args = array(
 	    	'category_name' => 'events',
-	    	'posts_per_page' => '1',
+	    	'posts_per_page' => '3',
 	    	//'category_in' => array('15, 17, 30'),category by category name (post id)
 	    	'paged' => $paged 
-	    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
+	    	//'category__not_in' => array('211')parameter in which category our post doesnt have to be (post id)
 	    );
 
 	$lastBlog = new WP_Query ($args);
@@ -255,32 +255,14 @@ function load_more_articles_posts() {
 		wp_reset_postdata();
 }
 
-
-
-
-
-
-
 /*
 	==========================================
 	 AJAX functions END
 	==========================================
 */
 
-	function permalink_thingy($atts) {
-	extract(shortcode_atts(array(
-		'id' => 188,
-		'text' => ""  // default value if none supplied
-    ), $atts));
-    
-    if ($text) {
-        $url = get_permalink($id);
-        return "<a href='$url'>$text</a>";
-    } else {
-	   return get_permalink($id);
-	}
-}
-add_shortcode('permalink', 'permalink_thingy');
+
+	
 
 
 ?>

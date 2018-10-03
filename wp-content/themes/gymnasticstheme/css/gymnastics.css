@@ -5,8 +5,9 @@ body {
 	padding: 0;
 	margin: 0;
 	color: #333;
-	/*font: sans-serif;*/
-  font-family: roboto;
+	/*font: sans-serif;
+  font-family: roboto;*/
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -430,6 +431,137 @@ APIE MUS END
 ===============================================
 */
 
+/*page-gallery-list.php START*/
+  #gallery-list {
+    background-image: url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/woman4.jpg);
+  }
+  
+  #gallery-list .container .card-deck {
+    padding: 1em 0;
+  }
+  
+  #gallery-list .container .card-deck .card {
+    padding-top: 0.5em;
+    height: 230px;
+    background: top;
+  }
+  
+  #gallery-list .container .card-deck .card img {
+    background-color: #fff;
+    padding: 4px;
+  }
+  
+  #gallery-list .container .card-deck .card .card-body {
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    left: 4em;
+    right: 3em;
+  }
+
+  #gallery-list .container .card-deck .card .card-body .card-title {
+    color: #fff;
+  }
+  
+  #gallery-list .container .card-deck .card .relative1,
+  #gallery-list .container .card-deck .card .relative4,
+  #gallery-list .container .card-deck .card .relative7,
+  #gallery-list .container .card-deck .card .relative10,
+  #gallery-list .container .card-deck .card .relative13,
+  #gallery-list .container .card-deck .card .relative16,
+  #gallery-list .container .card-deck .card .relative19,
+  #gallery-list .container .card-deck .card .relative22,
+  #gallery-list .container .card-deck .card .relative25 {
+    position: relative;
+    height: 204px;
+    width: 245px;
+    background-color: #cfc;
+    border-color: #eee;
+    /*opacity: 0.7;*/
+  }
+  
+  #gallery-list .container .card-deck .card .relative2,
+  #gallery-list .container .card-deck .card .relative5,
+  #gallery-list .container .card-deck .card .relative8,
+  #gallery-list .container .card-deck .card .relative11,
+  #gallery-list .container .card-deck .card .relative14,
+  #gallery-list .container .card-deck .card .relative17,
+  #gallery-list .container .card-deck .card .relative20,
+  #gallery-list .container .card-deck .card .relative23,
+  #gallery-list .container .card-deck .card .relative26 {
+    position: relative;
+    height: 185px;
+    width: 275px;
+    background-color: #cfc;
+    border-color: #eee;
+    /*opacity: 0.7;*/
+  }
+  
+  #gallery-list .container .card-deck .card .relative3,
+  #gallery-list .container .card-deck .card .relative6,
+  #gallery-list .container .card-deck .card .relative9,
+  #gallery-list .container .card-deck .card .relative12,
+  #gallery-list .container .card-deck .card .relative15,
+  #gallery-list .container .card-deck .card .relative18,
+  #gallery-list .container .card-deck .card .relative21,
+  #gallery-list .container .card-deck .card .relative24,
+  #gallery-list .container .card-deck .card .relative27 {
+    position: relative;
+    height: 192px;
+    width: 255px;
+    background-color: #cfc;
+    border-color: #eee;
+    /*opacity: 0.7;*/
+  }
+  
+  #gallery-list .container .card-deck .card #rel1,
+  #gallery-list .container .card-deck .card #rel4,
+  #gallery-list .container .card-deck .card #rel7,
+  #gallery-list .container .card-deck .card #rel10,
+  #gallery-list .container .card-deck .card #rel13,
+  #gallery-list .container .card-deck .card #rel16,
+  #gallery-list .container .card-deck .card #rel19,
+  #gallery-list .container .card-deck .card #rel22,
+  #gallery-list .container .card-deck .card #rel25 {
+    top: 5px;
+    left: 10px;
+    transform: rotate(-1deg);
+    margin: 0px 50px 0px 50px;
+    border: solid 1px #505050;
+  }
+  
+  #gallery-list .container .card-deck .card #rel2,
+  #gallery-list .container .card-deck .card #rel5,
+  #gallery-list .container .card-deck .card #rel8,
+  #gallery-list .container .card-deck .card #rel11,
+  #gallery-list .container .card-deck .card #rel14,
+  #gallery-list .container .card-deck .card #rel17,
+  #gallery-list .container .card-deck .card #rel20,
+  #gallery-list .container .card-deck .card #rel23,
+  #gallery-list .container .card-deck .card #rel26 {
+    top: -184px;
+    left: -8px;
+    margin: 0px 50px 0px 50px;
+    transform: rotate(1deg);
+    border: solid 1px #505050;
+  }
+  
+  #gallery-list .container .card-deck .card #rel3,
+  #gallery-list .container .card-deck .card #rel6,
+  #gallery-list .container .card-deck .card #rel9,
+  #gallery-list .container .card-deck .card #rel12,
+  #gallery-list .container .card-deck .card #rel15,
+  #gallery-list .container .card-deck .card #rel18,
+  #gallery-list .container .card-deck .card #rel21,
+  #gallery-list .container .card-deck .card #rel24,
+  #gallery-list .container .card-deck .card #rel27 {
+    top: -375px;
+    left: 3px;
+    margin: 0px 50px 0px 50px;
+    border: solid 1px #505050;
+  }
+/*page-gallery-list.php END*/
+
 
 /*
 ===============================================
@@ -619,13 +751,13 @@ PAGRINDINIO PSL GALERIJA START
   border-radius: .25em;
 }
 
-#video-carousel-example .carousel-inner {
+#video-carousel-example .picture-list {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-#video-carousel-example .carousel-inner .carousel-item video {
+#video-carousel-example .picture-list .picture-itemvideo {
   object-fit: cover;
   width: 100%;
   height: 400px;
@@ -658,6 +790,16 @@ PAGRINDINIO PSL GALERIJA START
 #picture-gallery .container .row .row .thumb .thumbnail .img-thumbnail:hover { 
   transform: scale(1.1); 
 }
+
+#picture-gallery .container .row .row .load-more-block2 .gymnastics-load-more2 .button-text {
+  margin-top: 8px;
+  border: 1px solid #808080;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  width: 150px;
+  display: block;
+  font-size: 1.5em;
+}
 /*page-gallery.php*/
 
 /*
@@ -672,7 +814,6 @@ PAGRINDINIO PSL GALERIJA END
 KONTAKTAI START
 ===============================================
 */
-
 /*GOOGLE MAPS START*/
 /*google apis zemelapio stiliai yra toj pacioj svetainej*/
 #map {
@@ -731,7 +872,6 @@ KONTAKTAI END
 CONTACT-BAR START
 ===============================================
 */
-
 #contact-bar { 
   position: relative;
   background: #fff;
@@ -822,26 +962,26 @@ CONTACT-BAR START
 
 /*button style*/
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body .wpcf7-submit {
-    cursor: pointer;
-    background: none;
-    border: 1px solid rgba(255, 255, 255, .65);
-    border-radius: 25px;
-    color: rgba(255, 255, 255, .65);
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    font-size: 19px;
-    font-size: 1.2rem;
-    font-family: roboto;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 300;
-    line-height: 2.5em;
-    margin-top: auto;
-    margin-bottom: 25px;
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    width: 90%;
-    text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, .65);
+  border-radius: 25px;
+  color: rgba(255, 255, 255, .65);
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  font-size: 19px;
+  font-size: 1.2rem;
+  font-family: roboto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: 2.5em;
+  margin-top: auto;
+  margin-bottom: 25px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 90%;
+  text-transform: uppercase;
 } 
 
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body .wpcf7-form-control:hover{
@@ -1181,7 +1321,7 @@ page-events.php START
 /*AJAX loading*/
 #events .container .col-lg-8 .load-more-block .gymnastics-load-more {
   display: block;
-  width: 200px;
+  width: 245px;
   font-size: 30px;
   margin: 0 auto;
   cursor: pointer;
@@ -1200,6 +1340,14 @@ page-events.php START
 
 #events .container .col-lg-8 .load-more-block .gymnastics-load-more span {
   display: block;
+}
+
+#events .container .col-lg-8 .load-more-block .gymnastics-load-more .button-text{
+  margin-top: 8px;
+  border: 1px solid #808080;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  width: 210px;
 }
 
 /*spinner rotation START*/
@@ -1229,9 +1377,28 @@ page-events.php END
 page-event-gallery.php START
 ===============================================
 */
-#event-gallery{
+#event-gallery {
   background-color: #fff;
   padding: 4em 0;
+}
+
+@media only screen and (min-width: 768px){
+  #event-gallery .container .content{
+    max-width: 60%;
+    display: -webkit-inline-box;
+    /*flex-wrap: nowrap;*/
+  }
+  #carousel-thumb .carousel-inner .carousel-item img {
+    max-height: 180px;
+  }
+  #carousel-thumb img {
+    max-height: 15px;
+  }
+  
+}
+
+#event-gallery .container .content .text{
+  padding-bottom: 1em;
 }
 
 #myCarousel .list-inline {
@@ -1262,18 +1429,109 @@ page-event-gallery.php START
   opacity: 0.7;
 }
 
-#myCarousel .carousel-inner a .fa-chevron-left{
+/*#myCarousel .picture-list a .fa-chevron-left {
   position: absolute;
   left: 1em;
   bottom: 16.7em;
 }
 
-#myCarousel .carousel-inner a .fa-chevron-right{
-  
+#myCarousel .picture-list a .fa-chevron-right {
   position: absolute;
   left: 44em;
   bottom: 17em;
+}*/
+
+#myCarousel .picture-list .picture-item img{
+  max-width: 100%;
+  max-height: 515px;
 }
+
+#carousel-thumb img{
+  max-height: 10px;
+}
+
+/*multiple carousel START*/
+
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .picture-list .active,
+    .picture-list .active + .picture-item,
+    .picture-list .active + .picture-item + .picture-item,
+    .picture-list .active + .picture-item + .picture-item + .picture-item {
+        display: block;
+    }
+    
+    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left),
+    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item,
+    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item + .picture-item,
+    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item + .picture-item + .picture-item {
+        transition: none;
+    }
+    
+    .picture-list .carousel-item-next,
+    .picture-list .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .picture-list .active.picture-item + .picture-item + .picture-item + .picture-item + .picture-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active .carousel-item-left + .carousel-item-next .carousel-item-left,
+    .carousel-item-next .carousel-item-left + .picture-item,
+    .carousel-item-next .carousel-item-left + .picture-item + .picture-item,
+    .carousel-item-next .carousel-item-left + .picture-item + .picture-item + .picture-item,
+    .carousel-item-next .carousel-item-left + .picture-item + .picture-item + .picture-item + .picture-item{
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .picture-list .carousel-item-prev .carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active .carousel-item-right + .carousel-item-prev .carousel-item-right,
+    .carousel-item-prev .carousel-item-right + .picture-item,
+    .carousel-item-prev .carousel-item-right + .picture-item + .picture-item,
+    .carousel-item-prev .carousel-item-right + .picture-item + .picture-item + .picture-item,
+    .carousel-item-prev .carousel-item-right + .picture-item + .picture-item + .picture-item + .picture-item{
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+ /* Bootstrap Lightbox using Modal */
+
+#profile-grid { overflow: auto; white-space: normal; } 
+#profile-grid .profile { padding-bottom: 40px; }
+#profile-grid .panel { padding: 0 }
+#profile-grid .panel-body { padding: 15px }
+#profile-grid .profile-name { font-weight: bold; }
+#profile-grid .thumbnail {margin-bottom:6px;}
+#profile-grid .panel-thumbnail { overflow: hidden; }
+#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+
+/*multiple carousel END*/
   
 /*
 ===============================================
@@ -1306,6 +1564,8 @@ page-trainer.php START
   max-width: 270px;
   margin-right: 1em;
   border-radius: 50%;
+
+  shape-outside: inset(1% round 50%); /*MAKES TEXT GO AROUND THE EXACT SHAPE*/
 }
 
 #trainers .container #trainer-posts .event-pic p,

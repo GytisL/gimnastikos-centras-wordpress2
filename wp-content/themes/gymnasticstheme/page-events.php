@@ -50,7 +50,7 @@ get_header (); ?>
 						<?php 
 							//wp_reset_postdata();
 						?>
-						<!-- append here (prints this content with ajax)
+						append here (prints this content with ajax)
 
 					</div>
  
@@ -60,10 +60,10 @@ get_header (); ?>
 
 						$args = array(
 		                    	'category_name' => 'events',
-		                    	'posts_per_page' => '1',
+		                    	'posts_per_page' => '3',
 		                    	//'category_in' => array('15, 17, 30'),category by category name (post id)
-		                    	'paged' => $paged 
-		                    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
+		                    	'paged' => $paged
+		                    	// 'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
 		                    );
 
 						$lastBlog = new WP_Query ($args);
@@ -80,7 +80,6 @@ get_header (); ?>
 							wp_reset_postdata();
 						?>
 		                
-						
 					</div>
 					<!--</div> .container -->
 
@@ -89,7 +88,7 @@ get_header (); ?>
 					
 					<div class="container text-center load-more-block">
 						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
-							<span class="fa fa-spinner loader gymnastics-loading"></span> <span class="button-text">Daugiau<span>
+							<span class="fa fa-spinner loader gymnastics-loading"></span><span class="button-text">Daugiau<span>
 						</a>
 					</div><!-- .container -->
 					<!-- uzdeti button'us 
@@ -107,7 +106,7 @@ get_header (); ?>
 				<h2 class="join">Prisijunk šiandien</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua.</p>
-				<button type="button" class="btn btn-lg btn-success">Užsirašyk dabar!</button>
+				<button type="button" class="btn btn-lg btn-default">Užsirašyk dabar!</button>
 				
 				<div class="search-form-container">
 					<h4>Paieška</h4>
@@ -135,14 +134,14 @@ get_header (); ?>
                 <?php //wp_reset_postdata(); ?> -->
 
                
-				<!-- STARTS TO PRINT FROM SECOND POST-->
+				<!-- STARTS TO PRINT FROM THIRD POST-->
 				
                 <?php 
                 	$args = array(
 					'type' => 'post',
 					'category_name' => 'events',
 					'posts_per_page' => 2,
-					'offset' => 2
+					'offset' => 3
 				);
 
                     $lastBlog = new WP_Query ($args);
