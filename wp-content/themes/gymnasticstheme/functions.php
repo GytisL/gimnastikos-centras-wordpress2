@@ -234,7 +234,7 @@ function load_more_articles_posts() {
 	    	'category_name' => 'events',
 	    	'posts_per_page' => '3',
 	    	//'category_in' => array('15, 17, 30'),category by category name (post id)
-	    	'paged' => $paged 
+	    	'paged' => $paged
 	    	//'category__not_in' => array('211')parameter in which category our post doesnt have to be (post id)
 	    );
 

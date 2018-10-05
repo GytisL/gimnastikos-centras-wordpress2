@@ -98,6 +98,7 @@ var swiper = new Swiper('.swiper-container', {
 /*sipwer slides gallery END*/
 
 
+/**/
  $(function(){//Remove inline css of an HTML elements
     $('* [style]').removeAttr('style');
  });
@@ -252,9 +253,9 @@ $(document).keydown(function (e) {
     var max_page = $(this).data('max-num-pages');
     that.addClass('loading');
       if(window.location.pathname == "/lksb/en/"){
-          that.find('.button-text').text('Loading').slideDown(320);
+          that.find('.button-text').text('Loading');
       }else{
-          that.find('.button-text').text('Kraunama').slideDown(320);
+          that.find('.button-text').text('Kraunama');
       }
       that.find('.fa-spinner').addClass("fa-spin");
       that.find('.loader').css('display','block');
@@ -301,6 +302,7 @@ $(document).keydown(function (e) {
 
 /* AJAX functions page-events.php END */
 
+
 /*page-event-gallery.php multiple carousel START*/
 
 
@@ -329,7 +331,7 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 
 
   $('#carouselExample').carousel({ 
-                interval: 2000
+                interval: 3000
         });
 
 
@@ -389,3 +391,24 @@ $(document).ready(function() {
 
 /*page-trainer.php show/hide button END*/
 
+
+
+
+/*footer.php back to top button START*/
+
+var btn = $('#ButtonToTop');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+/*footer.php back to top button END*/

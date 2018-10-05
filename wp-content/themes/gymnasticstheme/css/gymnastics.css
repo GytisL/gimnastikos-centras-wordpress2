@@ -457,10 +457,14 @@ APIE MUS END
     top: 50px;
     left: 4em;
     right: 3em;
+    margin: 0;
+    padding: 0;
   }
 
   #gallery-list .container .card-deck .card .card-body .card-title {
     color: #fff;
+    margin: 0;
+    padding: 0;
   }
   
   #gallery-list .container .card-deck .card .relative1,
@@ -1050,6 +1054,55 @@ CONTACT-BAR END
 
 /*
 ===============================================
+BACK TO TOP BUTTON START
+===============================================
+*/
+#ButtonToTop {
+  display: inline-block;
+  background-color: #b5aa93;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 105px;
+  right: 35px;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  border-radius: 25px;
+}
+#ButtonToTop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#ButtonToTop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#ButtonToTop:active {
+  background-color: #555;
+}
+#ButtonToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+/*
+===============================================
+BACK TO TOP BUTTON END
+===============================================
+*/
+
+
+/*
+===============================================
 FOOTER START
 ===============================================
 */
@@ -1060,7 +1113,6 @@ FOOTER START
 	font-size: .8rem;
 	padding: 2rem 0 0;
   overflow: hidden;
-
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -1294,29 +1346,29 @@ page-events.php START
   }
 }
 
-  #events .container .col-lg-8 ol .event-pic img {
-    max-height: 165px;
-    max-width: 40%;
-    margin: 0 2em 0 0;
+#events .container .col-lg-8 ol .event-picture img {
+  max-height: 165px;
+  max-width: 40%;
+  margin: 0 2em 0 0;
 
-    background: #fff;
-    padding: 4px;
-    position: relative;
-    content: "";
-    -webkit-transform: rotate(1deg);
-    -moz-transform: rotate(1deg);
-    -o-transform: rotate(1deg);
-    -ms-transform: rotate(1deg);
-    transform: rotate(1deg);
+  background: #fff;
+  padding: 4px;
+  position: relative;
+  content: "";
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
 
-    box-shadow: 
-      /* The top layer shadow */ 
-      1px 1px 1px rgba(0,0,0,0.25), 
-      /* The second layer 
-      -6px -6px 0px 0px #D3D3D3, */ 
-      /* The second layer shadow */
-      1px 1px 1px rgba(0,0,0,0.15);
-  }
+  box-shadow: 
+    /* The top layer shadow */ 
+    1px 1px 1px rgba(0,0,0,0.25), 
+    /* The second layer 
+    -6px -6px 0px 0px #D3D3D3, */ 
+    /* The second layer shadow */
+    1px 1px 1px rgba(0,0,0,0.15);
+}
 
 /*AJAX loading*/
 #events .container .col-lg-8 .load-more-block .gymnastics-load-more {
@@ -1365,6 +1417,22 @@ page-events.php START
 }
 /*spinner rotation END*/
 
+
+/*content-eventsright.php START*/
+
+#events .container .col-lg-4 .event-pic img {
+  content: "";
+  box-shadow: /* The top layer shadow */ 1px 1px 1px rgba(0,0,0,0.25), 
+    /* The second layer -6px -6px 0px 0px #D3D3D3, */ 
+  /* The second layer shadow */ 1px 1px 1px rgba(0,0,0,0.15);
+  margin: 0 2em 0 0;
+  background: #fff;
+  padding: 4px;
+  position: relative;
+}
+
+/*content-eventsright.php END*/
+
 /*
 ===============================================
 page-events.php END
@@ -1381,31 +1449,40 @@ page-event-gallery.php START
   background-color: #fff;
   padding: 4em 0;
 }
-
-@media only screen and (min-width: 768px){
-  #event-gallery .container .content{
-    max-width: 60%;
-    display: -webkit-inline-box;
-    /*flex-wrap: nowrap;*/
-  }
-  #carousel-thumb .carousel-inner .carousel-item img {
-    max-height: 180px;
-  }
-  #carousel-thumb img {
-    max-height: 15px;
-  }
-  
+/*@media only screen and (min-width: 768px) {
+} */ 
+#event-gallery .container .content #slider {
+  height: 200px;
+}
+/*#carousel-thumb .carousel-inner {
+  margin: 2em 0;
+}*/
+#carousel-thumb .carousel-inner .carousel-item img {
+  max-height: 210px;
+  max-width: 320px;
+}
+#carousel-thumb .carousel-indicators{
+  bottom: -55px;
 }
 
-#event-gallery .container .content .text{
+#carousel-thumb img {
+  max-height: 20px;
+}
+#event-gallery .container .content {
+  float:left; 
+  width: 350px;
+  height: 300px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  background-color: #fff;
+}
+#event-gallery .container .content .text {
   padding-bottom: 1em;
 }
-
 #myCarousel .list-inline {
   white-space:nowrap;
   /*overflow-x:auto;*/
 }
-
 #myCarousel .carousel-indicators {
   position: static;
   left: initial;
@@ -1415,7 +1492,6 @@ page-event-gallery.php START
   text-align: center;
   margin: 1em;
 }
-
 #myCarousel .carousel-indicators > li {
   width: initial;
   height: initial;
@@ -1424,36 +1500,16 @@ page-event-gallery.php START
   max-width: 100px;
   max-height: 100px;
 }
-
 #myCarousel .carousel-indicators > li.active img {
   opacity: 0.7;
 }
-
-/*#myCarousel .picture-list a .fa-chevron-left {
-  position: absolute;
-  left: 1em;
-  bottom: 16.7em;
-}
-
-#myCarousel .picture-list a .fa-chevron-right {
-  position: absolute;
-  left: 44em;
-  bottom: 17em;
-}*/
-
-#myCarousel .picture-list .picture-item img{
+#myCarousel .picture-list .picture-item img {
   max-width: 100%;
   max-height: 515px;
 }
 
-#carousel-thumb img{
-  max-height: 10px;
-}
-
 /*multiple carousel START*/
-
 @media (min-width: 768px) {
-
     /* show 3 items */
     .picture-list .active,
     .picture-list .active + .picture-item,
@@ -1476,12 +1532,12 @@ page-event-gallery.php START
     }
     
     .picture-list .active.picture-item + .picture-item + .picture-item + .picture-item + .picture-item {
-        position: absolute;
-        top: 0;
-        right: -25%;
-        z-index: -1;
-        display: block;
-        visibility: visible;
+      position: absolute;
+      top: 0;
+      right: -25%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
     }
     
     /* left or forward direction */
@@ -1490,19 +1546,19 @@ page-event-gallery.php START
     .carousel-item-next .carousel-item-left + .picture-item + .picture-item,
     .carousel-item-next .carousel-item-left + .picture-item + .picture-item + .picture-item,
     .carousel-item-next .carousel-item-left + .picture-item + .picture-item + .picture-item + .picture-item{
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
     }
     
     /* farthest right hidden item must be abso position for animations */
     .picture-list .carousel-item-prev .carousel-item-right {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        visibility: visible;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
     }
     
     /* right or prev direction */
@@ -1511,17 +1567,15 @@ page-event-gallery.php START
     .carousel-item-prev .carousel-item-right + .picture-item + .picture-item,
     .carousel-item-prev .carousel-item-right + .picture-item + .picture-item + .picture-item,
     .carousel-item-prev .carousel-item-right + .picture-item + .picture-item + .picture-item + .picture-item{
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
     }
-
 }
 
- /* Bootstrap Lightbox using Modal */
-
+/* Bootstrap Lightbox using Modal */
 #profile-grid { overflow: auto; white-space: normal; } 
 #profile-grid .profile { padding-bottom: 40px; }
 #profile-grid .panel { padding: 0 }
@@ -1530,7 +1584,6 @@ page-event-gallery.php START
 #profile-grid .thumbnail {margin-bottom:6px;}
 #profile-grid .panel-thumbnail { overflow: hidden; }
 #profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
-
 /*multiple carousel END*/
   
 /*
@@ -1572,13 +1625,20 @@ page-trainer.php START
 #trainers .container #trainer-posts .event-pic2 p{
   margin: 0;
   padding: 0;
+  text-align: justify;
 }
 
 #trainers .container #trainer-posts .event-pic2 img {
   max-height: 230px;
   max-width: 270px;
-  margin-right: 1em;
+  margin-left: 1em;
   border-radius: 50%;
+  shape-outside: inset(1% round 50%); /*MAKES TEXT GO AROUND THE EXACT SHAPE*/
+}
+#trainers .container #trainer-posts .event-pic2 .button #text2 .btn-container{
+  margin:auto;
+  height:44px;
+  width:166.23px;
 }
 /*
 #trainers .container #trainer-posts .event-pic .button,
@@ -1594,12 +1654,6 @@ page-trainer.php START
 
 #text{
       display:none;
-}
-
-#trainers .container #trainer-posts .event-pic2 .button #text2 .btn-container{
-  margin:auto;
-  height:44px;
-  width:166.23px;
 }
 
 #change{

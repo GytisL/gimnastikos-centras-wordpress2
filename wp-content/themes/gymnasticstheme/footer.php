@@ -1,47 +1,10 @@
 
 <?php wcr_share_buttons(); ?> <!-- Social media share buttons social-media-sidebar.php -->
 	
-	<section id="contact-bar">
-		<!-- kontaktine forma su MODAL START -->
-		<!-- <div class="container"> -->
-
-		<div class="body">
-		 	<!-- <h2>Modal Example</h2> -->
-			<!-- Trigger the modal with a button -->
-			<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#contact">Susisiekite</button> -->
-			
-				<!-- <a href="#" data-toggle="modal" data-target="#contact" class="button1"><i class="fa fa-envelope"></i>Susisiekite</a> -->
-				<!-- <button type="button" class="btn btn-lg btn-block btn-primary"><a href="#" data-toggle="modal" data-target="#contact" class="button1"><i class="fa fa-envelope"></i>Susisiekite</a></button> -->
-				<button type="button" class="btn btn-lg btn-block contact-btn"><a href="#" data-toggle="modal" data-target="#contact" class="button1"><i class="fa fa-envelope"></i>Susisiekite</a></button>
-			<!-- Modal -->
-			<div class="modal fade" id="contact" role="dialog">
-			    <div class="modal-dialog">
-					<!-- Modal content-->
-			    	<div class="modal-content">
-			    		<div class="modal-header">
-			    			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			    			<!-- <h4 class="modal-title">Modal Header</h4> -->
-			    		</div>
-
-				    	<div class="modal-body"> <!-- 1. install plug-in to wordpress admin. 2. create new form  3. insert php code. 4. copy key and insert to ''  . -->
-				          <?php echo do_shortcode('[contact-form-7 id="38" title="contact"]') ?>
-				          
-				    	</div>
-						<!-- <div class="modal-footer">
-				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        </div> -->
-			    	</div>
-			      
-				</div>
-			</div>
-
-		</div>
-		<!-- </div> --> <!-- container end -->
-		<!-- kontaktine forma su MODAL END -->
-	</section>
-
 	
 
+	
+	<a id="ButtonToTop"></a>
 
 
 	<footer id="footer-main">
@@ -96,8 +59,7 @@
                         $the_query = new WP_Query( $args = array(
                             'category_name' => 'Poraste',
                             'posts_per_page' => 1,
-                            'orderby' => 'date',
-
+                            'orderby' => 'date'
                             ));
 
                             if ( $the_query->have_posts() ) :
