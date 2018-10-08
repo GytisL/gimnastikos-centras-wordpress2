@@ -80,6 +80,10 @@ function handle(delta) {
 //   });
 // });
 
+
+
+
+
 $(document).ready(function($){
 var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
@@ -98,11 +102,11 @@ var swiper = new Swiper('.swiper-container', {
 /*sipwer slides gallery END*/
 
 
-/**/
+/*
  $(function(){//Remove inline css of an HTML elements
     $('* [style]').removeAttr('style');
  });
-
+*/
 
 /*grid row cards START*/
 $(function() {
