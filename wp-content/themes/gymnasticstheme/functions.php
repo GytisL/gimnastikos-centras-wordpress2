@@ -223,7 +223,7 @@ add_action('wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts'
 add_action('wp_ajax_priv_load_more_articles_posts', 'load_more_articles_posts');
 */
 
-
+/*load-more ajax button events.php START*/
 add_action( 'wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts' );
 add_action( 'wp_ajax_load_more_articles_posts', 'load_more_articles_posts' );
 function load_more_articles_posts() {
@@ -231,7 +231,7 @@ function load_more_articles_posts() {
 	$paged = $_POST["page"]+1;
 	
 	$args = array(
-	    	'category_name' => 'events',
+	    	'category_name' => 'renginiai',
 	    	'posts_per_page' => '3',
 	    	//'category_in' => array('15, 17, 30'),category by category name (post id)
 	    	'paged' => $paged
@@ -254,12 +254,19 @@ function load_more_articles_posts() {
 	 
 		wp_reset_postdata();
 }
+/*load-more ajax button events.php END*/
+
+
 
 /*
 	==========================================
 	 AJAX functions END
 	==========================================
 */
+
+
+
+
 
 
 	

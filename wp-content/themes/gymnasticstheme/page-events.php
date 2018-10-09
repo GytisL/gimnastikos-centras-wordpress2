@@ -14,7 +14,6 @@ get_header (); ?>
 		</div>
 	</section>-->
 
-
 	<section id="events">
 		<div class="container"><!-- d-flex -->
 			<div class="col-lg-8"><!-- d-inline-block -->
@@ -59,7 +58,7 @@ get_header (); ?>
 						<?php 
 
 						$args = array(
-		                    	'category_name' => 'events',
+		                    	'category_name' => 'renginiai',
 		                    	'posts_per_page' => '3',
 		                    	//'category_in' => array('15, 17, 30'),category by category name (post id)
 		                    	'paged' => $paged
@@ -141,7 +140,16 @@ get_header (); ?>
 					'type' => 'post',
 					'category_name' => 'events',
 					'posts_per_page' => 2,
-					'offset' => 3
+					'offset' => 3,
+					'orderby' => 'date'
+					/*'tax_query' => array(
+				        array(
+				            'taxonomy' => 'post_format',
+				            'field' => 'slug',
+				            'terms' => array( 'post-format-aside' ),
+				            'operator' => 'NOT IN'
+				        )
+				    )*/ //tax_query excludes the post from the same category with post format aside
 				);
 
                     $lastBlog = new WP_Query ($args);

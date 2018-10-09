@@ -1415,12 +1415,12 @@ page-events.php START
     margin: 1em 0;
   }
 
-  #events .container .col-lg-8 ol {
+  #events .container .col-lg-8 #gymnastics-posts ol {
     padding: 0;
   }
 }
 
-#events .container .col-lg-8 ol .event-picture img {
+#events .container .col-lg-8 #gymnastics-posts ol .event-picture img {
   max-height: 165px;
   max-width: 40%;
   margin: 0 2em 0 0;
@@ -1442,6 +1442,23 @@ page-events.php START
     -6px -6px 0px 0px #D3D3D3, */ 
     /* The second layer shadow */
     1px 1px 1px rgba(0,0,0,0.15);
+}
+
+#events .container .col-lg-8 #gymnastics-posts ol .event-picture strong a{
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+  background-size: 200% auto;
+  color: #fff;
+  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  /*display: block;*/
+  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+  text-decoration: none;
 }
 
 /*AJAX loading*/

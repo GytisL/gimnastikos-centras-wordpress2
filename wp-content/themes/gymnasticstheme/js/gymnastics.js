@@ -307,6 +307,9 @@ $(document).keydown(function (e) {
 /* AJAX functions page-events.php END */
 
 
+
+
+
 /*page-event-gallery.php multiple carousel START*/
 
 

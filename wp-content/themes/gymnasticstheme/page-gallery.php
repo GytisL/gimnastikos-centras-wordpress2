@@ -20,14 +20,18 @@ get_header(); ?>
 		<div class="container">
 			<h2 class="display-3 text-center">Galerija</h2>
 			<?php
-                $args  = array('category_name' => 'pagrindinegalerija','posts_per_page' => "1");
+                $args  = array(
+                	'category_name' => 'pagrindinegalerija',
+                	'posts_per_page' => '1',
+                	'paged' => $paged
+                );
 
                 $lastBlog = new WP_Query ($args);
 
             if ( $lastBlog->have_posts() ) : ?>
                 <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
 
-					<?php get_template_part('contents/content','gallery'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->
+					<?php get_template_part('contents/content','gallery'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-gallery.php failas-->
 
                 <?php endwhile; ?>
             <?php endif; ?>
