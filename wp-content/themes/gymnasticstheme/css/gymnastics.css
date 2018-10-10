@@ -1548,9 +1548,14 @@ page-event-gallery.php START
 /*#carousel-thumb .carousel-inner {
   margin: 2em 0;
 }*/
-#carousel-thumb .carousel-inner .carousel-item img {
-  max-height: 210px;
-  max-width: 320px;
+#carousel-thumb .carousel-image .carousel-img{
+  max-height: 230px;
+  max-width: 100%;
+}
+#carousel-thumb .carousel-image .carousel-img img {
+  max-height: 230px;
+  /*max-width: 340px;*/
+  display: block;
 }
 #carousel-thumb .carousel-indicators{
   bottom: -55px;
@@ -1567,9 +1572,14 @@ page-event-gallery.php START
   margin-bottom: 1em;
   background-color: #fff;
 }
-#event-gallery .container .content .text {
-  padding-bottom: 1em;
+#event-gallery .text {
+  padding: 0 0 .5em 0;
+  margin: 0;
 }
+#event-gallery .container .container-fluid #carouselExample .picture-list {
+  max-height: 160px;
+}
+
 #myCarousel .list-inline {
   white-space:nowrap;
   /*overflow-x:auto;*/

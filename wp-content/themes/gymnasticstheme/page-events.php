@@ -138,7 +138,7 @@ get_header (); ?>
                 <?php 
                 	$args = array(
 					'type' => 'post',
-					'category_name' => 'events',
+					'category_name' => 'renginiai',
 					'posts_per_page' => 2,
 					'offset' => 3,
 					'orderby' => 'date'
