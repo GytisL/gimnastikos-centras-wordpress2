@@ -467,15 +467,7 @@ APIE MUS END
     padding: 0;
   }
   
-  #gallery-list .container .card-deck .card .relative1,
-  #gallery-list .container .card-deck .card .relative4,
-  #gallery-list .container .card-deck .card .relative7,
-  #gallery-list .container .card-deck .card .relative10,
-  #gallery-list .container .card-deck .card .relative13,
-  #gallery-list .container .card-deck .card .relative16,
-  #gallery-list .container .card-deck .card .relative19,
-  #gallery-list .container .card-deck .card .relative22,
-  #gallery-list .container .card-deck .card .relative25 {
+  #gallery-list .container .card-deck .card .relative1 {
     position: relative;
     height: 204px;
     width: 245px;
@@ -483,16 +475,7 @@ APIE MUS END
     border-color: #eee;
     /*opacity: 0.7;*/
   }
-  
-  #gallery-list .container .card-deck .card .relative2,
-  #gallery-list .container .card-deck .card .relative5,
-  #gallery-list .container .card-deck .card .relative8,
-  #gallery-list .container .card-deck .card .relative11,
-  #gallery-list .container .card-deck .card .relative14,
-  #gallery-list .container .card-deck .card .relative17,
-  #gallery-list .container .card-deck .card .relative20,
-  #gallery-list .container .card-deck .card .relative23,
-  #gallery-list .container .card-deck .card .relative26 {
+  #gallery-list .container .card-deck .card .relative2 {
     position: relative;
     height: 185px;
     width: 275px;
@@ -500,16 +483,7 @@ APIE MUS END
     border-color: #eee;
     /*opacity: 0.7;*/
   }
-  
-  #gallery-list .container .card-deck .card .relative3,
-  #gallery-list .container .card-deck .card .relative6,
-  #gallery-list .container .card-deck .card .relative9,
-  #gallery-list .container .card-deck .card .relative12,
-  #gallery-list .container .card-deck .card .relative15,
-  #gallery-list .container .card-deck .card .relative18,
-  #gallery-list .container .card-deck .card .relative21,
-  #gallery-list .container .card-deck .card .relative24,
-  #gallery-list .container .card-deck .card .relative27 {
+  #gallery-list .container .card-deck .card .relative3 {
     position: relative;
     height: 192px;
     width: 255px;
@@ -517,48 +491,21 @@ APIE MUS END
     border-color: #eee;
     /*opacity: 0.7;*/
   }
-  
-  #gallery-list .container .card-deck .card #rel1,
-  #gallery-list .container .card-deck .card #rel4,
-  #gallery-list .container .card-deck .card #rel7,
-  #gallery-list .container .card-deck .card #rel10,
-  #gallery-list .container .card-deck .card #rel13,
-  #gallery-list .container .card-deck .card #rel16,
-  #gallery-list .container .card-deck .card #rel19,
-  #gallery-list .container .card-deck .card #rel22,
-  #gallery-list .container .card-deck .card #rel25 {
+  #gallery-list .container .card-deck .card .rel1 {
     top: 5px;
     left: 10px;
     transform: rotate(-1deg);
     margin: 0px 50px 0px 50px;
     border: solid 1px #505050;
   }
-  
-  #gallery-list .container .card-deck .card #rel2,
-  #gallery-list .container .card-deck .card #rel5,
-  #gallery-list .container .card-deck .card #rel8,
-  #gallery-list .container .card-deck .card #rel11,
-  #gallery-list .container .card-deck .card #rel14,
-  #gallery-list .container .card-deck .card #rel17,
-  #gallery-list .container .card-deck .card #rel20,
-  #gallery-list .container .card-deck .card #rel23,
-  #gallery-list .container .card-deck .card #rel26 {
+  #gallery-list .container .card-deck .card .rel2 {
     top: -184px;
     left: -8px;
     margin: 0px 50px 0px 50px;
     transform: rotate(1deg);
     border: solid 1px #505050;
   }
-  
-  #gallery-list .container .card-deck .card #rel3,
-  #gallery-list .container .card-deck .card #rel6,
-  #gallery-list .container .card-deck .card #rel9,
-  #gallery-list .container .card-deck .card #rel12,
-  #gallery-list .container .card-deck .card #rel15,
-  #gallery-list .container .card-deck .card #rel18,
-  #gallery-list .container .card-deck .card #rel21,
-  #gallery-list .container .card-deck .card #rel24,
-  #gallery-list .container .card-deck .card #rel27 {
+  #gallery-list .container .card-deck .card .rel3 {
     top: -375px;
     left: 3px;
     margin: 0px 50px 0px 50px;
@@ -1578,6 +1525,15 @@ page-event-gallery.php START
 }
 #event-gallery .container .container-fluid #carouselExample .picture-list {
   max-height: 160px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#event-gallery .container .container-fluid #carouselExample .picture-list .picture-item .panel .panel-thumbnail a img{
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 #myCarousel .list-inline {

@@ -265,7 +265,11 @@ function load_more_articles_posts() {
 */
 
 
+add_filter( 'post_type_link', 'append_query_string', 10, 2 );
+function append_query_string( $url, $post ) {
 
+    return $url.'?my_pid='.$post->ID;
+}
 
 
 

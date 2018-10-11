@@ -22,8 +22,7 @@ get_header(); ?>
 			<?php
                 $args  = array(
                 	'category_name' => 'pagrindinegalerija',
-                	'posts_per_page' => '1',
-                	'paged' => $paged
+                	'posts_per_page' => '1'
                 );
 
                 $lastBlog = new WP_Query ($args);
