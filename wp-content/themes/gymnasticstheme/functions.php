@@ -265,15 +265,31 @@ function load_more_articles_posts() {
 */
 
 
-add_filter( 'post_type_link', 'append_query_string', 10, 2 );
-function append_query_string( $url, $post ) {
+// add_filter( 'post_type_link', 'append_query_string', 10, 2 );
+// function append_query_string( $url, $post ) {
 
-    return $url.'?my_pid='.$post->ID;
-}
+//     return $url.'?my_pid='.$post->ID;
+// }
 
 
+/*
+	==========================================
+	 SEARCH WP AJAX LIVE SEARCH PLUGIN START
+	==========================================
+*/
+add_filter( 'searchwp_live_search_hijack_get_search_form', '__return_false' );
 
 	
+/*
+	==========================================
+	 AJAX LIVE SEARCH PLUGIN END
+	==========================================
+*/
+
+
+
+
+
 
 
 ?>

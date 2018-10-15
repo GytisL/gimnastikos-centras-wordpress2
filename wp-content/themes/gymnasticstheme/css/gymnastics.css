@@ -1326,7 +1326,9 @@ page-events.php START
   #events .container {
     display: flex;
   }
-
+  #events .container .col-lg-8 #gymnastics-posts ol {
+      padding: 0;
+    }
   #events .container .col-lg-8,
   #events .container .col-lg-4 {
     display: inline-block;
@@ -1357,13 +1359,16 @@ page-events.php START
     display: block;
     background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
   }
-
+  /*searchform.php */
   #events .container .col-lg-4 .search-form-container {
     margin: 1em 0;
   }
-
-  #events .container .col-lg-8 #gymnastics-posts ol {
-    padding: 0;
+  #events .container .col-lg-4 .search-form-container .search{
+    display: flex;
+  }
+  #events .container .col-lg-4 .search-form-container .search .form-control{
+    padding: 0 10px;
+    margin-right: 7px;
   }
 }
 
@@ -1519,12 +1524,15 @@ page-event-gallery.php START
   margin-bottom: 1em;
   background-color: #fff;
 }
+#event-gallery .container .container-fluid {
+  padding: 0;
+}
 #event-gallery .text {
-  padding: 0 0 .5em 0;
+  padding: 0 .5em .5em 0;
   margin: 0;
 }
 #event-gallery .container .container-fluid #carouselExample .picture-list {
-  max-height: 160px;
+  max-height: 250px;
   width: 100%;
   margin: 0 auto;
 }
@@ -1533,7 +1541,7 @@ page-event-gallery.php START
   margin: 0 auto;
   display: block;
   max-width: 100%;
-  height: auto;
+  max-height: 220px;
 }
 
 #myCarousel .list-inline {
