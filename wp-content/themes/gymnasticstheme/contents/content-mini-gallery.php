@@ -95,21 +95,24 @@
 					    <!--Slides-->
 					    <div class="carousel-inner" role="listbox">
 					        <div class="carousel-item active pics-gallery"> <!--susikurti nauja klase ir ideti i css-->
-					            <video loop="" muted="" autoplay="" playsinline="">
-						            <?php echo get_post_meta( get_the_ID(), 'video-1', true); ?> <!-- video  -  custom field'o name --> 
-						<!-- <iframe width="100%" height="360" src="https://player.vimeo.com/video/253404002"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						<iframe width="100%" height="320" src="https://www.youtube.com/embed/4h02IJMTvFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-						        </video>
+					            <!-- <video loop="" muted="" autoplay="" playsinline=""> -->
+					            	<?php echo get_post_meta( get_the_ID(), 'video-1', true); ?> <!-- video  -  custom field'o name-->
+						        <!-- </video>  -->
 					        </div>
 					        <div class="carousel-item pics-gallery">
-					            <video loop="" muted="" autoplay="" playsinline="">
+					            <!-- <video loop="" muted="" autoplay="" playsinline=""> -->
 					                <?php echo get_post_meta( get_the_ID(), 'video-2', true); ?>
-					            </video>
+					            <!-- </video> -->
 					        </div>
 					        <div class="carousel-item pics-gallery">
 					            <video loop="" muted="" autoplay="" playsinline="">
 					                <?php echo get_post_meta( get_the_ID(), 'video-3', true); ?>
 					            </video>
+					            <!-- <iframe width="100%" height="360" src="https://player.vimeo.com/video/253404002"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<iframe width="100%" height="320" src="https://www.youtube.com/embed/4h02IJMTvFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+					        </div>
+					        <div class="carousel-item pics-gallery">
+					                <?php echo get_post_meta( get_the_ID(), 'video-4', true); ?>
 					        </div>
 					    </div>
 					    <!--/.Slides-->

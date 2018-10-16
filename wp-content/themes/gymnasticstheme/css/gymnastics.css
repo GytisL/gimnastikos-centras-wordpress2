@@ -170,6 +170,75 @@ SWIPER SLIDER START
   -webkit-font-smoothing: antialiased;
 }
 
+/* header.php text fadeInLeft START*/
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity:0;
+        -webkit-transform: translatex(-10px);
+        -moz-transform: translatex(-10px);
+        -o-transform: translatex(-10px);
+        transform: translatex(-10px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+@-moz-keyframes fadeInLeft {
+    from {
+        opacity:0;
+        -webkit-transform: translatex(-10px);
+        -moz-transform: translatex(-10px);
+        -o-transform: translatex(-10px);
+        transform: translatex(-10px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity:0;
+        -webkit-transform: translatex(-100px);
+        -moz-transform: translatex(-100px);
+        -o-transform: translatex(-100px);
+        transform: translatex(-100px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+#cover .swiper-container .swiper-wrapper .swiper-slide .in-left {
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-duration:2s;
+    animation-delay: 2s;
+}
+/* header.php text fadeInLeft END*/
+
 #cover .swiper-container #cover1 {
   background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
   width: 100%;
@@ -552,6 +621,11 @@ PAGRINDINIO PSL GALERIJA START
 #multi-gallery .container .section .video-gallery {
   padding: 0;
   margin-right: 0;
+}
+
+#multi-gallery .container .section .video-gallery #video-carousel-example .carousel-inner .pics-gallery iframe{
+  width: 100%;
+  height: 400px;
 }
 
 #multi-gallery .container .to-gallery {

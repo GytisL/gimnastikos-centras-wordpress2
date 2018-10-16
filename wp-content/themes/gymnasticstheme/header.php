@@ -93,11 +93,14 @@
 			
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" id="cover1"><h1>Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover2"><h1>Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover3"><h1>Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover4"><h1>Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover5"><h1>Sveiki prisijungę prie gimnastikos svetainės</h1></div>
+					<div class="swiper-slide" id="cover1"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
+					<div class="swiper-slide" id="cover2"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
+					<div class="swiper-slide" id="cover3"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
+					<div class="swiper-slide" id="cover4"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
+					<div class="swiper-slide" id="cover5"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
+					<style type="text/css">
+						
+					</style>
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination"></div>

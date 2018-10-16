@@ -80,10 +80,7 @@ function handle(delta) {
 //   });
 // });
 
-
-
-
-
+/*swiper slides gallery START*/
 $(document).ready(function($){
 var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
@@ -99,7 +96,7 @@ var swiper = new Swiper('.swiper-container', {
       },
     });
 });
-/*sipwer slides gallery END*/
+/*swiper slides gallery END*/
 
 
 /*
