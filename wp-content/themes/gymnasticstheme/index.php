@@ -8,7 +8,7 @@
 				<?php the_content(); ?>
 
 				<?php endwhile; else : ?>
-				<p>Atsiprašome, neradome jokių įrašų, atitinkančių jūsų kriterijus.</p>
+				<p><?php _e( 'Atsiprašome, bet užklausa neatitinka jūsų kriterijų.' ); ?></p>
 
 			<?php endif; ?>
 

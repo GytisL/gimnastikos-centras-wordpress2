@@ -3,7 +3,7 @@
 	<head>
 		<meta charset=" <?php bloginfo('charset'); ?> ">
 		<title> <?php bloginfo('Gimnastikos centras'); ?><?php wp_title('|'); ?> </title>
-		<meta name="description" content=" <?php bloginfo('description'); ?> ">
+		<meta name="description" content=" <?php bloginfo('Gimnastikos centras'); ?> ">
 		<?php wp_head(); ?>
 	</head>
 	
@@ -98,9 +98,6 @@
 					<div class="swiper-slide" id="cover3"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
 					<div class="swiper-slide" id="cover4"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
 					<div class="swiper-slide" id="cover5"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<style type="text/css">
-						
-					</style>
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination"></div>

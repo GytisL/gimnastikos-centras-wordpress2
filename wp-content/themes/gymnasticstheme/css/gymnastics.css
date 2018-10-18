@@ -162,7 +162,8 @@ SWIPER SLIDER START
   align-items: center;
 }
 
-#cover .swiper-container h1 {
+#cover .swiper-container .swiper-wrapper .swiper-slide h1 {
+  font-size: 48px;
   text-transform: uppercase;
   position: relative;
   top: 2em;
@@ -262,7 +263,7 @@ SWIPER SLIDER START
 }
 
 #cover .swiper-container #cover4 {
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
+  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg) no-repeat;
   width: 100%;
   max-height: 570px;
   object-fit: cover;

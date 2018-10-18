@@ -4,10 +4,9 @@ get_header(); ?>
 	
 
 	<section id="feature-one">
-		
+		<h2 class="display-4 text-center">Pagrindinis puslapis</h2>
 		<div class="container">
 			<div class="feature-row">
-
 				<!-- 1 variantas -->  <?php 
 					//$args = array ( 
 					// Post or Page ID
@@ -32,9 +31,7 @@ get_header(); ?>
 					//} //else {
 					 
 					//echo 'Nieko nerasta';
-					     
 					//} ?>
-
 
 				<!-- 2 trumpesnis variantas php POST content START -->
 				<!-- per wordpress postuose susikurti nauja posta, isijungti custom field. Tada add new category ir pasirinkt video -->
@@ -61,7 +58,6 @@ get_header(); ?>
 
 	<section id="multi-gallery">
 		<div class="container">
-
 			<?php
                 $args  = array('category_name' => 'galerija','posts_per_page' => "1");
 
