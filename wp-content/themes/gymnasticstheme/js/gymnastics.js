@@ -50,7 +50,6 @@ function handle(delta) {
 
 
 
-
 /*Smooth Scrolling Effect START
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -105,6 +104,7 @@ var swiper = new Swiper('.swiper-container', {
  });
 */
 
+
 /*grid row cards START*/
 $(function() {
     var selectedClass = "";
@@ -118,11 +118,7 @@ $(function() {
         }, 300);
     });
 });
-
 /* grid row cards END*/
-
-
-
 
 
 /*#id map GOOGLE MAPS START*/
@@ -142,7 +138,6 @@ function initMap() {
 
 
 /*page-gallery.php picture gallery START*/
-
 let modalId = $('#image-gallery');
 
 $(document)
@@ -163,8 +158,7 @@ $(document)
       }
     }
 
-    /**
-     *
+    /*
      * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
      * @param setClickAttr  Sets the attribute for the click handler.
      */
@@ -234,15 +228,10 @@ $(document).keydown(function (e) {
     }
     e.preventDefault(); // prevent the default action (scroll / move caret)
   });
-
-
 /*gallery.html picture gallery END*/
 
 
-
 /* AJAX functions page-events.php START */
-
-
   $(".gymnastics-load-more:not(.loading)").on('click', function(){
     
     var that = $(this);
@@ -280,7 +269,6 @@ $(document).keydown(function (e) {
         that.data('page', newPage);
         $('#gymnastics-posts').append( response );
 
-
         that.removeClass('.loading');
         that.find('.fa-spinner').removeClass("fa-spin");
         that.find('.button-text').text('Rodyti daugiau').slideUp(320);
@@ -293,24 +281,13 @@ $(document).keydown(function (e) {
           that.find('.loader').css('display','none');
         }
 
-        
       }
-      
     });
-    
   });
-
-
 /* AJAX functions page-events.php END */
 
 
-
-
-
 /*page-event-gallery.php multiple carousel START*/
-
-
-
 $('#carouselExample').on('slide.bs.carousel', function (e) {
 
   
@@ -352,54 +329,75 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
     });
 
   });
-
 /*page-event-gallery.php multiple carousel END*/
 
 
 /*page-trainer.php show/hide button START*/
 
-$(document).ready(function() {
+const toggler = (() => {
+  const dataAttr = "data-toggler";
 
-      $("#change2").on('click', function() {
-        var hide2 = $("#change2").text();
+  // Get height of an element object
+  // Assumes it is hidden by max-height: 0 in the CSS
+  const getHeight = (obj) => {
+    obj.setAttribute("style", "max-height: auto");
+    const height = obj.scrollHeight + "px";
+    obj.removeAttribute("style");
+    return height;
+  };
+  
+  // Toggles the show/hide state of button and block using ARIA attributes
+  const toggleState = (togglerBtn, isHidden) => {
+  
+    const toggledAttr = togglerBtn.getAttribute(dataAttr);
+    if (!toggledAttr) {return;}
+    
+    const toggled = document.querySelector(toggledAttr);
+    if (!toggled) {return;}
 
-        if (hide2 == "Daugiau") {
-          //Stuff to do when btn is in the read more state
-          $("#change2").text("Mažiau");
-          $("#text2").slideDown(900);
-          //$(".button").animate({marginTop: '-29px'}, 1500);
-        } else {
-          //Stuff to do when btn is in the read less state
-          $("#change2").text("Daugiau");
-          $("#text2").slideUp(900);
+    if (isHidden) { // Show
+      //toggled.setAttribute("style", "max-height: " + getHeight(toggled));
+      toggled.setAttribute('style', 'max-height:' + toggled.scrollHeight + 'px');
+    } else { // Hide
+      //toggled.removeAttribute("style");
+    }
 
-          //$('.button').animate({marginTop: '-80px'}, 1500);
-        }
-      });
+    togglerBtn.setAttribute("aria-expanded", isHidden);
+    toggled.setAttribute("aria-hidden", !isHidden);
+  };
+  
 
-      $("#change").on('click', function() {
-        var hide = $("#change").text();
-        if (hide == "Daugiau") {
-          //Stuff to do when btn is in the read more state
-          $("#change").text("Mažiau");
-          $("#text").slideDown(1000);
-          //$(".button").animate({marginTop: '-29px'}, 1500);
-        } else {
-          //Stuff to do when btn is in the read less state
-          $("#change").text("Daugiau");
-          $("#text").slideUp(1000);
-          //$('.button').animate({marginTop: '-80px'}, 1500);
-        }
-      });
-});
+  const isOpen = (togglerBtn) => {
+    return togglerBtn.getAttribute("aria-expanded") === "true";
+  };
+  
 
+  const togglerClicked = (e) => {
+    const togglerBtn = e.target;
+    toggleState(togglerBtn, !isOpen(togglerBtn));
+  };
+  
+
+  const initialise = (() => {
+
+    const togglerButtons = document.querySelectorAll("["+ dataAttr + "]");
+
+    // Run through each toggle button which has a data-toggler3 set
+    for (const togglerBtn of togglerButtons) {
+      
+      // Set ARIA states
+      toggleState(togglerBtn, isOpen(togglerBtn));
+
+      // Toggle ARIA state on a button click
+      togglerBtn.addEventListener("click", togglerClicked);
+    }
+  })();
+  
+})();
 /*page-trainer.php show/hide button END*/
 
 
-
-
 /*footer.php back to top button START*/
-
 var btn = $('#ButtonToTop');
 
 $(window).scroll(function() {
@@ -414,5 +412,4 @@ btn.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '300');
 });
-
 /*footer.php back to top button END*/

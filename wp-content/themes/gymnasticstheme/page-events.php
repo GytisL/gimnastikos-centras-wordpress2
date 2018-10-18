@@ -17,7 +17,7 @@ get_header (); ?>
 	<section id="events">
 		<div class="container"><!-- d-flex -->
 			<div class="col-lg-8"><!-- d-inline-block -->
-				<h2 class="display-3 text-center">Įvykiai</h2>
+				<h2 class="display-4 text-center">Įvykiai</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam modi ratione ut nisi tempora quibusdam autem est numquam qui culpa eos eum commodi recusandae nihil quisquam magnam, perferendis, voluptate neque.</p>
 				
 					<!-- <div id="gymnastics-posts">

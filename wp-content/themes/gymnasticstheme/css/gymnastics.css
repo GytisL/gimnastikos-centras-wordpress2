@@ -582,7 +582,6 @@ APIE MUS END
   }
 /*page-gallery-list.php END*/
 
-
 /*
 ===============================================
 PAGRINDINIO PSL GALERIJA START
@@ -721,7 +720,6 @@ PAGRINDINIO PSL GALERIJA START
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
     transform: translateZ(0);
 }
-
 #gallery .pics .img-fluid::after {
   content: "";
   border-radius: 5px;
@@ -736,12 +734,10 @@ PAGRINDINIO PSL GALERIJA START
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 #gallery .pics .img-fluid:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.25, 1.25);
 }
-
 #gallery .pics .img-fluid:hover::after {
     opacity: 1;
 }*/
@@ -797,11 +793,10 @@ PAGRINDINIO PSL GALERIJA START
   position: absolute;
   bottom: 11rem;
 }
+/*page-main.php END*/
 
-/*page-main.php*/
 
-
-/*page-gallery.php*/
+/*page-gallery.php START*/
 #picture-gallery{
   background-color: #fff;
 }
@@ -825,7 +820,7 @@ PAGRINDINIO PSL GALERIJA START
   display: block;
   font-size: 1.5em;
 }
-/*page-gallery.php*/
+/*page-gallery.php END*/
 
 /*
 ===============================================
@@ -915,7 +910,7 @@ KONTAKTAI START
   vertical-align: middle;
   width: 100%;
 }
-/*content-contacts.php map-overlay START*/
+/*content-contacts.php map-overlay END*/
 
 #contacts .container .row .col-lg-5 table {
   border: none;
@@ -931,7 +926,6 @@ KONTAKTAI START
 #contacts .container .title {
   font-size: 3rem;
 }
-
 /*
 ===============================================
 KONTAKTAI END
@@ -1177,10 +1171,8 @@ BACK TO TOP BUTTON END
 FOOTER START
 ===============================================
 */
-
-
 @media only screen and (min-width: 768px){
-    #footer-main {
+  #footer-main {
     background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255, .40) 0%, rgba(0,0,0, .25) 200%);
     background-blend-mode: multiply;
     color: #fff;
@@ -1192,33 +1184,6 @@ FOOTER START
     width: 100%;
     z-index: -1;
   }
-    .col-sm-2 .arrow-up {
-    position: absolute;
-    left: 79rem;
-    top: -16rem;
-  }
-
-  .arrow-up .btn {
-    color: whitesmoke;
-    border-color: antiquewhite;
-    height: 30px;
-    width: 30px;
-    border-radius: 8px;
-  }
-
-  .arrow-up .btn:hover {
-    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-  }
-
-   .solution .logo {
-    position: absolute;
-    bottom: -5em;
-    left: 92em;
-    opacity: 0.3;
-    padding: 0;
-    margin: 0;
-  }
-
   #footer-main .container .row .solution .logo p {
     text-transform: uppercase;
     display: flex;
@@ -1226,10 +1191,32 @@ FOOTER START
     padding: 0;
     margin: 0;
   }
-
   #footer-main .container .row .solution .logo p img {
     height: 70px;
     width: 70px;
+  }
+    .col-sm-2 .arrow-up {
+    position: absolute;
+    left: 79rem;
+    top: -16rem;
+  }
+  .arrow-up .btn {
+    color: whitesmoke;
+    border-color: antiquewhite;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+  }
+  .arrow-up .btn:hover {
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  }
+   .solution .logo {
+    position: absolute;
+    bottom: -5em;
+    left: 92em;
+    opacity: 0.3;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -1247,12 +1234,10 @@ FOOTER START
     z-index: 1;
     max-height: 100%;
   }
-
   #footer-main .container .row .solution .logo,
   #footer-main .container .row .solution .logo p{
     display: none;
   }
-
 
 }
 
@@ -1281,14 +1266,72 @@ FOOTER START
   margin-top: 4em;
 }
 
-#footer-main .container .row .col-sm-4 .list-unstyled li a {
+/*effect-underline*/
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled{
+  height: 37px;
+  width: 50%;
+}
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
 }
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover{
+  color: #aaa;
+}
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  display: inline-block;
+  height: 1em;
+  width: 17%;
+  border-bottom: 2px solid;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled:nth-child(2) a:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  display: inline-block;
+  height: 1em;
+  width: 24%;
+  border-bottom: 2px solid;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled:nth-child(3) a:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  display: inline-block;
+  height: 1em;
+  width: 26%;
+  border-bottom: 2px solid;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
 
-#footer-main .container .row .col-sm-4 .list-unstyled li a:hover {
-  color: #ccb8b8;
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 #footer-main .container .row .col-sm-3 {
@@ -1379,7 +1422,6 @@ gallery.html, page-gallery.php galerija START
   width: 25px;
   border-radius: .25rem;
 }
-
 /*
 ===============================================
 gallery.html galerija END
@@ -1402,20 +1444,17 @@ page-events.php START
   }
   #events .container .col-lg-8 #gymnastics-posts ol {
       padding: 0;
-    }
+  }
   #events .container .col-lg-8,
   #events .container .col-lg-4 {
     display: inline-block;
   }
-
   #events .container .col-lg-4 .join {
     text-align: center;
   }
-
   #events .container .col-lg-4 .btn:hover {
     background-position: right center;
   }
-
   #events .container .col-lg-4 .btn {
     display: flex;
     margin: 0 auto;
@@ -1713,7 +1752,6 @@ page-event-gallery.php START
       visibility: visible;
     }
 }
-
 /* Bootstrap Lightbox using Modal */
 #profile-grid { overflow: auto; white-space: normal; } 
 #profile-grid .profile { padding-bottom: 40px; }
@@ -1724,7 +1762,6 @@ page-event-gallery.php START
 #profile-grid .panel-thumbnail { overflow: hidden; }
 #profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
 /*multiple carousel END*/
-  
 /*
 ===============================================
 page-event-gallery.php END
@@ -1742,8 +1779,8 @@ page-trainer.php START
   margin-bottom: -1em;
 }
 
-#trainers .container #trainer-posts .event-pic2,
-#trainers .container #trainer-posts .event-pic {
+#trainers .container #trainer-posts .trainer-event-pic2,
+#trainers .container #trainer-posts .trainer-event-pic {
   padding-bottom: 1.5em;
   flex-wrap: nowrap;
   display: table;
@@ -1751,7 +1788,7 @@ page-trainer.php START
   width: 100%;
 }
 
-#trainers .container #trainer-posts .event-pic img {
+#trainers .container #trainer-posts .trainer-event-pic img {
   max-height: 230px;
   max-width: 270px;
   margin-right: 1em;
@@ -1760,96 +1797,80 @@ page-trainer.php START
   shape-outside: inset(1% round 50%); /*MAKES TEXT GO AROUND THE EXACT SHAPE*/
 }
 
-#trainers .container #trainer-posts .event-pic p,
-#trainers .container #trainer-posts .event-pic2 p{
+#trainers .container #trainer-posts .trainer-event-pic p,
+#trainers .container #trainer-posts .trainer-event-pic2 p{
   margin: 0;
   padding: 0;
   text-align: justify;
 }
 
-#trainers .container #trainer-posts .event-pic2 img {
+#trainers .container #trainer-posts .trainer-event-pic2 img {
   max-height: 230px;
   max-width: 270px;
   margin-left: 1em;
   border-radius: 50%;
   shape-outside: inset(1% round 50%); /*MAKES TEXT GO AROUND THE EXACT SHAPE*/
 }
-#trainers .container #trainer-posts .event-pic2 .button #text2 .btn-container{
-  margin: auto;
-  height: 44px;
-  width: 166.23px;
-}
-/*
-#trainers .container #trainer-posts .event-pic .button,
-#trainers .container #trainer-posts .event-pic2 .button {
-  overflow-y: scroll;
-}
 
-#trainers .container #trainer-posts .event-pic .button::-webkit-scrollbar,
-#trainers .container #trainer-posts .event-pic2 .button::-webkit-scrollbar { 
-    display: none; 
-}
-*/
-
-#text{
-      display:none;
-}
-
-#change{
-  /*user-select:none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  cursor:pointer;
-  border:none;
-  padding:8px;
-  font-size:20px;
-  background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  color:#000;
-  font-family:cursive;
-  box-sizing:border-box;*/
-  cursor: pointer;
-  /* margin: 0 auto; */
-  padding: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: .5s;
-  background-size: 200% auto;
-  color: #fff;
-  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-  box-shadow: 0 0 20px #eee;
-  border-radius: 50px;
+/*DAUGIAU button style START*/
+[class^="toggler"] {
+  font-size: 1.125rem;
+  line-height: 1.2;
   display: block;
-  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
-}
-
-#change2{
-  /*user-select:none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  cursor:pointer;
-  border:none;
-  padding:8px;
-  font-size:20px;
-  background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  color:#000;
-  font-family:cursive;
-  box-sizing:border-box;*/
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  border: 0 solid;
+  background-color: hsl(0, 0%, 80%);
   cursor: pointer;
-  /* margin: 0 auto; */
-  padding: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: .5s;
-  background-size: 200% auto;
-  color: #fff;
-  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-  box-shadow: 0 0 20px #eee;
-  border-radius: 50px;
-  display: block;
-  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+  transition: all .3s ease-out;
+  outline: 0 solid;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
 }
+[class^="toggler"]:hover,
+[class^="toggler"]:focus {
+  background-color: hsl(0, 0%, 90%);
+  outline: 0 solid;
+  box-shadow: 0 3px 6px rgba(0,0,0,.75);
+}
+[class^="toggler"]:active {
+  box-shadow: inset 0 0 2px rgba(0,0,0,.75);
+}
+[class^="toggled"] {
+  box-shadow: 0 3px 6px rgba(0,0,0,.75);
+}
+/*DAUGIAU button style END*/
+
+/*Sibling inline JS START*/
+.toggler_1[aria-expanded="false"] + .toggled_1 {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0.35;
+  max-height: 0;
+  transition:
+    visibility 0s ease .6s,
+    opacity .6s ease-in 0s,
+    max-height .6s ease-out 0s;
+}
+.toggler_1[aria-expanded="true"] + .toggled_1 {
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  /* Note: Manually set, check content visible at minimum viewport widths */
+  max-height: 75rem;
+  transition:
+    visibility 0s ease 0s,
+    opacity .6s ease-in 0s,
+    max-height 1s ease-out 0s;
+}
+/*.tog_content {
+  background-color: hsla(0, 0%, 35%, 0.8);
+  color: #fff;
+  display: block;
+  padding: 1rem;
+}*/
+/*Sibling inline JS END*/
 /*
 ===============================================
 page-trainer.php END
