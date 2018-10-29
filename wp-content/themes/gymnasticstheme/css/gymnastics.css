@@ -36,23 +36,63 @@ body::-webkit-scrollbar-thumb {
 
 /*
 ===============================================
-header.php NAVBAR START
+single.php posts START
+===============================================
+*/
+#post-section {
+  background-color: #dee2e6;
+  padding: 2em 0 .5em 0;
+  margin-bottom: 24em;
+  z-index: 1;
+}
+/*
+===============================================
+single.php posts END
 ===============================================
 */
 
+/*
+===============================================
+header.php NAVBAR START
+===============================================
+*/
+/*header.php nav changes on scroll START*/
+    .navbar {
+      background-color: #fff;
+      
+    }
+    .red {
+      opacity: 0.5;
+      background-color: skyblue;
+    }
+  /*header.php nav changes on scroll END*/
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
 .navbar #gymnasticsNavbar .nav {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/*NAVBAR EFFEXT ON HOVER START*/
+/*NAVBAR EFFECT ON HOVER START*/
 
 #gymnasticsNavbar {
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
 }
 
 #gymnasticsNavbar #menu-gimnastikos-menu { 
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   flex-direction: row;
 }
 
@@ -78,7 +118,8 @@ header.php NAVBAR START
   display: inline-block;
   font-size: 20px;
   font-weight: 300;
-  color: #666;
+  /*color: #666;*/
+  color: #634848;
   transition: color .2s ease;
   padding: 3px 0;
   margin-bottom: 5px;
@@ -86,7 +127,8 @@ header.php NAVBAR START
 }
 
 #gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover {
-  color: #aaa;
+  /*color: #aaa;*/
+  color: #000;
 }
 
 #gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::after,
@@ -114,8 +156,7 @@ header.php NAVBAR START
   transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
   background: #F44336;
 }
-/*header.php NAVBAR EFFEXT ON HOVER END*/
-
+/*header.php NAVBAR EFFECT ON HOVER END*/
 
 
 
@@ -148,10 +189,11 @@ SWIPER SLIDER START
   text-align: center;
   font-size: 18px;
   background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -301,6 +343,10 @@ SWIPER SLIDER START
   background-color: #a5f3ff;
 }
 
+#cover-caption{
+  height: 100%;
+}
+
 #cover #cover-caption .container .col-sm-12 .btn {
 	position: absolute;
   top: -7rem;
@@ -438,22 +484,9 @@ SOCIAL SITES END
 APIE MUS START
 ===============================================
 */
-
-/*#feature-one .container .feature-row .feature-content .col-lg-6,
-#feature-one .container .feature-row .feature-content .col-lg-5 {
-	display: inline-block;
-}
-*/
-#contacts .container h3,
-.services .container h3,
-#multi-gallery .container h3,
 #feature-one .container .feature-row h3{
 	text-transform: uppercase;
 	/*margin: 0 auto;*/
-}
-
-#multi-gallery .container .section {
-	padding-bottom: 0rem;
 }
 #feature-one{
   background-color: #fff;
@@ -468,8 +501,6 @@ APIE MUS START
 	margin: 0 auto;
 }
 
-#contacts .container h3,
-#multi-gallery .container h3,
 #feature-one .container .feature-row h3 {
   margin: 0 .4em;
 }
@@ -600,14 +631,19 @@ PAGRINDINIO PSL GALERIJA START
 
 /*Grid row cards START*/
 /*#multi-gallery .container .col-md-12 .col-md-6 {
-  display: flex;
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ 
   justify-content: center;
   margin-bottom: 1em;
 }*/
 
-#multi-gallery .container a {
-  text-decoration: none;
+#multi-gallery .container h3 {
+  margin: 0 .4em;
+  text-transform: uppercase;
 }
+
+/*#multi-gallery .container a {
+  text-decoration: none;
+}*/
 
 #multi-gallery .container .title {
   color: rgba(0,0,0,0.7);
@@ -616,6 +652,7 @@ PAGRINDINIO PSL GALERIJA START
 
 #multi-gallery .container .section {
   padding-right: 0;
+  padding-bottom: 0;
 }
 
 #multi-gallery .container .section .video-gallery {
@@ -626,6 +663,10 @@ PAGRINDINIO PSL GALERIJA START
 #multi-gallery .container .section .video-gallery #video-carousel-example .carousel-inner .pics-gallery iframe{
   width: 100%;
   height: 400px;
+}
+
+#multi-gallery .container .section .col-lg-6 a:hover{
+  text-decoration: none;
 }
 
 #multi-gallery .container .to-gallery {
@@ -645,7 +686,7 @@ PAGRINDINIO PSL GALERIJA START
 }
 
 #multi-gallery .container .to-gallery:hover { 
-  background-position: right center; 
+  background-position: right center;
 }
 
 #multi-gallery .container .gallery {
@@ -654,7 +695,15 @@ PAGRINDINIO PSL GALERIJA START
     column-count: 3;
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
-    column-width: 33%; }
+    column-width: 33%;
+
+/*css for mozilla START*/
+  flex-wrap: nowrap;
+  display: inline-block;
+  flex-direction: column;
+  display: flex;
+  /*css for mozilla END*/
+}
 #multi-gallery .container .gallery .pics {
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease; }
@@ -682,12 +731,17 @@ PAGRINDINIO PSL GALERIJA START
 }
 
 @media (min-width: 768px){
-	.col-md-12 {
-	    -ms-flex: 0 0 100%;
-	    flex: 0 0 100%;
+	/*.col-md-12*/ #multi-gallery .container .section{
+      -webkit-box-flex: 0 0 100%; /* OLD - iOS 6-, Safari 3.1-6 */
+      -moz-box-flex: 0 0 100%;    /* OLD - Firefox 19- */
+      -webkit-flex: 0 0 100%;     /* Chrome */
+
+
+	    -ms-flex: 0 0 100%;         /* IE 10 */
+	    flex: 0 0 100%;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	    max-width: 100%;
 	    margin: 0 -1em;
-	}
+	}                
 }
 
 .pics-gallery {
@@ -744,11 +798,16 @@ PAGRINDINIO PSL GALERIJA START
 }*/
 
 #gallery .row {
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-wrap: nowrap;
 }
 
 #gallery .row .image {
-  margin: 1em 2em 1em .8em;
+  margin: 1em 1.5em 1em .8em;
 }
 
 #gallery .row a img {
@@ -760,6 +819,12 @@ PAGRINDINIO PSL GALERIJA START
   border: 1px solid #dee2e6;
   border-radius: .25rem;
   max-width: 100%;
+
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  object-fit: fill;
 }  
 
 #gallery .row a img:hover {
@@ -924,8 +989,11 @@ KONTAKTAI START
 #contacts .container .row .col-lg-5 table tbody tr td p {
   font-size: 1.25rem;
 }
+
 #contacts .container .title {
   font-size: 3rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
 }
 /*
 ===============================================
@@ -1187,7 +1255,11 @@ FOOTER START
   }
   #footer-main .container .row .solution .logo p {
     text-transform: uppercase;
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     align-items: center;
     padding: 0;
     margin: 0;
@@ -1239,7 +1311,6 @@ FOOTER START
   #footer-main .container .row .solution .logo p{
     display: none;
   }
-
 }
 
 #footer-main .container {
@@ -1267,73 +1338,47 @@ FOOTER START
   margin-top: 4em;
 }
 
-/*effect-underline*/
+/*effect-underline START*/
 #footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled{
   height: 37px;
   width: 50%;
 }
 #footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a {
-  text-decoration: none;
+  position: relative;
+  font-size: 20px;
+  font-weight: 300;
   color: #fff;
-  font-size: 18px;
+  transition: color .2s ease;
+  padding: 3px 0;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover{
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover {
   color: #aaa;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:after {
-  content: '';
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover::after,
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover::before {
+  width: 100%;
+  left: 0;
+}
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::after,
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::before {
+  content: ''; 
   position: absolute;
-  left: 15px;
-  display: inline-block;
-  height: 1em;
-  width: 17%;
-  border-bottom: 2px solid;
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(0,1);
-  transform: scale(0,1);
+  top: calc(100% + 5px);
+  width: 0;
+  right: 0;
+  height: 3px;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled:nth-child(2) a:after {
-  content: '';
-  position: absolute;
-  left: 15px;
-  display: inline-block;
-  height: 1em;
-  width: 24%;
-  border-bottom: 2px solid;
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(0,1);
-  transform: scale(0,1);
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::before {
+  transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+  background: #2196f3;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled:nth-child(3) a:after {
-  content: '';
-  position: absolute;
-  left: 15px;
-  display: inline-block;
-  height: 1em;
-  width: 26%;
-  border-bottom: 2px solid;
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(0,1);
-  transform: scale(0,1);
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::after {
+  transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: #F44336;
 }
-
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+/*effect underline END*/
 
 #footer-main .container .row .col-sm-3 {
   padding-right: 2em;
@@ -1441,10 +1486,14 @@ page-events.php START
 
 @media (min-width: 992px){
   #events .container {
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   }
   #events .container .col-lg-8 #gymnastics-posts ol {
-      padding: 0;
+    padding: 0;
   }
   #events .container .col-lg-8,
   #events .container .col-lg-4 {
@@ -1457,7 +1506,11 @@ page-events.php START
     background-position: right center;
   }
   #events .container .col-lg-4 .btn {
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     margin: 0 auto;
     cursor: pointer;
     margin: 0 auto;
@@ -1478,7 +1531,11 @@ page-events.php START
     margin: 1em 0;
   }
   #events .container .col-lg-4 .search-form-container .search{
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   }
   #events .container .col-lg-4 .search-form-container .search .form-control{
     padding: 0 10px;
@@ -1626,7 +1683,6 @@ page-event-gallery.php START
 #carousel-thumb .carousel-indicators{
   bottom: -55px;
 }
-
 #carousel-thumb img {
   max-height: 20px;
 }
@@ -1646,7 +1702,7 @@ page-event-gallery.php START
   margin: 0;
 }
 #event-gallery .container .container-fluid #carouselExample .picture-list {
-  max-height: 250px;
+  max-height: 210px;
   width: 100%;
   margin: 0 auto;
 }
@@ -1697,11 +1753,11 @@ page-event-gallery.php START
         display: block;
     }
     
-    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left),
-    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item,
-    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item + .picture-item,
-    .picture-list .carousel-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item + .picture-item + .picture-item {
-        transition: none;
+    .picture-list .picture-item .active:not(.carousel-item-right):not(.carousel-item-left),
+    .picture-list .picture-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item,
+    .picture-list .picture-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item + .picture-item,
+    .picture-list .picture-item .active:not(.carousel-item-right):not(.carousel-item-left) + .picture-item + .picture-item + .picture-item {
+      transition: none;
     }
     
     .picture-list .carousel-item-next,
@@ -1750,18 +1806,37 @@ page-event-gallery.php START
       transform: translate3d(100%, 0, 0);
       visibility: visible;
       display: block;
-      visibility: visible;
     }
 }
+
 /* Bootstrap Lightbox using Modal */
-#profile-grid { overflow: auto; white-space: normal; } 
-#profile-grid .profile { padding-bottom: 40px; }
-#profile-grid .panel { padding: 0 }
-#profile-grid .panel-body { padding: 15px }
-#profile-grid .profile-name { font-weight: bold; }
-#profile-grid .thumbnail {margin-bottom:6px;}
-#profile-grid .panel-thumbnail { overflow: hidden; }
-#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+#profile-grid { 
+  /*overflow: auto;*/
+  overflow: hidden;
+  white-space: normal; 
+} 
+#profile-grid .profile { 
+  padding-bottom: 40px; 
+}
+#profile-grid .panel { 
+  padding: 0;
+}
+#profile-grid .panel-body { 
+  padding: 15px; 
+}
+#profile-grid .profile-name { 
+  font-weight: bold; 
+}
+#profile-grid .thumbnail {
+  margin-bottom:6px;
+}
+#profile-grid .panel-thumbnail { 
+  overflow: hidden; 
+}
+#profile-grid .img-rounded { 
+  border-radius: 4px 4px 0 0;
+}
+
 /*multiple carousel END*/
 /*
 ===============================================

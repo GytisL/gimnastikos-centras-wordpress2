@@ -79,6 +79,19 @@ function handle(delta) {
 //   });
 // });
 
+/*header.php nav changes on scroll START*/
+jQuery(window).scroll(function() {
+    if(jQuery(this).scrollTop() > 500) {
+        jQuery('nav').addClass('red');
+    } else {
+        jQuery('nav').removeClass('red');
+    }  
+});
+
+// open link in new tab without ugly target="_blank"
+$("a[href^='http']").attr("target", "_blank");
+/*header.php nav changes on scroll END*/
+
 /*swiper slides gallery START*/
 $(document).ready(function($){
 var swiper = new Swiper('.swiper-container', {
@@ -97,13 +110,11 @@ var swiper = new Swiper('.swiper-container', {
 });
 /*swiper slides gallery END*/
 
-
 /*
  $(function(){//Remove inline css of an HTML elements
     $('* [style]').removeAttr('style');
  });
 */
-
 
 /*grid row cards START*/
 $(function() {

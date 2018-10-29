@@ -8,7 +8,7 @@
 	</head>
 	
 	<body>
-	
+
 
 <!-- Makes inside pages navbar titles disappear START -->
 	<!-- OPTIMIZUOTI! -->
@@ -33,11 +33,9 @@
 	<!-- padaryti, kad neisijungtu, o kad nuvestu i home page ir nuvestu prie ivykiu arba galerijos -->
 
 <!-- Makes inside pages navbar titles disappear END -->
-	
 
-	
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
 			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#gymnasticsNavbar" aria-controls="gymnasticsNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -82,15 +80,13 @@
 				    
 				</ul>  -->
 			</div>
-
 		</nav>
 
 
-<!-- <button onclick="myFunction()" ><a class="nav-link" href="<?php //echo home_url(); ?>#feature-one">Apie mus</a></button> -->
+		<!-- <button onclick="myFunction()" ><a class="nav-link" href="<?php //echo home_url(); ?>#feature-one">Apie mus</a></button> -->
 
 
-	<section id="cover">
-			
+		<section id="cover">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide" id="cover1"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
@@ -106,11 +102,11 @@
 			    <div class="swiper-button-prev"></div>
 			</div>
 
-		<div id="cover-caption">
-			<div class="container">
-				<!-- <div class="col-sm-12">
-					<a href="#footer-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a>
-				</div> -->
+			<div id="cover-caption">
+				<div class="container">
+					<!-- <div class="col-sm-12">
+						<a href="#footer-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a>
+					</div> -->
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
