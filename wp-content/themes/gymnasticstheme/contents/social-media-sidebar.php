@@ -6,15 +6,15 @@
 		</li>
 
 		<li>
-			<a class="fa fa-twitter" href="https://twitter.com/"  target="_blank"><span>Twitter</span></a>
+			<a class="fa fa-twitter" href="https://twitter.com/" target="_blank"><span>Twitter</span></a>
 		</li>
 
 		<li>
-			<a class="fa fa-instagram" href="https://www.instagram.com/"  target="_blank"><span>Instagram</span></a>
+			<a class="fa fa-instagram" href="https://www.instagram.com/" target="_blank"><span>Instagram</span></a>
 		</li>
 
 		<li>
-			<a class="fa fa-linkedin" href="https://www.linkedin.com/uas/login"  target="_blank"><span>LinkedIn</span></a>
+			<a class="fa fa-linkedin" href="https://www.linkedin.com/uas/login" target="_blank"><span>LinkedIn</span></a>
 		</li>
 
 		<li>

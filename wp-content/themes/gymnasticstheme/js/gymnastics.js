@@ -88,8 +88,8 @@ jQuery(window).scroll(function() {
     }  
 });
 
-// open link in new tab without ugly target="_blank"
-$("a[href^='http']").attr("target", "_blank");
+// open wordpress link in new tab without ugly target="_blank" !!!!!!!!!
+/*$("a[href^='http']").attr("target", "_blank");*/
 /*header.php nav changes on scroll END*/
 
 /*swiper slides gallery START*/
@@ -298,7 +298,7 @@ $(document).keydown(function (e) {
 /* AJAX functions page-events.php END */
 
 
-/*page-event-gallery.php multiple carousel START*/
+/*page-event-gallery.php multiple carousel START
 $('#carouselExample').on('slide.bs.carousel', function (e) {
 
   
@@ -328,7 +328,7 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 
 
   $(document).ready(function() {
-/* show lightbox when clicking a thumbnail */
+/* show lightbox when clicking a thumbnail 
     $('a.thumb').click(function(event){
       event.preventDefault();
       var content = $('.modal-body');

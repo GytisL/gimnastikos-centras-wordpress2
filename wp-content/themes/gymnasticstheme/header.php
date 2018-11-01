@@ -82,31 +82,30 @@
 			</div>
 		</nav>
 
-
 		<!-- <button onclick="myFunction()" ><a class="nav-link" href="<?php //echo home_url(); ?>#feature-one">Apie mus</a></button> -->
 
-
-		<section id="cover">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" id="cover1"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover2"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover3"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover4"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
-					<div class="swiper-slide" id="cover5"><h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1></div>
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner carousel-block">
+				<div class="carousel-item active carousel-img">
+					<h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1>
+					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="First slide">
+		 		</div>
+				<div class="carousel-item carousel-img">
+					<h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1>
+					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg" alt="Second slide">
 				</div>
-				<!-- Add Pagination -->
-				<div class="swiper-pagination"></div>
-				<!-- Add Arrows -->
-			    <div class="swiper-button-next"></div>
-			    <div class="swiper-button-prev"></div>
-			</div>
-
-			<div id="cover-caption">
-				<div class="container">
-					<!-- <div class="col-sm-12">
-						<a href="#footer-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a>
-					</div> -->
+				<div class="carousel-item carousel-img">
+					<h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1>
+					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="Third slide">
 				</div>
 			</div>
-		</section>
+
+			<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Atgal</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Pirmyn</span>
+			</a>
+		</div>

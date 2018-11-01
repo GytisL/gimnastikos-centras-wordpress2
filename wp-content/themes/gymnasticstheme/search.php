@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
 <div class="container">
-	
-		<div class="col-lg-12" >
-
+		<div class="col-lg-12">
 			<div class="row">
 			
 			<?php 
@@ -53,7 +51,6 @@
 			
 			</div>
 		</div>
-
 </div>
 
 <?php get_footer(); ?>

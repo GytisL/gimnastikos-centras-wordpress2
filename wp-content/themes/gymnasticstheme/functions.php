@@ -130,98 +130,13 @@ function wcr_share_buttons() {
 	==========================================
 */
 
-/* 
-=================================================
-Modify the read more link on the_excerpt() START
-=================================================
-*/
- 
-function et_excerpt_length($length) {
-    return 220;
-}
-add_filter('excerpt_length', 'et_excerpt_length');
- 
-/* Add a link  to the end of our excerpt contained in a div for styling purposes and to break to a new line on the page.*/
- 
-function et_excerpt_more($more) {
-    global $post;
-    return '<div class="view-full-post"><a href="'. get_permalink($post->ID) . '" class="view-full-post-btn">View Full Post</a></div>;';
-}
-add_filter('excerpt_more', 'et_excerpt_more');	
-
-/* 
-=================================================
-Modify the read more link on the_excerpt() END
-=================================================
-*/
 
 /*
-	==========================================
-	 AJAX functions page-events.php START
-	==========================================
+==========================================
+ AJAX functions page-events.php START
+==========================================
 */
 
-/*
-* initial posts display
- */
-
-/*function load_more_posts(){
-	$page = $_POST['page'];
-
-	$query = new WP_Query( array(
-			'post_type' => 'post',
-			'post_per_page' =>'6',
-			'paged' => $paged,
-		));
-	if ( $query-> have_posts() ) : 
-       	while ( $query-> have_posts() ) : $query->the_post();
-
-			get_template_part('content-eventsmain');
-
-	    endwhile;
-	endif; 
-  	wp_reset_postdata();
-	wp_die();
-}
-
-add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
-add_action('wp_ajax_priv_load_more_posts', 'load_more_posts');
-*/
-
-/*
- load more script call back
- 
-function load_more_articles_posts(){
-	$page = $_POST['page'];
-	//echo $page;
-
-	$query = new WP_Query( array(
-			'post_type' => 'post',
-			'category_name' => 'events',
-			'post_per_page' =>'6',
-			'paged' => $paged
-		));
-
-	$total_pages = $the_query->max_num_pages;
-	print_r($total_pages);
-
-	if ( $query-> have_posts() ) : 
-        while ( $query-> have_posts() ) : $query->the_post();
-
-			get_template_part('contents/content', get_post_format() );
-
-		endwhile;
-    endif; 
-  	wp_die();
-  	wp_reset_postdata();
-}
-
-/*
- * load more script ajax hooks
- 
-add_action('wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts');
-add_action('wp_ajax_priv_load_more_articles_posts', 'load_more_articles_posts');
-*/
 
 /*load-more ajax button events.php START*/
 add_action( 'wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts' );
@@ -256,20 +171,11 @@ function load_more_articles_posts() {
 }
 /*load-more ajax button events.php END*/
 
-
-
 /*
 	==========================================
 	 AJAX functions END
 	==========================================
 */
-
-
-// add_filter( 'post_type_link', 'append_query_string', 10, 2 );
-// function append_query_string( $url, $post ) {
-
-//     return $url.'?my_pid='.$post->ID;
-// }
 
 
 /*
@@ -279,14 +185,11 @@ function load_more_articles_posts() {
 */
 add_filter( 'searchwp_live_search_hijack_get_search_form', '__return_false' );
 
-	
 /*
 	==========================================
 	 AJAX LIVE SEARCH PLUGIN END
 	==========================================
 */
-
-
 
 
 ?>

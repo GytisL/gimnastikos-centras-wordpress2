@@ -1,17 +1,16 @@
 		<h3 class="title"><?php the_title(); ?></h3>
 			<!-- Grid row -->
-			<!-- <div class="row col-md-12"> -->
+			
 				<!-- Grid column -->
 				<!-- <div class="col-md-6"> --><!-- d-flex justify-content-center mb-5 -->
 				    <!-- <button type="button" class="btn btn-outline-black waves-effect filter mr-1" data-rel="all">Visi</button>
 				    <button type="button" class="btn btn-outline-black waves-effect filter mr-1" data-rel="1">Sportinė gimnastika</button>
-				    <button type="button" class="btn btn-outline-black waves-effect filter mr-1" data-rel="2">Meninė gimnastika</button>
 				</div> -->
 				<!-- Grid column -->
-			<!-- </div> -->
+			
 			<!-- Grid row -->
 			<div class="row col-lg-12 section">
-				<div class="col-lg-6">
+				<div class="col-lg-6 picture-section">
 					<!-- Grid row -->
 					<div class="gallery" id="gallery">
 					    <!-- Grid column -->
@@ -93,7 +92,7 @@
 					    </ol>-->
 					    <!--/.Indicators-->
 					    <!--Slides-->
-					    <div class="carousel-inner" role="listbox">
+					    <div class="carousel-inner pics-list" role="listbox">
 					        <div class="carousel-item active pics-gallery"> <!--susikurti nauja klase ir ideti i css-->
 					            <!-- <video loop="" muted="" autoplay="" playsinline=""> -->
 					            	<?php echo get_post_meta( get_the_ID(), 'video-1', true); ?> <!-- video  -  custom field'o name-->
@@ -130,5 +129,5 @@
 						    </a>
 						</div><!--/.Controls-->
 					</div><!--Carousel Wrapper-->
-				</div> <!-- col-lg-6 -->
-			</div><!-- row -->
+				</div> <!-- video-gallery -->
+			</div><!-- section -->

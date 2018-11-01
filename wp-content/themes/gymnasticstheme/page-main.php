@@ -1,37 +1,34 @@
 <?php 
 /* Template Name: main */
 get_header(); ?>
-	
 
 	<section id="feature-one">
 		<h2 class="display-4 text-center">Pagrindinis puslapis</h2>
 		<div class="container">
 			<div class="feature-row">
-				<!-- 1 variantas -->  <?php 
-					//$args = array ( 
-					// Post or Page ID
-					 // 'p' => 39,  //irasomas posto numeris kuri rodo uzvedus ant posto apacioj. siuo atveju post=39
-					//);
+				<!-- 1 variantas --><?php 
+					/*$args = array ( 
+					 Post or Page ID
+					  'p' => 39,  //irasomas posto numeris kuri rodo uzvedus ant posto apacioj. siuo atveju post=39
+					);
 					 
-					// The Query
-					///$the_query = new WP_Query( $args );
+					/* The Query
+					$the_query = new WP_Query( $args );
 					 
-					// The Loop
-					//if ( $the_query->have_posts() ) {
+					 The Loop
+					if ( $the_query->have_posts() ) {
 					 
-					    //while ( $the_query->have_posts() ) {
-					        //$the_query->the_post();
-					        //echo get_post_meta( get_the_ID(), 'Gimnastikos_pasirodymai', true);
-					        //}
+					    while ( $the_query->have_posts() ) {
+					        $the_query->the_post();
+					        echo get_post_meta( get_the_ID(), 'Gimnastikos_pasirodymai', true);
+					        }
+					    /* Restore original Post Data 
+					    wp_reset_postdata();
 					 
-					     
-					    /* Restore original Post Data */
-					    //wp_reset_postdata();
+					} //else {
 					 
-					//} //else {
-					 
-					//echo 'Nieko nerasta';
-					//} ?>
+					echo 'Nieko nerasta';
+					} */?>
 
 				<!-- 2 trumpesnis variantas php POST content START -->
 				<!-- per wordpress postuose susikurti nauja posta, isijungti custom field. Tada add new category ir pasirinkt video -->
@@ -73,7 +70,6 @@ get_header(); ?>
 
             <?php wp_reset_postdata(); ?>
 
-			
 		</div>
 	</section><!-- multi-gallery -->
 
@@ -95,7 +91,6 @@ get_header(); ?>
             <?php endif; ?>
 
             	<?php wp_reset_postdata(); ?>
-			
 
 				<!-- <h2>Adresas</h2>
 				<ul>
@@ -114,19 +109,15 @@ get_header(); ?>
 				 	<li>I-V 8:00 - 17:00</li>
 				 	<li>VI-VII Nedirbame</li>
 				</ul> -->
-				
 		</div>
 
 		<!-- <div class="arrow-up">
 			<a href="#gymnasticsNavbar" class="btn btn-secondary-outline btn-sm" role="button">&uarr;</a>
 		</div> -->
-		
 	</section>
 
 	<section id="contact-bar">
 		<!-- kontaktine forma su MODAL START -->
-		<!-- <div class="container"> -->
-
 		<div class="body">
 		 	<!-- <h2>Modal Example</h2> -->
 			<!-- Trigger the modal with a button -->
@@ -153,13 +144,10 @@ get_header(); ?>
 				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				        </div> -->
 			    	</div>
-			      
 				</div>
 			</div>
-
 		</div>
-		<!-- </div> --> <!-- container end -->
 		<!-- kontaktine forma su MODAL END -->
 	</section>
 
-	<?php get_footer(); ?>
+<?php get_footer(); ?>

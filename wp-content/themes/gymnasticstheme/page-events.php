@@ -16,12 +16,11 @@ get_header (); ?>
 
 	<section id="events">
 		<div class="container"><!-- d-flex -->
-			<div class="col-lg-8"><!-- d-inline-block -->
+			<div class="col-lg-8 events-post"><!-- d-inline-block -->
 				<h2 class="display-4 text-center">Įvykiai</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam modi ratione ut nisi tempora quibusdam autem est numquam qui culpa eos eum commodi recusandae nihil quisquam magnam, perferendis, voluptate neque.</p>
 				
-					<!-- <div id="gymnastics-posts">
-
+				<!-- <div id="gymnastics-posts">
 						<?php
 		                 	// patikrina kokiame puslapyje esi
 		                 	// $paged = get_query_var( 'paged', 1 ); 
@@ -50,8 +49,7 @@ get_header (); ?>
 							//wp_reset_postdata();
 						?>
 						append here (prints this content with ajax)
-
-					</div>
+				</div>
  
 					<div class="container sunset-posts-container">-->
 					<div id="gymnastics-posts">
@@ -83,8 +81,7 @@ get_header (); ?>
 					<!--</div> .container -->
 
 				<!-- ajax .container START -->
-	
-					
+
 					<div class="container text-center load-more-block">
 						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
 							<span class="fa fa-spinner loader gymnastics-loading"></span><span class="button-text">Daugiau<span>
@@ -98,14 +95,10 @@ get_header (); ?>
 					</div>-->
 
 				<!-- ajax .container END-->
-
-
-
-
-
 			</div>
 
-			<div class="col-lg-4"><!-- d-inline-block -->
+
+			<div class="col-lg-4 events-post-right"><!-- d-inline-block -->
 				<h2 class="join">Prisijunk šiandien</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -136,9 +129,7 @@ get_header (); ?>
 
                 <?php //wp_reset_postdata(); ?> -->
 
-               
 				<!-- STARTS TO PRINT FROM THIRD POST-->
-				
                 <?php 
                 	$args = array(
 					'type' => 'post',
@@ -168,7 +159,6 @@ get_header (); ?>
 
                 <?php wp_reset_postdata(); ?>
 
-
 			</div>
 
 		</div>
@@ -178,7 +168,6 @@ get_header (); ?>
 	<section id="contact-bar">
 		<!-- kontaktine forma su MODAL START -->
 		<!-- <div class="container"> -->
-
 		<div class="body">
 		 	<!-- <h2>Modal Example</h2> -->
 			<!-- Trigger the modal with a button -->
@@ -205,12 +194,11 @@ get_header (); ?>
 				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				        </div> -->
 			    	</div>
-			      
 				</div>
 			</div>
 
-		</div>
-		<!-- </div> --> <!-- container end -->
+		</div> <!-- <class="body"> --> 
+		<!-- container end -->
 		<!-- kontaktine forma su MODAL END -->
 	</section>
 

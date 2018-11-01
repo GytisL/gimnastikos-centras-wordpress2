@@ -62,8 +62,9 @@ header.php NAVBAR START
       
     }
     .red {
-      opacity: 0.5;
-      background-color: skyblue;
+      /*opacity: 0.5;
+      background-color: skyblue;*/
+      display: none;
     }
   /*header.php nav changes on scroll END*/
 .navbar {
@@ -84,7 +85,6 @@ header.php NAVBAR START
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
 }
 
 #gymnasticsNavbar #menu-gimnastikos-menu { 
@@ -170,47 +170,25 @@ header.php NAVBAR START
 SWIPER SLIDER START
 ===============================================
 */
-#cover {
-  background: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #FEF9E7;
-  text-align: center;
-  /*height: 259px;*/
-  height: 87%;
-  margin-bottom: -4em;
+#carouselExampleFade{
+    background-color: #fff;
 }
-
-#cover .swiper-container {
-  margin: 0;
+#carouselExampleFade .carousel-block .carousel-img {
   width: 100%;
-  height: 100%;
-  max-height: 600px;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  max-height: 450px;
 }
-
-#cover .swiper-container .swiper-wrapper .swiper-slide h1 {
+#carouselExampleFade .carousel-block .carousel-img h1{
+  position: absolute;
   font-size: 48px;
   text-transform: uppercase;
-  position: relative;
-  top: 2em;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
+  top: 80px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: #fff;
 }
 
 /* header.php text fadeInLeft START*/
@@ -262,7 +240,7 @@ SWIPER SLIDER START
         transform: translatex(0);
     }
 }
-#cover .swiper-container .swiper-wrapper .swiper-slide .in-left {
+#carouselExampleFade .carousel-block .carousel-img .in-left {
     -webkit-animation-name: fadeInLeft;
     -moz-animation-name: fadeInLeft;
     -o-animation-name: fadeInLeft;
@@ -282,86 +260,13 @@ SWIPER SLIDER START
 }
 /* header.php text fadeInLeft END*/
 
-#cover .swiper-container #cover1 {
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
+#carouselExampleFade .carousel-block .carousel-img img{
   width: 100%;
-  max-height: 570px;
+  max-height: 450px;
   object-fit: cover;
-}
-
-#cover .swiper-container #cover2 {
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg) no-repeat;
   background-position: center;
-  width: 100%;
-  max-height: 570px;
-  object-fit: cover;
-}
-
-#cover .swiper-container #cover3 {
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
-  width: 100%;
-  max-height: 570px;
-  object-fit: cover;
-}
-
-#cover .swiper-container #cover4 {
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg) no-repeat;
-  width: 100%;
-  max-height: 570px;
-  object-fit: cover;
-}
-
-#cover .swiper-container #cover5 {
-  background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg) no-repeat;
-  width: 100%;
-  max-height: 570px;
-  object-fit: cover;
-}
-
-#cover .swiper-container .swiper-button-prev {
-  left: 200px;
-  background-color: #fff;
-  border: 1px solid #007bff;
-  border-style: solid;
-  height: 70px;
-  width: 50px;
-  opacity: 0.2;
-}
-
-#cover .swiper-container .swiper-button-next {
-  right: 200px;
-  background-color: #fff;
-  border: 1px solid #007bff;
-  border-style: solid;
-  height: 70px;
-  width: 50px;
-  opacity: 0.2;
-}
-
-#cover .swiper-container .swiper-button-next:hover,
-#cover .swiper-container .swiper-button-prev:hover {
-  background-color: #a5f3ff;
-}
-
-#cover-caption{
-  height: 100%;
-}
-
-#cover #cover-caption .container .col-sm-12 .btn {
-	position: absolute;
-  top: -7rem;
-  right: -11rem;
-  color: whitesmoke;
-  border-color: antiquewhite;
-  text-align: center;
-  height: 30px;
-  width: 30px;
-  border-radius: 8px;
-  z-index: 1;
-}
-
-#cover #cover-caption .container .col-sm-12 .btn:hover {
-  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*
 ===============================================
@@ -481,13 +386,13 @@ SOCIAL SITES END
 
 /*
 ===============================================
-APIE MUS START
+page-main.php APIE MUS START
 ===============================================
 */
 #feature-one .container .feature-row h3{
 	text-transform: uppercase;
-	/*margin: 0 auto;*/
 }
+
 #feature-one{
   background-color: #fff;
   margin-bottom: -1em;
@@ -511,12 +416,12 @@ APIE MUS START
 
 #feature-one .container .feature-row .feature-content {
   padding: 1rem ;
-  /*overflow: hidden;*/
 }
 
 @media (min-width: 992px){
-  #feature-one .container .feature-row .col-lg-5 {
+  #feature-one .container .feature-row .feature-content .video-text {
     max-width: 49.666667%;
+    display: inline-block;
   }
 
   #feature-one .container .feature-row .feature-content .video-content {
@@ -524,11 +429,12 @@ APIE MUS START
     max-width: 48%;
     max-height: 45%;
     margin-left: 6em;
+    display: inline-block;
   }
 }
 /*
 ===============================================
-APIE MUS END
+page-main.php APIE MUS END
 ===============================================
 */
 
@@ -630,20 +536,10 @@ PAGRINDINIO PSL GALERIJA START
 }
 
 /*Grid row cards START*/
-/*#multi-gallery .container .col-md-12 .col-md-6 {
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ 
-  justify-content: center;
-  margin-bottom: 1em;
-}*/
-
 #multi-gallery .container h3 {
   margin: 0 .4em;
   text-transform: uppercase;
 }
-
-/*#multi-gallery .container a {
-  text-decoration: none;
-}*/
 
 #multi-gallery .container .title {
   color: rgba(0,0,0,0.7);
@@ -653,20 +549,6 @@ PAGRINDINIO PSL GALERIJA START
 #multi-gallery .container .section {
   padding-right: 0;
   padding-bottom: 0;
-}
-
-#multi-gallery .container .section .video-gallery {
-  padding: 0;
-  margin-right: 0;
-}
-
-#multi-gallery .container .section .video-gallery #video-carousel-example .carousel-inner .pics-gallery iframe{
-  width: 100%;
-  height: 400px;
-}
-
-#multi-gallery .container .section .col-lg-6 a:hover{
-  text-decoration: none;
 }
 
 #multi-gallery .container .to-gallery {
@@ -688,14 +570,27 @@ PAGRINDINIO PSL GALERIJA START
 #multi-gallery .container .to-gallery:hover { 
   background-position: right center;
 }
+#multi-gallery .container .section .video-gallery {
+  padding: 0;
+  margin-right: 0;
+}
+
+#multi-gallery .container .section .video-gallery #video-carousel-example .carousel-inner .pics-gallery iframe{
+  width: 100%;
+  height: 400px;
+}
+
+#multi-gallery .container .section .picture-section a:hover{
+  text-decoration: none;
+}
 
 #multi-gallery .container .gallery {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
 
 /*css for mozilla START*/
   flex-wrap: nowrap;
@@ -704,6 +599,41 @@ PAGRINDINIO PSL GALERIJA START
   display: flex;
   /*css for mozilla END*/
 }
+
+#multi-gallery .container .section .picture-section #gallery .row {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-wrap: nowrap;
+}
+
+#multi-gallery .container .section .picture-section #gallery .row .image {
+  margin: 1em 1.5em 1em .8em;
+}
+
+#multi-gallery .container .section .picture-section #gallery .row a img {
+  transition: .5s all;
+  height: 150px;
+  object-fit: cover;
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 100%;
+
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 220px;
+  object-fit: fill;
+}  
+
+#multi-gallery .container .section .picture-section #gallery .row a img:hover {
+  transform: scale(1.1);
+}
+
 #multi-gallery .container .gallery .pics {
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease; }
@@ -722,14 +652,12 @@ PAGRINDINIO PSL GALERIJA START
         column-width: 100%;
     }
 }
-
-@media (max-width: 400px) {
-    .btn.filter {
+/*@media (max-width: 400px) {
+    .btn .filter {
         padding-left: 1.1rem;
         padding-right: 1.1rem;
     }
-}
-
+}*/
 @media (min-width: 768px){
 	/*.col-md-12*/ #multi-gallery .container .section{
       -webkit-box-flex: 0 0 100%; /* OLD - iOS 6-, Safari 3.1-6 */
@@ -744,8 +672,37 @@ PAGRINDINIO PSL GALERIJA START
 	}                
 }
 
-.pics-gallery {
-	height: 400px;
+#multi-gallery .container .section .video-gallery #video-carousel-example{
+  background-color: #fff;
+  padding: .25em;
+  margin: 1em .4em 1em .4em;
+  border-radius: .25em;
+}
+
+#multi-gallery .container .section .video-gallery #video-carousel-example .pics-list .pics-gallery {
+  height: 400px;
+}
+
+#multi-gallery .container .section .video-gallery #video-carousel-example .picture-list {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#multi-gallery .container .section .video-gallery #video-carousel-example .picture-list .picture-itemvideo {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+#multi-gallery .container .section .video-gallery #video-carousel-example .modal-body {
+  padding: 0;
+}
+
+#multi-gallery .container .section .video-gallery #video-carousel-example .modal-body .carousel-control-next .btn,
+#multi-gallery .container .section .video-gallery #video-carousel-example .modal-body .carousel-control-prev .btn {
+  position: absolute;
+  bottom: 11rem;
 }
 
 /*#gallery .pics {
@@ -753,7 +710,6 @@ PAGRINDINIO PSL GALERIJA START
   width: 100%;
   height: auto;
 }*/
-
 /* turns off image flickering
  -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
@@ -797,68 +753,6 @@ PAGRINDINIO PSL GALERIJA START
     opacity: 1;
 }*/
 
-#gallery .row {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  flex-wrap: nowrap;
-}
-
-#gallery .row .image {
-  margin: 1em 1.5em 1em .8em;
-}
-
-#gallery .row a img {
-  transition: .5s all;
-  height: 150px;
-  object-fit: cover;
-  padding: .25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: .25rem;
-  max-width: 100%;
-
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 220px;
-  object-fit: fill;
-}  
-
-#gallery .row a img:hover {
-  transform: scale(1.1);
-}
-
-#video-carousel-example{
-  background-color: #fff;
-  padding: .25em;
-  margin: 1em .4em 1em .4em;
-  border-radius: .25em;
-}
-
-#video-carousel-example .picture-list {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-#video-carousel-example .picture-list .picture-itemvideo {
-  object-fit: cover;
-  width: 100%;
-  height: 400px;
-}
-
-#video-carousel-example .modal-body {
-  padding: 0;
-}
-
-#video-carousel-example .modal-body .carousel-control-next .btn,
-#video-carousel-example .modal-body .carousel-control-prev .btn {
-  position: absolute;
-  bottom: 11rem;
-}
 /*page-main.php END*/
 
 
@@ -910,7 +804,7 @@ KONTAKTAI START
 	height: 20em;
   width: 22em;
 	top: 1em;
-	 /*Optional: Makes the sample page fill the window. */
+	 /*Makes the sample page fill the window. */
 	margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
@@ -1268,21 +1162,21 @@ FOOTER START
     height: 70px;
     width: 70px;
   }
-    .col-sm-2 .arrow-up {
+    /*#footer-main .container .row .col-sm-2 .arrow-up {
     position: absolute;
     left: 79rem;
     top: -16rem;
   }
-  .arrow-up .btn {
+  #footer-main .container .row .arrow-up .btn {
     color: whitesmoke;
     border-color: antiquewhite;
     height: 30px;
     width: 30px;
     border-radius: 8px;
   }
-  .arrow-up .btn:hover {
+  #footer-main .container .row .arrow-up .btn:hover {
     background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-  }
+  }*/
    .solution .logo {
     position: absolute;
     bottom: -5em;
@@ -1333,17 +1227,17 @@ FOOTER START
   -webkit-font-smoothing: antialiased;
 } 
 
-#footer-main .container .row .col-sm-5 #logo img {
+#footer-main .container .row .footer-content-1 #logo img {
   width: 50%;
   margin-top: 4em;
 }
 
 /*effect-underline START*/
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled{
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled {
   height: 37px;
   width: 50%;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a {
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a {
   position: relative;
   font-size: 20px;
   font-weight: 300;
@@ -1353,16 +1247,16 @@ FOOTER START
   margin-bottom: 5px;
   text-decoration: none;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover {
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover {
   color: #aaa;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover::after,
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a:hover::before {
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover::after,
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover::before {
   width: 100%;
   left: 0;
 }
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::after,
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::before {
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a::after,
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a::before {
   content: ''; 
   position: absolute;
   top: calc(100% + 5px);
@@ -1380,11 +1274,11 @@ FOOTER START
 }
 /*effect underline END*/
 
-#footer-main .container .row .col-sm-3 {
+#footer-main .container .row .footer-content-3 {
   padding-right: 2em;
 }
 
-#footer-main .container .row .col-sm-3 h3 {
+#footer-main .container .row .footer-content-3 h3 {
   text-transform: uppercase;
 }
 
@@ -1492,20 +1386,20 @@ page-events.php START
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   }
-  #events .container .col-lg-8 #gymnastics-posts ol {
+  #events .container .events-post #gymnastics-posts ol {
     padding: 0;
   }
-  #events .container .col-lg-8,
-  #events .container .col-lg-4 {
+  #events .container .events-post,
+  #events .container .events-post-right {
     display: inline-block;
   }
-  #events .container .col-lg-4 .join {
+  #events .container .events-post-right .join {
     text-align: center;
   }
-  #events .container .col-lg-4 .btn:hover {
+  #events .container .events-post-right .btn:hover {
     background-position: right center;
   }
-  #events .container .col-lg-4 .btn {
+  #events .container .events-post-right .btn {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -1526,27 +1420,29 @@ page-events.php START
     display: block;
     background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
   }
-  /*searchform.php */
-  #events .container .col-lg-4 .search-form-container {
+/*searchform.php START*/
+  #events .container .events-post-right .search-form-container {
     margin: 1em 0;
   }
-  #events .container .col-lg-4 .search-form-container .search{
+  #events .container .events-post-right .search-form-container .search{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   }
-  #events .container .col-lg-4 .search-form-container .search .form-control{
+  #events .container .events-post-right .search-form-container .search .form-control{
     padding: 0 10px;
     margin-right: 7px;
   }
 }
+/*searchform.php END*/
 
-#events .container .col-lg-8 #gymnastics-posts ol .event-picture img {
+#events .container .events-post #gymnastics-posts ol .event-picture .post-picture {
   max-height: 165px;
   max-width: 40%;
   margin: 0 2em 0 0;
+  display: inline-block;
 
   background: #fff;
   padding: 4px;
@@ -1567,7 +1463,7 @@ page-events.php START
     1px 1px 1px rgba(0,0,0,0.15);
 }
 
-#events .container .col-lg-8 #gymnastics-posts ol .event-picture strong a{
+#events .container .events-post #gymnastics-posts ol .event-picture strong a{
   cursor: pointer;
   margin: 0 auto;
   padding: 10px;
@@ -1585,7 +1481,7 @@ page-events.php START
 }
 
 /*AJAX loading*/
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more {
+#events .container .events-post .load-more-block .gymnastics-load-more {
   display: block;
   width: 245px;
   font-size: 30px;
@@ -1594,21 +1490,21 @@ page-events.php START
   opacity: 0.5;
 }
 
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more:hover,
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more:focus,
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more .loading{
+#events .container .events-post .load-more-block .gymnastics-load-more:hover,
+#events .container .events-post .load-more-block .gymnastics-load-more:focus,
+#events .container .events-post .load-more-block .gymnastics-load-more .loading{
   opacity: 1;
 }
 
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more .loading {
+#events .container .events-post .load-more-block .gymnastics-load-more .loading {
   cursor: default;
 }
 
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more span {
+#events .container .events-post .load-more-block .gymnastics-load-more span {
   display: block;
 }
 
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more .button-text{
+#events .container .events-post .load-more-block .gymnastics-load-more .button-text{
   margin-top: 8px;
   border: 1px solid #808080;
   border-radius: 6px;
@@ -1617,7 +1513,7 @@ page-events.php START
 }
 
 /*spinner rotation START*/
-#events .container .col-lg-8 .load-more-block .gymnastics-load-more .fa-spin{
+#events .container .events-post .load-more-block .gymnastics-load-more .fa-spin{
   -webkit-animation: rotation 1000ms infinite linear;
 }
 
@@ -1633,8 +1529,10 @@ page-events.php START
 
 
 /*content-eventsright.php START*/
-
-#events .container .col-lg-4 .event-pic img {
+#events .container .events-post-right .event-pic{
+  display: flex;
+}
+#events .container .events-post-right .event-pic .event-img {
   content: "";
   box-shadow: /* The top layer shadow */ 1px 1px 1px rgba(0,0,0,0.25), 
     /* The second layer -6px -6px 0px 0px #D3D3D3, */ 
@@ -1643,8 +1541,15 @@ page-events.php START
   background: #fff;
   padding: 4px;
   position: relative;
-}
 
+  width: 25%;
+  height: 25%;
+  margin: 0 1em;
+  display: inline-block;
+}
+#events .container .events-post-right .event-pic .event-list{
+  display: inline-block;
+}
 /*content-eventsright.php END*/
 
 /*
@@ -1706,14 +1611,12 @@ page-event-gallery.php START
   width: 100%;
   margin: 0 auto;
 }
-
 #event-gallery .container .container-fluid #carouselExample .picture-list .picture-item .panel .panel-thumbnail a img{
   margin: 0 auto;
   display: block;
   max-width: 100%;
   max-height: 220px;
 }
-
 #myCarousel .list-inline {
   white-space:nowrap;
   /*overflow-x:auto;*/
@@ -1743,9 +1646,9 @@ page-event-gallery.php START
   max-height: 515px;
 }
 
-/*multiple carousel START*/
+/*multiple carousel START
 @media (min-width: 768px) {
-    /* show 3 items */
+    /* show 3 items 
     .picture-list .active,
     .picture-list .active + .picture-item,
     .picture-list .active + .picture-item + .picture-item,
@@ -1775,7 +1678,7 @@ page-event-gallery.php START
       visibility: visible;
     }
     
-    /* left or forward direction */
+    /* left or forward direction 
     .active .carousel-item-left + .carousel-item-next .carousel-item-left,
     .carousel-item-next .carousel-item-left + .picture-item,
     .carousel-item-next .carousel-item-left + .picture-item + .picture-item,
@@ -1786,7 +1689,7 @@ page-event-gallery.php START
       visibility: visible;
     }
     
-    /* farthest right hidden item must be abso position for animations */
+    /* farthest right hidden item must be abso position for animations 
     .picture-list .carousel-item-prev .carousel-item-right {
       position: absolute;
       top: 0;
@@ -1796,7 +1699,7 @@ page-event-gallery.php START
       visibility: visible;
     }
     
-    /* right or prev direction */
+    /* right or prev direction 
     .active .carousel-item-right + .carousel-item-prev .carousel-item-right,
     .carousel-item-prev .carousel-item-right + .picture-item,
     .carousel-item-prev .carousel-item-right + .picture-item + .picture-item,
@@ -1809,9 +1712,9 @@ page-event-gallery.php START
     }
 }
 
-/* Bootstrap Lightbox using Modal */
+/* Bootstrap Lightbox using Modal 
 #profile-grid { 
-  /*overflow: auto;*/
+  /*overflow: auto;
   overflow: hidden;
   white-space: normal; 
 } 
@@ -1836,8 +1739,19 @@ page-event-gallery.php START
 #profile-grid .img-rounded { 
   border-radius: 4px 4px 0 0;
 }
-
 /*multiple carousel END*/
+
+#event-gallery .container .container #multi-item-example{
+  padding: 5em 0;
+}
+#event-gallery .container .container #multi-item-example .carousel-inner .carousel-item {
+  -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+}
+#event-gallery .container .container #multi-item-example .carousel-inner .carousel-item .col-md-12 .card .card-img-top {
+  max-height: 300px;
+}
 /*
 ===============================================
 page-event-gallery.php END
