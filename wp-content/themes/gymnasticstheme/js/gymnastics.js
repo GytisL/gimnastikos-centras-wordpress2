@@ -81,7 +81,7 @@ function handle(delta) {
 
 /*header.php nav changes on scroll START*/
 jQuery(window).scroll(function() {
-    if(jQuery(this).scrollTop() > 500) {
+    if(jQuery(this).scrollTop() > 450) {
         jQuery('nav').addClass('red');
     } else {
         jQuery('nav').removeClass('red');

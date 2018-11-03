@@ -2,56 +2,12 @@
 /* Template Name: events */
 get_header (); ?>
 
-	<!--<section id="cover">
-			 <img src="<?php //echo get_stylesheet_directory_uri(); ?>/pictures/silhouette.jpg" class="image" />
-			<h1>Įvykiai</h1> 
-		<div id="cover-caption">
-			<div class="container">
-				<div class="col-sm-12">
-					 <a href="#footer-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a>
-				</div>
-			</div>
-		</div>
-	</section>-->
-
 	<section id="events">
 		<div class="container"><!-- d-flex -->
 			<div class="col-lg-8 events-post"><!-- d-inline-block -->
 				<h2 class="display-4 text-center">Įvykiai</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam modi ratione ut nisi tempora quibusdam autem est numquam qui culpa eos eum commodi recusandae nihil quisquam magnam, perferendis, voluptate neque.</p>
-				
-				<!-- <div id="gymnastics-posts">
-						<?php
-		                 	// patikrina kokiame puslapyje esi
-		                 	// $paged = get_query_var( 'paged', 1 ); 
-		                 	// echo $paged;
-							// $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-						
-		                    //$args = array(
-		                    //	'category_name' => 'events',
-		                    //	'posts_per_page' => '2',
-		                    	//'category_in' => array('15, 17, 30'),category by category name (post id)
-		                    	//'paged' => $paged 
-		                    	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
-		                    //);
 
-							//$lastBlog = new WP_Query ($args);
-
-						//if ( $lastBlog->have_posts() ): ?>
-							<?php //while ( $lastBlog->have_posts() ): $lastBlog->the_post(); 
-
-							//get_template_part('contents/content','eventsmain'); //content is in content-eventsmain.php?>
-
-							<?php //endwhile; ?>
-						<?php //endif; ?>
-
-						<?php 
-							//wp_reset_postdata();
-						?>
-						append here (prints this content with ajax)
-				</div>
- 
-					<div class="container sunset-posts-container">-->
 					<div id="gymnastics-posts">
 						<?php 
 
@@ -78,23 +34,15 @@ get_header (); ?>
 						?>
 		                
 					</div>
-					<!--</div> .container -->
 
 				<!-- ajax .container START -->
-
 					<div class="container text-center load-more-block">
 						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
 							<span class="fa fa-spinner loader gymnastics-loading"></span><span class="button-text">Daugiau<span>
 						</a>
 					</div><!-- .container -->
-					<!-- uzdeti button'us 
-					<div class="container text-center load-more-block">
-						<a class="btn btn-lg btn-default gymnastics-load-more" data-page="1" data-url="<?php// echo admin_url('admin-ajax.php'); ?>">
-							<span class="loader gymnastics-loading"></span><span class="button-text">Daugiau<span>
-						</a>
-					</div>-->
-
 				<!-- ajax .container END-->
+
 			</div>
 
 
@@ -112,22 +60,7 @@ get_header (); ?>
 				<!-- <div id="sidebar" class="widgets-area">
 					 <?php //dynamic_sidebar('sidebar-1'); ?>
 				</div> -->
-				<h2>Nesenai įvykę renginiai</h2>
-				
-				<!-- <?php
-                    //$args = array('category_name' => 'events','posts_per_page' => "5");
-
-                    //$lastBlog = new WP_Query ($args);
-
-                //if ( $lastBlog->have_posts() ) : ?>
-                    <?php //while ( $lastBlog->have_posts() ) : $lastBlog->the_post();
-                    //get_template_part('contents/content','eventsright'); //contents - papke, content - nurodo, kad yra content'as ir visada taip reikia zymeti, 'eventsright - kontento pavadinimas'.
-                	?>
-
-                    <?php //endwhile; ?>
-                <?php //endif; ?>
-
-                <?php //wp_reset_postdata(); ?> -->
+					<h2>Nesenai įvykę renginiai</h2>
 
 				<!-- STARTS TO PRINT FROM THIRD POST-->
                 <?php 
@@ -137,6 +70,7 @@ get_header (); ?>
 					'posts_per_page' => 2,
 					'offset' => 3,
 					'orderby' => 'date'
+
 					/*'tax_query' => array(
 				        array(
 				            'taxonomy' => 'post_format',
@@ -201,6 +135,37 @@ get_header (); ?>
 		<!-- container end -->
 		<!-- kontaktine forma su MODAL END -->
 	</section>
+
+	<!-- <div id="gymnastics-posts">
+		<?php
+         	// patikrina kokiame puslapyje esi
+         	// $paged = get_query_var( 'paged', 1 ); 
+         	// echo $paged;
+			// $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+		
+            //$args = array(
+            //	'category_name' => 'events',
+            //	'posts_per_page' => '2',
+            	//'category_in' => array('15, 17, 30'),category by category name (post id)
+            	//'paged' => $paged 
+            	//'category__not_in' => array('')parameter in which category our post doesnt have to be (post id)
+            //);
+
+			//$lastBlog = new WP_Query ($args);
+
+		//if ( $lastBlog->have_posts() ): ?>
+			<?php //while ( $lastBlog->have_posts() ): $lastBlog->the_post(); 
+
+			//get_template_part('contents/content','eventsmain'); //content is in content-eventsmain.php?>
+
+			<?php //endwhile; ?>
+		<?php //endif; ?>
+
+		<?php 
+			//wp_reset_postdata();
+		?>
+		append here (prints this content with ajax)
+	</div>-->
 
 
 <?php get_footer (); ?>

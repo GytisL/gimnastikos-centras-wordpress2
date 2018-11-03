@@ -40,10 +40,24 @@ single.php posts START
 ===============================================
 */
 #post-section {
-  background-color: #dee2e6;
+  background-color: #fff;
   padding: 2em 0 .5em 0;
   margin-bottom: 24em;
   z-index: 1;
+}
+#post-section .container img{
+  max-height: 185px;
+  max-width: 29%;
+  margin-right: 1em;
+  background: #fff;
+  padding: 4px;
+  transform: rotate(1deg);
+  box-shadow: /* The top layer shadow */ 
+    1px 1px 1px rgba(0,0,0,0.25), 
+    /* The second layer 
+    -6px -6px 0px 0px #D3D3D3, */ 
+    /* The second layer shadow */
+    1px 1px 1px rgba(0,0,0,0.15);
 }
 /*
 ===============================================
@@ -127,8 +141,8 @@ header.php NAVBAR START
 }
 
 #gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover {
-  /*color: #aaa;*/
-  color: #000;
+  color: #aaa;
+  /*color: #b5aa93;*/
 }
 
 #gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::after,
@@ -149,7 +163,8 @@ header.php NAVBAR START
 
 #gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::before {
   transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
-  background: #2196f3;
+  /*background: #2196f3;*/
+  background: #26a0da;
 }
 
 #gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::after {
@@ -157,8 +172,6 @@ header.php NAVBAR START
   background: #F44336;
 }
 /*header.php NAVBAR EFFECT ON HOVER END*/
-
-
 
 /*header.php navbar item turn off*/
 /*.isjungtas{
@@ -564,7 +577,7 @@ PAGRINDINIO PSL GALERIJA START
   box-shadow: 0 0 20px #eee;
   border-radius: 50px;
   display: block;
-  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+  background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
 }
 
 #multi-gallery .container .to-gallery:hover { 
@@ -635,22 +648,24 @@ PAGRINDINIO PSL GALERIJA START
 }
 
 #multi-gallery .container .gallery .pics {
-    -webkit-transition: all 350ms ease;
-    transition: all 350ms ease; }
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
 #multi-gallery .container .gallery .animation {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); 
+}
 
 @media (max-width: 450px) {
-    #multi-gallery .container .gallery {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-        -webkit-column-width: 100%;
-        -moz-column-width: 100%;
-        column-width: 100%;
-    }
+  #multi-gallery .container .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+  }
 }
 /*@media (max-width: 400px) {
     .btn .filter {
@@ -660,15 +675,15 @@ PAGRINDINIO PSL GALERIJA START
 }*/
 @media (min-width: 768px){
 	/*.col-md-12*/ #multi-gallery .container .section{
-      -webkit-box-flex: 0 0 100%; /* OLD - iOS 6-, Safari 3.1-6 */
-      -moz-box-flex: 0 0 100%;    /* OLD - Firefox 19- */
-      -webkit-flex: 0 0 100%;     /* Chrome */
+    -webkit-box-flex: 0 0 100%; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 0 0 100%;    /* OLD - Firefox 19- */
+    -webkit-flex: 0 0 100%;     /* Chrome */
 
 
-	    -ms-flex: 0 0 100%;         /* IE 10 */
-	    flex: 0 0 100%;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	    max-width: 100%;
-	    margin: 0 -1em;
+    -ms-flex: 0 0 100%;         /* IE 10 */
+    flex: 0 0 100%;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    max-width: 100%;
+    margin: 0 -1em;
 	}                
 }
 
@@ -949,7 +964,7 @@ CONTACT-BAR START
   box-shadow: 0 0 20px #eee;
   border-radius: 50px;
   /* display: block; */
-  background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+  background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
 }
 
 #contact-bar .body .contact-btn .button1:hover {
@@ -961,7 +976,8 @@ CONTACT-BAR START
   cursor: default;
   border: none;
   padding: 2em 0;
-  background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);
+  /*background: linear-gradient(rgba(155, 138, 167, 0), #d299c252, #d299c2);*/
+  background: linear-gradient(rgba(183, 131, 140, 0), #da272752, #bb5151);
 }
 
 #contact-bar .body a:hover{
@@ -1418,7 +1434,7 @@ page-events.php START
     box-shadow: 0 0 20px #eee;
     border-radius: 50px;
     display: block;
-    background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
   }
 /*searchform.php START*/
   #events .container .events-post-right .search-form-container {
@@ -1478,6 +1494,33 @@ page-events.php START
   /*display: block;*/
   background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
   text-decoration: none;
+}
+
+#events .container .events-post #gymnastics-posts ol .event-picture p a{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+  background-size: 200% auto;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50px;
+  display: block;
+  background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+  width: 15%;
+  text-decoration: none;
+}
+ 
+#events .container .events-post #gymnastics-posts ol .event-picture p a:hover{
+  background-position: right center;
 }
 
 /*AJAX loading*/
@@ -1550,6 +1593,8 @@ page-events.php START
 #events .container .events-post-right .event-pic .event-list{
   display: inline-block;
 }
+
+
 /*content-eventsright.php END*/
 
 /*

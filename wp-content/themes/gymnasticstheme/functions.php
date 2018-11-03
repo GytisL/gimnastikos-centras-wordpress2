@@ -192,4 +192,5 @@ add_filter( 'searchwp_live_search_hijack_get_search_form', '__return_false' );
 */
 
 
+
 ?>
