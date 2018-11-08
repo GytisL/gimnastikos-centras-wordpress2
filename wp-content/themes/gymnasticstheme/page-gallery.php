@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<section id="picture-gallery">
 		<div class="container">
-			<h2 class="display-4 text-center">Galerija</h2>
+			<h1>Galerija</h1>
 			<?php
                 $args  = array(
                 	'category_name' => 'pagrindinegalerija',

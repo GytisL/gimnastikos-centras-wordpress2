@@ -3,7 +3,7 @@
 get_header(); ?>
 
 	<section id="feature-one">
-		<h2 class="display-4 text-center">Pagrindinis puslapis</h2>
+		<h1>Pagrindinis puslapis</h1>
 		<div class="container">
 			<div class="feature-row">
 				<!-- 1 variantas --><?php 
@@ -37,7 +37,7 @@ get_header(); ?>
 
                     $lastBlog = new WP_Query ($args);
 
-                 if ( $lastBlog->have_posts() ) : ?>
+                if ( $lastBlog->have_posts() ) : ?>
                     <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
 
 						<?php get_template_part('contents/content','video'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->

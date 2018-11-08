@@ -184,7 +184,7 @@ SWIPER SLIDER START
 ===============================================
 */
 #carouselExampleFade{
-    background-color: #fff;
+  background-color: #fff;
 }
 #carouselExampleFade .carousel-block .carousel-img {
   width: 100%;
@@ -192,11 +192,12 @@ SWIPER SLIDER START
 }
 #carouselExampleFade .carousel-block .carousel-img h1{
   position: absolute;
-  font-size: 48px;
+  /*font-size: 48px;*/
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
-  top: 80px;
+  top: 110px;
   text-align: center;
   left: 0;
   right: 0;
@@ -402,13 +403,16 @@ SOCIAL SITES END
 page-main.php APIE MUS START
 ===============================================
 */
-#feature-one .container .feature-row h3{
-	text-transform: uppercase;
-}
-
-#feature-one{
+#feature-one {
   background-color: #fff;
   margin-bottom: -1em;
+}
+
+#feature-one h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .4em 0 0 0;
 }
 
 #feature-one .container .feature-row {
@@ -421,6 +425,7 @@ page-main.php APIE MUS START
 
 #feature-one .container .feature-row h3 {
   margin: 0 .4em;
+  text-transform: uppercase;
 }
 
 #feature-one .container .feature-row .title {
@@ -452,8 +457,19 @@ page-main.php APIE MUS END
 */
 
 /*page-gallery-list.php START*/
-  #gallery-list {
+  /*#gallery-list {
     background-image: url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/woman4.jpg);
+  }*/
+
+  #gallery-list {
+    background-color: #fff;
+  }
+
+  #gallery-list .container h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .4em 0 0 0;
   }
   
   #gallery-list .container .card-deck {
@@ -551,6 +567,7 @@ PAGRINDINIO PSL GALERIJA START
 /*Grid row cards START*/
 #multi-gallery .container h3 {
   margin: 0 .4em;
+  padding-top: .4em;
   text-transform: uppercase;
 }
 
@@ -690,7 +707,7 @@ PAGRINDINIO PSL GALERIJA START
 #multi-gallery .container .section .video-gallery #video-carousel-example{
   background-color: #fff;
   padding: .25em;
-  margin: 1em .4em 1em .4em;
+  margin: 1em .4em 1em 1em;
   border-radius: .25em;
 }
 
@@ -776,6 +793,13 @@ PAGRINDINIO PSL GALERIJA START
   background-color: #fff;
 }
 
+#picture-gallery .container h1{
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .4em 0 0 0;
+}
+
 #picture-gallery .container .row .row  .thumb .thumbnail .img-thumbnail {
   max-height: 175px;
   width: 100%;
@@ -829,6 +853,9 @@ KONTAKTAI START
 
 #contacts {
   background-color: #fff;
+}
+#contacts .container h3{
+  padding-top: .4em;
 }
 #contacts .container .row .map-column .block img {
   max-width: 96.6%;
@@ -1238,8 +1265,7 @@ FOOTER START
 }
 
 #footer-main .container .row .title {
-  font-size:25px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 } 
 
@@ -1394,6 +1420,30 @@ page-events.php START
   background-color: #fff;
 }
 
+#events .container .events-post h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .4em 0;
+  margin: 0;
+}
+
+#events .container .events-post-right .join {
+  padding: 1em 0;
+  margin: 0;
+}
+
+#events .container .events-post-right p,
+#events .container .events-post-right .search-form-container h4 {
+  padding-bottom: 1em;
+  margin: 0;
+}
+
+#events .container .events-post-right h2 {
+  margin: 0;
+  padding-bottom: .5em;
+}
+
 @media (min-width: 992px){
   #events .container {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -1440,12 +1490,15 @@ page-events.php START
   #events .container .events-post-right .search-form-container {
     margin: 1em 0;
   }
+  
   #events .container .events-post-right .search-form-container .search{
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    height: 3em;
   }
   #events .container .events-post-right .search-form-container .search .form-control{
     padding: 0 10px;
@@ -1791,8 +1844,8 @@ page-event-gallery.php START
 }
 #event-gallery .container .container #multi-item-example .carousel-inner .carousel-item {
   -webkit-column-count: 3;
-      -moz-column-count: 3;
-      column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
 }
 #event-gallery .container .container #multi-item-example .carousel-inner .carousel-item .col-md-12 .card .card-img-top {
   max-height: 300px;
@@ -1812,6 +1865,14 @@ page-trainer.php START
 #trainers {
   background-color: #fff;
   margin-bottom: -1em;
+}
+
+#trainers .container h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .4em 0;
+  margin: 0;
 }
 
 #trainers .container #trainer-posts .trainer-event-pic2,

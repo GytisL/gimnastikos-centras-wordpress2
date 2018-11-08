@@ -87,16 +87,16 @@
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 			<div class="carousel-inner carousel-block">
 				<div class="carousel-item active carousel-img">
-					<h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1>
-					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="First slide">
+					<h1 class="in-left">Sveiki prisijungę prie svetainės</h1>
+					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="Pirmas paveiksliukas">
 		 		</div>
 				<div class="carousel-item carousel-img">
-					<h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1>
-					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg" alt="Second slide">
+					<h1 class="in-left">Sveiki prisijungę prie svetainės</h1>
+					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg" alt="Antras paveiksliukas">
 				</div>
 				<div class="carousel-item carousel-img">
-					<h1 class="in-left">Sveiki prisijungę prie gimnastikos svetainės</h1>
-					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="Third slide">
+					<h1 class="in-left">Sveiki prisijungę prie svetainės</h1>
+					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="Trečias paveiksliukas">
 				</div>
 			</div>
 

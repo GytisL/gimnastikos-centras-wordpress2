@@ -5,8 +5,7 @@
 				<!-- <div class="col-md-6"> --><!-- d-flex justify-content-center mb-5 -->
 				    <!-- <button type="button" class="btn btn-outline-black waves-effect filter mr-1" data-rel="all">Visi</button>
 				    <button type="button" class="btn btn-outline-black waves-effect filter mr-1" data-rel="1">Sportinė gimnastika</button>
-				</div> -->
-				<!-- Grid column -->
+				</div> --><!-- Grid column -->
 			
 			<!-- Grid row -->
 			<div class="row col-lg-12 section">
@@ -16,14 +15,13 @@
 					    <!-- Grid column -->
 					    <!-- <div class="mb-3 pics animation all 2">
 					        <a href="gallery"><img class="img-fluid" src="<?php //echo get_stylesheet_directory_uri(); ?>/pictures/woman.jpg" alt="Nepavyko atvaizduoti nuotraukos" /></a>
-					    </div> -->
-					    <!-- Grid column -->
+					    </div> --><!-- Grid column -->
 
 					    <!-- Grid column -->
 					    <!-- <div class="mb-3 pics animation all 1">
 					        <a href="gallery"><img class="img-fluid" src="<?php //echo get_stylesheet_directory_uri(); ?>/pictures/sport-gymnastics.jpg" alt="Nepavyko atvaizduoti nuotraukos" /></a>
-					    </div> -->
-					    <!-- Grid column -->
+					    </div> --><!-- Grid column -->
+					    
 						<div class="row column1">
 							<div class="image pics all 2">
 						    	<?php echo get_post_meta( get_the_ID(), 'image-1', true); ?>
@@ -48,7 +46,7 @@
 							<!-- <div class="image pics all 1">
 								<a  class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Gimnastika7" data-image="<?php //echo get_stylesheet_directory_uri(); ?>/pictures/girl-2.jpg" data-target="#image-gallery">
 						    	<?php //echo get_post_meta( get_the_ID(), 'image-6', true); ?>
-							</a>
+								</a>
 							</div> -->
 						</div>
 
@@ -80,7 +78,7 @@
 					<!-- <a href="gallery"><button class="to-gallery">Į galeriją &rarr;</button></a> -->
 					<a href="<?php echo get_permalink(147); ?>"><button class="to-gallery"><?php _e( 'Į galeriją &rarr;' ); ?></button></a>
 				</div>
-					
+
 				<div class="col-lg-6 video-gallery">
 					<!--Carousel Wrapper-->
 					<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">

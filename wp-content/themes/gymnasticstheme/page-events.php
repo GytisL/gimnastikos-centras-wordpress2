@@ -5,7 +5,7 @@ get_header (); ?>
 	<section id="events">
 		<div class="container"><!-- d-flex -->
 			<div class="col-lg-8 events-post"><!-- d-inline-block -->
-				<h2 class="display-4 text-center">Įvykiai</h2>
+				<h1>Įvykiai</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam modi ratione ut nisi tempora quibusdam autem est numquam qui culpa eos eum commodi recusandae nihil quisquam magnam, perferendis, voluptate neque.</p>
 
 					<div id="gymnastics-posts">
