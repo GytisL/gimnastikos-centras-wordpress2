@@ -132,7 +132,7 @@ $(function() {
 /* grid row cards END*/
 
 
-/*#id map GOOGLE MAPS START*/
+/*#id map content-contacts.php GOOGLE MAPS START
 function initMap() {
 	var location = {lat: 54.892813, lng: 23.916402};
 	var map = new google.maps.Map(document.getElementById("map"), {

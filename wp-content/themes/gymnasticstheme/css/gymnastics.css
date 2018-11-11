@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
 }
  
 body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
  
 body::-webkit-scrollbar-thumb {
@@ -53,11 +53,11 @@ single.php posts START
   padding: 4px;
   transform: rotate(1deg);
   box-shadow: /* The top layer shadow */ 
-    1px 1px 1px rgba(0,0,0,0.25), 
+    1px 1px 1px rgba(0, 0, 0, .25), 
     /* The second layer 
     -6px -6px 0px 0px #D3D3D3, */ 
     /* The second layer shadow */
-    1px 1px 1px rgba(0,0,0,0.15);
+    1px 1px 1px rgba(0, 0, 0, .15);
 }
 /*
 ===============================================
@@ -71,22 +71,22 @@ header.php NAVBAR START
 ===============================================
 */
 /*header.php nav changes on scroll START*/
-    .navbar {
-      background-color: #fff;
-      
-    }
-    .red {
-      /*opacity: 0.5;
-      background-color: skyblue;*/
-      display: none;
-    }
-  /*header.php nav changes on scroll END*/
+  .navbar {
+    background-color: #fff;
+    
+  }
+  .red {
+    /*opacity: .5;
+    background-color: skyblue;*/
+    display: none;
+  }
+/*header.php nav changes on scroll END*/
 .navbar {
   position: fixed;
   width: 100%;
   z-index: 2;
 }
-.navbar #gymnasticsNavbar .nav {
+.navbar .gymnasticsNavbar .nav {
   font-size: 17px;
   text-transform: uppercase;
 }
@@ -112,7 +112,7 @@ header.php NAVBAR START
 
 
 @media (max-width: 768px) {
-  #gymnasticsNavbar #menu-gimnastikos-menu {
+  .gymnasticsNavbar #menu-gimnastikos-menu {
     flex-direction: row;
   }
     }
@@ -123,11 +123,11 @@ header.php NAVBAR START
     }
   }*/
 
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 {
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 {
   padding: 0 .5em;
 }
 
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a {
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a {
   position: relative;
   display: inline-block;
   font-size: 20px;
@@ -140,19 +140,19 @@ header.php NAVBAR START
   text-decoration: none;
 }
 
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover {
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover {
   color: #aaa;
   /*color: #b5aa93;*/
 }
 
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::after,
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::before {
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::after,
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a:hover::before {
   width: 100%;
   left: 0;
 }
 
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::after,
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::before {
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::after,
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::before {
   content: ''; 
   position: absolute;
   top: calc(100% + 5px);
@@ -161,14 +161,14 @@ header.php NAVBAR START
   height: 3px;
 }
 
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::before {
-  transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::before {
+  transition: width .4s cubic-bezier(.51, .18, 0, .88) .1s;
   /*background: #2196f3;*/
   background: #26a0da;
 }
 
-#gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::after {
-  transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+.gymnasticsNavbar #menu-gimnastikos-menu .nav-item1 a::after {
+  transition: width .2s cubic-bezier(.29, .18, .26, .83);
   background: #F44336;
 }
 /*header.php NAVBAR EFFECT ON HOVER END*/
@@ -351,9 +351,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
 #sticky-social .social li:first-child a { 
   border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
 }
 #sticky-social .social li:last-child a { 
   border-radius: 0 0 5px 0;
+  -moz-border-radius: 0 5px 0 0;
 }
     
 #sticky-social .social li a span {
@@ -369,6 +371,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   opacity: 0;
   transform: rotateY(45deg);
   border-radius: 5px;
+  -moz-border-radius: 5px;
   transition: all .5s ease .300ms;
 }
 
@@ -435,6 +438,11 @@ page-main.php APIE MUS START
 #feature-one .container .feature-row .feature-content {
   padding: 1rem ;
 }
+#feature-one .container .feature-row .feature-content .video-content iframe {
+  border-radius: .25em;
+  padding: .25em;
+  border: solid 1px #26a0da;
+}
 
 @media (min-width: 992px){
   #feature-one .container .feature-row .feature-content .video-text {
@@ -443,7 +451,7 @@ page-main.php APIE MUS START
   }
 
   #feature-one .container .feature-row .feature-content .video-content {
-    padding: 0;
+    padding: 0 0 0 .35em;
     max-width: 48%;
     max-height: 45%;
     margin-left: 6em;
@@ -477,7 +485,7 @@ page-main.php APIE MUS END
   }
   
   #gallery-list .container .card-deck .card {
-    padding-top: 0.5em;
+    padding-top: .5em;
     height: 230px;
     background: top;
   }
@@ -509,7 +517,6 @@ page-main.php APIE MUS END
     width: 245px;
     background-color: #cfc;
     border-color: #eee;
-    /*opacity: 0.7;*/
   }
   #gallery-list .container .card-deck .card .relative2 {
     position: relative;
@@ -517,7 +524,6 @@ page-main.php APIE MUS END
     width: 275px;
     background-color: #cfc;
     border-color: #eee;
-    /*opacity: 0.7;*/
   }
   #gallery-list .container .card-deck .card .relative3 {
     position: relative;
@@ -525,7 +531,6 @@ page-main.php APIE MUS END
     width: 255px;
     background-color: #cfc;
     border-color: #eee;
-    /*opacity: 0.7;*/
   }
   #gallery-list .container .card-deck .card .rel1 {
     top: 5px;
@@ -572,7 +577,7 @@ PAGRINDINIO PSL GALERIJA START
 }
 
 #multi-gallery .container .title {
-  color: rgba(0,0,0,0.7);
+  color: rgba(0, 0, 0, .7);
   font-size: 3rem;
 }
 
@@ -590,9 +595,10 @@ PAGRINDINIO PSL GALERIJA START
   transition: .5s;
   background-size: 200% auto;
   color: #fff;
-  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  /* text-shadow: 0px 0px 10px rgba(0, 0, 0, .2); */
   box-shadow: 0 0 20px #eee;
   border-radius: 50px;
+  -moz-border-radius: 50px;
   display: block;
   background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
 }
@@ -651,6 +657,7 @@ PAGRINDINIO PSL GALERIJA START
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: .25rem;
+  -moz-border-radius: .25rem;
   max-width: 100%;
 
   overflow: hidden;
@@ -709,6 +716,7 @@ PAGRINDINIO PSL GALERIJA START
   padding: .25em;
   margin: 1em .4em 1em 1em;
   border-radius: .25em;
+  -moz-border-radius: .25em;
 }
 
 #multi-gallery .container .section .video-gallery #video-carousel-example .pics-list .pics-gallery {
@@ -754,10 +762,10 @@ PAGRINDINIO PSL GALERIJA START
   height: 150px;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
   border-radius: 5px;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all .6s cubic-bezier(.165, .84, .44, 1);
+  transition: all .6s cubic-bezier(.165, .84, .44, 1);
 
   /*-webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
@@ -772,10 +780,10 @@ PAGRINDINIO PSL GALERIJA START
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
   opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all .6s cubic-bezier(.165, .84, .44, 1);
+  transition: all .6s cubic-bezier(.165, .84, .44, 1);
 }
 #gallery .pics .img-fluid:hover {
   -webkit-transform: scale(1.25, 1.25);
@@ -843,7 +851,7 @@ KONTAKTAI START
 	height: 20em;
   width: 22em;
 	top: 1em;
-	 /*Makes the sample page fill the window. */
+	/*Makes the sample page fill the window.*/
 	margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
@@ -854,24 +862,43 @@ KONTAKTAI START
 #contacts {
   background-color: #fff;
 }
-#contacts .container h3{
+#contacts .container h3 {
   padding-top: .4em;
+  margin-bottom: 0;
 }
-#contacts .container .row .map-column .block img {
-  max-width: 96.6%;
-  max-height: 30em;
-  margin: 2.5em auto;
+#contacts .container .row .map-column .block {
+  text-align: right;
+  max-width: 100%;
+  padding: 2em 1.3em 0 0;
+}
+#contacts .container .row .map-column .block a {
   border-radius: .25em;
+  -moz-border-radius: .25em;
+  padding: 18.2em .4em .2em .4em;
+  border: solid 1px #26a0da;
+}
+#contacts .container .row .map-column .block a iframe {
+  width: 83.5%;
 }
 
-/*content-contacts.php map-overlay START*/
+/*#contacts .container .row .map-column .block img {
+  max-width: 96.6%;
+  max-height: 30em;
+  border-radius: .25em;
+  -moz-border-radius: .25em;
+  margin: 2em 0 0 0;
+  padding: .3em;
+  border: solid 1px #26a0da;
+}*/
+
+/*content-contacts.php map-overlay START
 #contacts .container .row .map-column .map-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, .7);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
@@ -882,10 +909,11 @@ KONTAKTAI START
   z-index: 3;
 }
 #contacts .container .row .map-column .map-overlay .popup {
-  margin: 47px auto;
-  padding: 20px;
+  margin: 60px auto;
+  padding: 5px;
   background: #fff;
   border-radius: 5px;
+  -moz-border-radius: 5px;
   width: 90%;
   position: relative;
   transition: all 5s ease-in-out;
@@ -912,7 +940,7 @@ KONTAKTAI START
   vertical-align: middle;
   width: 100%;
 }
-/*content-contacts.php map-overlay END*/
+content-contacts.php map-overlay END*/
 
 #contacts .container .row .col-lg-5 table {
   border: none;
@@ -961,7 +989,7 @@ CONTACT-BAR START
 }
 
 #contact-bar .body i {
-  margin-right: 0.5em;
+  margin-right: .5em;
 }
 
 #contact-bar .body .contact-btn {
@@ -987,9 +1015,10 @@ CONTACT-BAR START
   transition: .5s;
   background-size: 200% auto;
   color: #fff;
-  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  /* text-shadow: 0px 0px 10px rgba(0,0,0,.2); */
   box-shadow: 0 0 20px #eee;
   border-radius: 50px;
+  -moz-border-radius: 50px;
   /* display: block; */
   background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
 }
@@ -1020,7 +1049,7 @@ CONTACT-BAR START
   box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, .2);
   /*background: linear-gradient(#8CA6DB, #B993D6);*/
   background: linear-gradient(#8CA6DB, #c36ff88f);
-  opacity: 0.85;
+  opacity: .85;
   border-color: #fff;
 }
 
@@ -1040,6 +1069,7 @@ CONTACT-BAR START
   background: none;
   border: 1px solid rgba(255, 255, 255, .65);
   border-radius: 25px;
+  -moz-border-radius: 25px;
   color: rgba(255, 255, 255, .65);
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -1084,6 +1114,7 @@ CONTACT-BAR START
   transition: all .2s ease;
   width: 400px;
   border-radius: 7px;
+  -moz-border-radius: 7px;
 }
 
 #contact-bar .body .modal .modal-dialog .modal-content .modal-body #wpcf7-f38-o1 .wpcf7-form p{
@@ -1108,8 +1139,9 @@ CONTACT-BAR START
 }
 
 .wpcf7-form-control-wrap input {
-    border: none;
-    border-radius: 7px;
+  border: none;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
 }
 
 #wpcf7-f38-o1 .wpcf7-form .wpcf7-textarea{
@@ -1133,7 +1165,6 @@ BACK TO TOP BUTTON START
   width: 50px;
   height: 50px;
   text-align: center;
-  border-radius: 4px;
   position: fixed;
   bottom: 105px;
   right: 35px;
@@ -1141,9 +1172,10 @@ BACK TO TOP BUTTON START
   opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden;
-  /*z-index: 1000;*/
   z-index: 2;
   border-radius: 25px;
+  -moz-border-radius: 25px;
+
 }
 #ButtonToTop::after {
   content: "\f077";
@@ -1224,7 +1256,7 @@ FOOTER START
     position: absolute;
     bottom: -5em;
     left: 92em;
-    opacity: 0.3;
+    opacity: .3;
     padding: 0;
     margin: 0;
   }
@@ -1307,11 +1339,11 @@ FOOTER START
   height: 3px;
 }
 #footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::before {
-  transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+  transition: width .4s cubic-bezier(.51, .18, 0, .88) .1s;
   background: #2196f3;
 }
 #footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::after {
-  transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  transition: width .2s cubic-bezier(.29, .18, .26, .83);
   background: #F44336;
 }
 /*effect underline END*/
@@ -1403,6 +1435,7 @@ gallery.html, page-gallery.php galerija START
   border: 1px solid #ccc;
   width: 25px;
   border-radius: .25rem;
+  -moz-border-radius: .25rem;
 }
 /*
 ===============================================
@@ -1435,13 +1468,19 @@ page-events.php START
 
 #events .container .events-post-right p,
 #events .container .events-post-right .search-form-container h4 {
-  padding-bottom: 1em;
+  padding-bottom: .8em;
   margin: 0;
 }
 
 #events .container .events-post-right h2 {
   margin: 0;
   padding-bottom: .5em;
+}
+
+#events .container .events-post-right button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
 }
 
 @media (min-width: 992px){
@@ -1480,9 +1519,10 @@ page-events.php START
     transition: .5s;
     background-size: 200% auto;
     color: #fff;
-    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,.2); */
     box-shadow: 0 0 20px #eee;
     border-radius: 50px;
+    -moz-border-radius: 50px;
     display: block;
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
   }
@@ -1505,6 +1545,11 @@ page-events.php START
     margin-right: 7px;
   }
 }
+
+.searchwp-live-search-result a {
+  text-decoration: none;
+}
+
 /*searchform.php END*/
 
 #events .container .events-post #gymnastics-posts ol .event-picture .post-picture {
@@ -1525,11 +1570,11 @@ page-events.php START
 
   box-shadow: 
     /* The top layer shadow */ 
-    1px 1px 1px rgba(0,0,0,0.25), 
+    1px 1px 1px rgba(0, 0, 0, .25), 
     /* The second layer 
     -6px -6px 0px 0px #D3D3D3, */ 
     /* The second layer shadow */
-    1px 1px 1px rgba(0,0,0,0.15);
+    1px 1px 1px rgba(0, 0, 0, .15);
 }
 
 #events .container .events-post #gymnastics-posts ol .event-picture strong a{
@@ -1541,39 +1586,35 @@ page-events.php START
   transition: .5s;
   background-size: 200% auto;
   color: #fff;
-  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+  /* text-shadow: 0px 0px 10px rgba(0, 0, 0, .2); */
   box-shadow: 0 0 20px #eee;
   border-radius: 50px;
-  /*display: block;*/
+  -moz-border-radius: 50px;
   background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);
   text-decoration: none;
 }
 
 #events .container .events-post #gymnastics-posts ol .event-picture p a{
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   cursor: pointer;
-  margin: 0;
-  padding: 10px;
+  margin: 1em 0 0 0;
+  padding: 3px 10px;
   text-align: center;
   text-transform: uppercase;
   transition: .5s;
   background-size: 200% auto;
-  color: #fff;
-  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  box-shadow: 0 0 20px #eee;
+  color: #3F3F3F;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 20px #3F3F3F;
   border-radius: 50px;
-  display: block;
-  background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+  -moz-border-radius: 50px;
+  display: inline;
   width: 15%;
   text-decoration: none;
+  opacity: .5;
 }
- 
 #events .container .events-post #gymnastics-posts ol .event-picture p a:hover{
   background-position: right center;
+  opacity: 1;
 }
 
 /*AJAX loading*/
@@ -1583,7 +1624,7 @@ page-events.php START
   font-size: 30px;
   margin: 0 auto;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 #events .container .events-post .load-more-block .gymnastics-load-more:hover,
@@ -1601,11 +1642,22 @@ page-events.php START
 }
 
 #events .container .events-post .load-more-block .gymnastics-load-more .button-text{
-  margin-top: 8px;
-  border: 1px solid #808080;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  width: 210px;
+  cursor: pointer;
+  margin: 10px 0 0 10px;
+  padding: 10px;
+  padding: 2px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+  background-size: 200% auto;
+  color: #3F3F3F;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 20px #3F3F3F;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  display: block;
+  width: 95%;
+  text-decoration: none;
 }
 
 /*spinner rotation START*/
@@ -1630,9 +1682,9 @@ page-events.php START
 }
 #events .container .events-post-right .event-pic .event-img {
   content: "";
-  box-shadow: /* The top layer shadow */ 1px 1px 1px rgba(0,0,0,0.25), 
+  box-shadow: /* The top layer shadow */ 1px 1px 1px rgba(0, 0, 0, .25), 
     /* The second layer -6px -6px 0px 0px #D3D3D3, */ 
-  /* The second layer shadow */ 1px 1px 1px rgba(0,0,0,0.15);
+  /* The second layer shadow */ 1px 1px 1px rgba(0, 0, 0, .15);
   margin: 0 2em 0 0;
   background: #fff;
   padding: 4px;
@@ -1641,13 +1693,32 @@ page-events.php START
   width: 25%;
   height: 25%;
   margin: 0 1em;
-  display: inline-block;
 }
-#events .container .events-post-right .event-pic .event-list{
-  display: inline-block;
+#events .container .events-post-right .event-pic .event-list {
+  /*display: inline-block;*/
 }
-
-
+#events .container .events-post-right .event-pic .event-list p a {
+  cursor: pointer;
+  margin: 1em 0 0 0;
+  padding: 3px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+  background-size: 200% auto;
+  color: #3F3F3F;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 20px #3F3F3F;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  display: inline;
+  width: 15%;
+  text-decoration: none;
+  opacity: .5;
+}
+#events .container .events-post-right .event-pic .event-list p a:hover {
+  background-position: right center;
+  opacity: 1;
+}
 /*content-eventsright.php END*/
 
 /*
@@ -1737,7 +1808,7 @@ page-event-gallery.php START
   max-height: 100px;
 }
 #myCarousel .carousel-indicators > li.active img {
-  opacity: 0.7;
+  opacity: .7;
 }
 #myCarousel .picture-list .picture-item img {
   max-width: 100%;
@@ -1889,6 +1960,7 @@ page-trainer.php START
   max-width: 270px;
   margin-right: 1em;
   border-radius: 50%;
+  -moz-border-radius: 50%;
 
   shape-outside: inset(1% round 50%); /*MAKES TEXT GO AROUND THE EXACT SHAPE*/
 }
@@ -1905,6 +1977,7 @@ page-trainer.php START
   max-width: 270px;
   margin-left: 1em;
   border-radius: 50%;
+  -moz-border-radius: 50%;
   shape-outside: inset(1% round 50%); /*MAKES TEXT GO AROUND THE EXACT SHAPE*/
 }
 
@@ -1942,7 +2015,7 @@ page-trainer.php START
 .toggler_1[aria-expanded="false"] + .toggled_1 {
   overflow: hidden;
   visibility: hidden;
-  opacity: 0.35;
+  opacity: .35;
   max-height: 0;
   transition:
     visibility 0s ease .6s,
@@ -1961,7 +2034,7 @@ page-trainer.php START
     max-height 1s ease-out 0s;
 }
 /*.tog_content {
-  background-color: hsla(0, 0%, 35%, 0.8);
+  background-color: hsla(0, 0%, 35%, .8);
   color: #fff;
   display: block;
   padding: 1rem;

@@ -50,12 +50,14 @@ get_header (); ?>
 				<h2 class="join">Prisijunk šiandien</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua.</p>
-				<button type="button" class="btn btn-lg btn-default">Užsirašyk dabar!</button>
+				<!-- <button type="button" class="btn btn-lg btn-default">Užsirašyk dabar!</button> -->
+				<button type="button" class="btn btn-lg btn-default"><a href="<?php echo site_url();?>#contacts">Užsirašyk dabar!</a></button>
 				
 				<div class="search-form-container">
 					<h4>Paieška</h4>
 					<?php get_search_form(); ?>
 				</div>
+
 
 				<!-- <div id="sidebar" class="widgets-area">
 					 <?php //dynamic_sidebar('sidebar-1'); ?>
@@ -84,7 +86,7 @@ get_header (); ?>
                     $lastBlog = new WP_Query ($args);
 
                 if ( $lastBlog->have_posts() ) : ?>
-                    <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post();
+                    <?php while ( $lastBlog->have_posts() ): $lastBlog->the_post();
                     get_template_part('contents/content','eventsright'); //contents - papke, content - nurodo, kad yra content'as ir visada taip reikia zymeti, 'eventsright - kontento pavadinimas'.
                 	?>
 

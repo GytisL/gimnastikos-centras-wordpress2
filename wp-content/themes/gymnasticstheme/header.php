@@ -35,19 +35,20 @@
 <!-- Makes inside pages navbar titles disappear END -->
 
 
+
 		<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
-			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#gymnasticsNavbar" aria-controls="gymnasticsNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#gymnasticsnavbarDiv" aria-controls="gymnasticsNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
+			</button><!-- NEVEIKE NES #gymnasticsNavbarDiv id buvo toks pats kaip aria-controls-->
 				<a class="navbar-brand ml-5" href="<?php echo site_url();?>">LOGO</a>
 
-			<div class="collapse navbar-collapse justify-content-end" id="gymnasticsNavbar">
+			<div class="collapse navbar-collapse justify-content-end gymnasticsNavbar" id="gymnasticsnavbarDiv">
 				<?php
 					wp_nav_menu(array(
 						'theme_location' => 'primary',
 	                    'container' => false,
 	                    'menu_class' => 'nav navbar-nav'
-	                    ));
+	                ));
 	            ?>
 
 				 <!-- <ul class="nav navbar-nav">
@@ -78,7 +79,7 @@
 						<a class="nav-link" href="gallery">Galerija</a>--><!-- vidiniai puslapiai -->
 				    <!-- </li>
 				    
-				</ul>  -->
+				</ul>-->
 			</div>
 		</nav>
 

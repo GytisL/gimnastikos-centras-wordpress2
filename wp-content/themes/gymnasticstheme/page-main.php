@@ -37,8 +37,8 @@ get_header(); ?>
 
                     $lastBlog = new WP_Query ($args);
 
-                if ( $lastBlog->have_posts() ) : ?>
-                    <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
+                if ( $lastBlog->have_posts() ): ?>
+                    <?php while ( $lastBlog->have_posts() ): $lastBlog->the_post(); ?>
 
 						<?php get_template_part('contents/content','video'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->
 
@@ -60,7 +60,7 @@ get_header(); ?>
 
                 $lastBlog = new WP_Query ($args);
 
-            if ( $lastBlog->have_posts() ) : ?>
+            if ( $lastBlog->have_posts() ): ?>
                 <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
 
 					<?php get_template_part('contents/content','mini-gallery'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->
@@ -82,7 +82,7 @@ get_header(); ?>
 
                 $lastBlog = new WP_Query ($args);
 
-            if ( $lastBlog->have_posts() ) : ?>
+            if ( $lastBlog->have_posts() ): ?>
                 <?php while ( $lastBlog->have_posts() ) : $lastBlog->the_post(); ?>
 
 					<?php get_template_part('contents/content','contacts'); ?> <!-- nurodoma vieta i contents/content papke (content - yra visa laika kaip formatas)  susikuriama content-video.php failas-->
