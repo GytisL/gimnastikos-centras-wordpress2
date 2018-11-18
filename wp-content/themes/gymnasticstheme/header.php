@@ -3,7 +3,7 @@
 	<head>
 		<meta charset=" <?php bloginfo('charset'); ?> ">
 		<title> <?php bloginfo('Gimnastikos centras'); ?><?php wp_title('|'); ?> </title>
-		<meta name="description" content=" <?php bloginfo('Gimnastikos centras'); ?> ">
+		<meta name="Gimnastikos centras" content=" <?php bloginfo('Gimnastikos centras'); ?> ">
 		<?php wp_head(); ?>
 	</head>
 	
@@ -40,15 +40,17 @@
 			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#gymnasticsnavbarDiv" aria-controls="gymnasticsNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button><!-- NEVEIKE NES #gymnasticsNavbarDiv id buvo toks pats kaip aria-controls-->
-				<a class="navbar-brand ml-5" href="<?php echo site_url();?>">LOGO</a>
+				<a class="navbar-brand" href="<?php echo site_url();?>"><!-- LOGO --><img src=http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/logo13-cropped.png></a>
 
 			<div class="collapse navbar-collapse justify-content-end gymnasticsNavbar" id="gymnasticsnavbarDiv">
 				<?php
-					wp_nav_menu(array(
-						'theme_location' => 'primary',
-	                    'container' => false,
-	                    'menu_class' => 'nav navbar-nav'
-	                ));
+					wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+		                    'container' => false,
+		                    'menu_class' => 'nav navbar-nav'
+	                	)
+					);
 	            ?>
 
 				 <!-- <ul class="nav navbar-nav">
@@ -92,11 +94,11 @@
 					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="Pirmas paveiksliukas">
 		 		</div>
 				<div class="carousel-item carousel-img">
-					<h1 class="in-left">Sveiki prisijungę prie svetainės</h1>
+					<!-- <h1 class="in-left">Sveiki prisijungę prie svetainės</h1> -->
 					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/rhythm.jpg" alt="Antras paveiksliukas">
 				</div>
 				<div class="carousel-item carousel-img">
-					<h1 class="in-left">Sveiki prisijungę prie svetainės</h1>
+					<!-- <h1 class="in-left">Sveiki prisijungę prie svetainės</h1> -->
 					<img src="http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/silhouette2.jpg" alt="Trečias paveiksliukas">
 				</div>
 			</div>
