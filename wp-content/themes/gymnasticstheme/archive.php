@@ -1,77 +1,90 @@
-<?php
-/* 
-Template Name: archive
-*/
-?>
-
 <?php get_header(); ?>
 
-	<section id="cover">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/pictures/silhouette.jpg" class="image" />
-			<h1>Archyvas</h1>
-		<div id="cover-caption">
-			<div class="container">
-				<div class="col-sm-12">
-					<!-- <a href="#footer-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a> -->
-				</div>
-			</div>
-		</div>
-	</section>
+<div id="section">
 
-	<section id="events">
+	<style>
+		#section {
+			background-color: #fff;
+		}
 		
-		<div class="container d-flex">
+	</style>
 
-			<div class="col-lg-8 d-inline-block">
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-lg-12 col-xs-12 col-sm-7">
+
+				<div class="row text-center no-margin">
 				
-				<h2 class="display-3">Archyvas</h2>
-
-				<?php if ( have_posts() ): ?>
-
+				<?php if(have_posts() ): ?>
+					
 					<header class="page-header">
 						<?php 
+
 							the_archive_title('<h1 class="page-title">', '</h1>');
 							the_archive_description('<div class="taxonomy-description">', '</div>');
+							
 						?>
-
-						
-
 					</header>
-					<?php while ( have_posts() ): the_post(); ?>
-						<?php get_template_part('contents/content-eventsright', 'archive'); ?>
 
+					<?php while(have_posts()): the_post(); ?>
 
-                    <?php endwhile; ?>
+						<?php get_template_part('contents/content', 'archive'); ?>
 
-                    <div class="col-lg-12 text-center">
-                    	<?php the_posts_navigation(); ?>
+					<?php endwhile; ?>
 
-                    </div>
+					<div class="col-lg-12 col-xs-12 text-center">
+						<?php the_posts_navigation(); ?>
+					</div>
 
-                    
-                <?php endif; ?>
-
-                
-
-			</div>
-
-			<div class="col-lg-4 d-inline-block">
+				<?php endif; ?>
 				
-				<div class="search-form-container">
-					<h4>Paieška</h4>
-					<?php get_search_form(); ?>
-
-					<div id="sidebar" class="widgets-area">
-							<?php dynamic_sidebar('sidebar-1'); ?>
-						</div>
 				</div>
-
-				
-				
-
-			</div>
+			</div> 
 
 		</div>
-	</section>
+	</div>
+</div>
+
+
+<section id="contact-bar">
+	<!-- kontaktine forma su MODAL START -->
+	<!-- <div class="container"> -->
+
+	<div class="body">
+	 	<!-- <h2>Modal Example</h2> -->
+		<!-- Trigger the modal with a button -->
+		<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#contact">Susisiekite</button> -->
+		
+			<!-- <a href="#" data-toggle="modal" data-target="#contact" class="button1"><i class="fa fa-envelope"></i>Susisiekite</a> -->
+			<!-- <button type="button" class="btn btn-lg btn-block btn-primary"><a href="#" data-toggle="modal" data-target="#contact" class="button1"><i class="fa fa-envelope"></i>Susisiekite</a></button> -->
+			<button type="button" class="btn btn-lg btn-block contact-btn"><a href="#" data-toggle="modal" data-target="#contact" class="button1"><i class="fa fa-envelope"></i>Susisiekite</a></button>
+		<!-- Modal -->
+		<div class="modal fade" id="contact" role="dialog">
+		    <div class="modal-dialog">
+				<!-- Modal content-->
+		    	<div class="modal-content">
+		    		<div class="modal-header">
+		    			<button type="button" class="close" data-dismiss="modal">&times;</button>
+		    			<!-- <h4 class="modal-title">Modal Header</h4> -->
+		    		</div>
+
+			    	<div class="modal-body"> <!-- 1. install plug-in to wordpress admin. 2. create new form  3. insert php code. 4. copy key and insert to ''  . -->
+			          <?php echo do_shortcode('[contact-form-7 id="38" title="contact"]') ?>
+			          
+			    	</div>
+					<!-- <div class="modal-footer">
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        </div> -->
+		    	</div>
+		      
+			</div>
+		</div>
+
+	</div>
+	<!-- </div> --> <!-- container end -->
+	<!-- kontaktine forma su MODAL END -->
+</section>
 
 <?php get_footer(); ?>

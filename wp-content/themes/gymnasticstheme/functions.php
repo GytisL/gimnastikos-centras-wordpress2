@@ -55,12 +55,41 @@ add_theme_support('html5', array('search-form'));
 	==========================================
 */
 
+
+/*
+	==========================================
+	put code in functions.php -> on dashboard Appearance -> Menus -> refresh page -> choose
+	 Gallery-archive in nav bar START
+	==========================================
+
+add_action( 'init', function () {
+    register_post_type( 'gallery-archive',
+        array(
+            'labels' => array(
+                'name' => __( 'Gallery-archive' ),
+                'singular_name' => __( 'Gallery-archive' ),
+                'archives' => __( 'Gallery-archive' ),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array(
+                'slug' => 'gallery-archive',
+            ),
+        )
+    );
+});
+/*
+	==========================================
+	 Gallery-archive in nav bar END
+	==========================================
+*/
+
+
 /*
 	==========================================
 	 Sidebar function START
 	==========================================
 */
-
 function gymnastics_widget_setup() {
 	
 	register_sidebar ( 

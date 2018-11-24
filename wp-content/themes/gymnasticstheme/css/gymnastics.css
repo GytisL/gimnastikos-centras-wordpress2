@@ -496,6 +496,7 @@ page-main.php APIE MUS END
     padding-top: .5em;
     height: 230px;
     background: top;
+    border-color: #fff;
   }
   
   #gallery-list .container .card-deck .card img {
@@ -527,14 +528,14 @@ page-main.php APIE MUS END
     border-color: #eee;
   }
   #gallery-list .container .card-deck .card .relative2 {
-    position: relative;
+    position: absolute;
     height: 185px;
-    width: 275px;
+    width: 270px;
     background-color: #cfc;
     border-color: #eee;
   }
   #gallery-list .container .card-deck .card .relative3 {
-    position: relative;
+    position: absolute;
     height: 192px;
     width: 255px;
     background-color: #cfc;
@@ -548,14 +549,14 @@ page-main.php APIE MUS END
     border: solid 1px #505050;
   }
   #gallery-list .container .card-deck .card .rel2 {
-    top: -184px;
-    left: -8px;
+    top: 22px;
+    left: -5px;
     margin: 0px 50px 0px 50px;
     transform: rotate(1deg);
     border: solid 1px #505050;
   }
   #gallery-list .container .card-deck .card .rel3 {
-    top: -375px;
+    top: 18px;
     left: 3px;
     margin: 0px 50px 0px 50px;
     border: solid 1px #505050;
