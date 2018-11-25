@@ -2,13 +2,6 @@
 
 <div id="section">
 
-	<style>
-		#section {
-			background-color: #fff;
-		}
-		
-	</style>
-
 	<div class="container">
 
 		<div class="row">
@@ -20,11 +13,16 @@
 				<?php if(have_posts() ): ?>
 					
 					<header class="page-header">
-						<?php 
+						<h1>
+							<?php 
+								//the_archive_title('<h1 class="page-title">', '</h1>');
+								echo str_replace('Category: ',' Kategorija: ', get_the_archive_title());
+							?>
+						</h1>
 
-							the_archive_title('<h1 class="page-title">', '</h1>');
+						<?php
+							//echo str_replace('Category: ',' Kategorija: ', get_the_archive_title()); //archive Category is replaced with Kategorija
 							the_archive_description('<div class="taxonomy-description">', '</div>');
-							
 						?>
 					</header>
 
@@ -46,7 +44,6 @@
 		</div>
 	</div>
 </div>
-
 
 <section id="contact-bar">
 	<!-- kontaktine forma su MODAL START -->

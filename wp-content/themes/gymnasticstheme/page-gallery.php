@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<section id="picture-gallery">
 		<div class="container">
-			<h1>Galerija</h1>
+			<h1>Žiemos pasirodymai</h1>
 			<?php
                 $args  = array(
                 	'category_name' => 'pagrindinegalerija',
@@ -38,6 +38,8 @@ get_header(); ?>
             <?php wp_reset_postdata(); ?>
 
 		</div>
+
+		<!-- !!!!!!!!!!!!!!!sukurti dar 2 galerijos failus page-gallery.php ir du content-gallery failus!!!!!!!!!!!!!! -->
 
 	</section>
 
