@@ -56,6 +56,10 @@ add_theme_support('html5', array('search-form'));
 */
 
 
+
+
+
+
 /*
 	==========================================
 	put code in functions.php -> on dashboard Appearance -> Menus -> refresh page -> choose
@@ -162,53 +166,6 @@ function wcr_share_buttons() {
 
 /*
 ==========================================
- AJAX functions page-events.php START
-==========================================
-*/
-
-
-/*load-more ajax button events.php START*/
-add_action( 'wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts' );
-add_action( 'wp_ajax_load_more_articles_posts', 'load_more_articles_posts' );
-function load_more_articles_posts() {
-	
-	$paged = $_POST["page"]+1;
-	
-	$args = array(
-	    	'category_name' => 'renginiai',
-	    	'posts_per_page' => '3',
-	    	//'category_in' => array('15, 17, 30'),category by category name (post id)
-	    	'paged' => $paged
-	    	//'category__not_in' => array('211')parameter in which category our post doesnt have to be (post id)
-	    );
-
-	$lastBlog = new WP_Query ($args);
-
-	if ( $lastBlog->have_posts() ): ?>
-		<?php while ( $lastBlog->have_posts() ): $lastBlog->the_post(); 
-
-		get_template_part('contents/content','eventsmain'); //content is in content-eventsmain.php?>
-
-		<?php endwhile; ?>
-	<?php endif; ?>
-
-	<?php
-	
-	wp_die();
-	 
-		wp_reset_postdata();
-}
-/*load-more ajax button events.php END*/
-
-/*
-==========================================
- AJAX functions END
-==========================================
-*/
-
-
-/*
-==========================================
  SEARCH WP AJAX LIVE SEARCH PLUGIN START
 ==========================================
 */
@@ -297,6 +254,67 @@ add_filter( 'searchwp_live_search_configs', 'my_searchwp_live_search_configs' );
  AJAX LIVE SEARCH PLUGIN END
 ==========================================
 */
+
+
+/*
+======================================================
+ AJAX function load more button page-events.php START
+======================================================
+*/
+
+/*load-more ajax button events.php START*/
+add_action( 'wp_ajax_nopriv_load_more_articles_posts', 'load_more_articles_posts' );
+add_action( 'wp_ajax_load_more_articles_posts', 'load_more_articles_posts' );
+
+function load_more_articles_posts() {
+
+	$paged = $_POST["page"] + 1;
+
+		$args = array(
+	    	'category_name' => 'renginiai',
+	    	'posts_per_page' => '3',
+	    	'paged' => $paged
+	    );
+
+	$lastBlog = new WP_Query ($args);
+
+	if ( $lastBlog->have_posts() ): ?>
+		<?php while ( $lastBlog->have_posts() ): $lastBlog->the_post(); 
+
+		get_template_part('contents/content','eventsmain'); //content is in content-eventsmain.php?>
+
+		<?php endwhile; ?>
+	<?php endif; ?>
+
+	<?php
+	
+	wp_die();
+	 
+	wp_reset_postdata();
+}
+/*load-more ajax button events.php END*/
+
+/*
+==========================================
+ AJAX function load more button END
+==========================================
+*/
+
+/*
+==========================================
+ AJAX function load more on scroll START
+==========================================
+*/
+
+
+/*
+==========================================
+ AJAX function load more on scroll END
+==========================================
+*/
+
+
+
 
 
 

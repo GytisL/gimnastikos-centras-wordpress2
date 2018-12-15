@@ -148,11 +148,10 @@ function initMap() {
 //*#id map GOOGLE MAPS END*/
 
 
-/*page-gallery.php picture gallery START*/
+/*page-gallery.php picture gallery START
 let modalId = $('#image-gallery');
 
-$(document)
-  .ready(function () {
+$(document).ready(function () {
 
     loadGallery(true, 'a.thumbnail');
 
@@ -172,7 +171,7 @@ $(document)
     /*
      * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
      * @param setClickAttr  Sets the attribute for the click handler.
-     */
+    
 
     function loadGallery(setIDs, setClickAttr) {
       let current_image,
@@ -210,8 +209,7 @@ $(document)
               .attr('data-image-id', counter);
           });
       }
-      $(setClickAttr)
-        .on('click', function () {
+      $(setClickAttr).on('click', function () {
           updateGallery($(this));
         });
     }
@@ -247,7 +245,7 @@ $(document).keydown(function (e) {
     
     var that = $(this);
     var page = $(this).data('page');
-    var newPage = page+1;
+    var newPage = page + 1;
     var ajaxurl = that.data('url');
 
 
@@ -281,8 +279,8 @@ $(document).keydown(function (e) {
         $('#gymnastics-posts').append( response );
 
         that.removeClass('.loading');
-        that.find('.fa-spinner').removeClass("fa-spin");
-        that.find('.button-text').text('Rodyti daugiau').slideUp(320);
+        that.find('.fa-spinner').removeClass("fa-spin").slideUp(320);
+        that.find('.button-text').text('Daugiau');
         $('.load-more-block').addClass('news-article');
         console.log(newPage);
         var k = newPage - 1;
@@ -296,6 +294,61 @@ $(document).keydown(function (e) {
     });
   });
 /* AJAX functions page-events.php END */
+
+
+
+
+/*AJAX function load more on scroll archive.php START*/
+$(window).scroll(function(){
+  
+  var that = $(this);
+  var page = $(this).data('page');
+  var newPage = page + 1;
+  var ajaxurl = that.data('url');
+
+
+  var max_page = $(this).data('max-num-pages');
+  that.addClass('loading');
+        
+    that.find('.fa-spinner').addClass("fa-spin");
+    that.find('.loader').css('display','block');
+  
+  //check
+  if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+      
+    $.ajax({
+      
+      url : ajaxurl,
+      type : 'post',
+      data : {
+        
+        page : page,
+        action: 'load_more_articles_posts2'
+        
+      },
+      error : function( response ){
+        console.log(response);
+      },
+      success: function(response) {
+          //check
+          if (response == 0) {
+              //check
+              if ($("#no-more").length == 0) {
+                  $('#ajax-content').append('<div id="no-more" class="text-center"><h3>You reached the end of the line!</h3><p>No more posts to load.</p></div>');
+              }
+              $('#loadMore').hide();
+          } else {
+              $('#loadMore').data('page', newPage);
+              $('#ajax-content').append(response);
+          }
+      }
+    });
+
+  }
+
+});
+
+/*AJAX function load more on scroll END*/
 
 
 /*page-event-gallery.php multiple carousel START

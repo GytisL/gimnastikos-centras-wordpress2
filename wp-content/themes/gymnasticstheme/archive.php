@@ -33,7 +33,7 @@
 					<?php endwhile; ?>
 
 					<div class="col-lg-12 col-xs-12 text-center">
-						<?php the_posts_navigation(); ?>
+						<?php //the_posts_navigation(); ?>
 					</div>
 
 				<?php endif; ?>

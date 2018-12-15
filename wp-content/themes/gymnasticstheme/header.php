@@ -30,7 +30,6 @@
 		</style>
 	<?php //endif; ?> -->
 
-	<!-- padaryti, kad neisijungtu, o kad nuvestu i home page ir nuvestu prie ivykiu arba galerijos -->
 
 <!-- Makes inside pages navbar titles disappear END -->
 

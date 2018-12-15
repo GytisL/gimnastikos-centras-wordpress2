@@ -76,7 +76,7 @@
 					<!-- Grid row -->
 					
 					<!-- <a href="gallery"><button class="to-gallery">Į galeriją &rarr;</button></a> -->
-					<a href="<?php echo get_permalink(147); ?>"><button class="to-gallery"><?php _e( 'Į galeriją &rarr;' ); ?></button></a>
+					<a href="<?php echo get_permalink(220); ?>"><button class="to-gallery"><?php _e( 'Į galeriją &rarr;' ); ?></button></a>
 				</div>
 
 				<div class="col-lg-6 video-gallery">

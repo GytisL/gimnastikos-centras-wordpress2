@@ -39,16 +39,11 @@ get_header(); ?>
 
 		</div>
 
-		<!-- !!!!!!!!!!!!!!!sukurti dar 2 galerijos failus page-gallery.php ir du content-gallery failus!!!!!!!!!!!!!! -->
-
 	</section>
 
 	<section id="contact-bar">
 		<!-- kontaktine forma su MODAL START -->
-		<!-- <div class="container"> -->
-
 		<div class="body">
-		 	<!-- <h2>Modal Example</h2> -->
 			<!-- Trigger the modal with a button -->
 			<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#contact">Susisiekite</button> -->
 			
@@ -73,12 +68,10 @@ get_header(); ?>
 				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				        </div> -->
 			    	</div>
-			      
 				</div>
 			</div>
 
 		</div>
-		<!-- </div> --> <!-- container end -->
 		<!-- kontaktine forma su MODAL END -->
 	</section>
 

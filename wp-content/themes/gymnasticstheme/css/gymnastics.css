@@ -817,16 +817,46 @@ PAGRINDINIO PSL GALERIJA START
   padding: .4em 0 0 0;
 }
 
+#picture-gallery .container .row-gallery {
+  padding-top: 1em;
+}
+
+#picture-gallery .container .row-gallery .row .picture-gall {
+  display: flex;
+  justify-content: center;
+  height: 15em;
+}
+
+#picture-gallery .container .row-gallery .row .picture-gall a img{
+  padding: 1em;
+  transition: .5s all;
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 160%;
+  /*object-fit: fill;*/
+  object-fit: cover;
+}
+
+#picture-gallery .container .row-gallery .row .picture-gall a img:hover{
+  transform: scale(1.1);
+}
+
+/*
 #picture-gallery .container .row .row  .thumb .thumbnail .img-thumbnail {
   max-height: 175px;
   width: 100%;
   transition: all .2s ease-in-out;
 }
-
 #picture-gallery .container .row .row .thumb .thumbnail .img-thumbnail:hover { 
   transform: scale(1.1); 
 }
-
 #picture-gallery .container .row .row .load-more-block2 .gymnastics-load-more2 .button-text {
   margin-top: 8px;
   border: 1px solid #808080;
@@ -836,6 +866,7 @@ PAGRINDINIO PSL GALERIJA START
   display: block;
   font-size: 1.5em;
 }
+*/
 /*page-gallery.php END*/
 
 /*
@@ -2096,6 +2127,22 @@ content-archive.php START
 #section .container .row .col-lg-12 .row article .post-content .col-xs-12 .thumbnail {
   padding: 0;
 }
+#section .container .row .col-lg-12 .row article .post-content .col-xs-12 .thumbnail img {
+  max-height: 165px;
+  max-width: 45%;
+  border: solid 1px #26a0da;
+  background: #fff;
+  padding: 4px;
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+    box-shadow: /* The top layer shadow */ 1px 1px 1px rgba(0, 0, 0, .25), 
+    /* The second layer -6px -6px 0px 0px #D3D3D3, */ 
+    /* The second layer shadow */ 1px 1px 1px rgba(0, 0, 0, .15);
+}
+
 #section .container .row .col-lg-12 .row article .post-content .col-xs-12 p {
   text-align: left;
 }
@@ -2136,5 +2183,20 @@ content-archive.php START
 /*
 ===============================================
 content-archive.php END
+===============================================
+*/
+
+
+/*
+===============================================
+404.php START
+===============================================
+*/
+
+
+
+/*
+===============================================
+404.php END
 ===============================================
 */
