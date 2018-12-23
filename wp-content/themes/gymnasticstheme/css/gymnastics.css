@@ -191,26 +191,60 @@ header.php NAVBAR START
 SWIPER SLIDER START
 ===============================================
 */
-#carouselExampleFade{
-  background-color: #fff;
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  /*#carouselExampleFade .carousel-block .carousel-img {
+    width: 100%;
+    max-height: 295px;
+  }
+
+  #carouselExampleFade .carousel-block .carousel-img img{
+    width: 100%;
+    max-height: 295px;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: block;
+    height: auto;
+    max-height: 70%;
+  }*/
 }
-#carouselExampleFade .carousel-block .carousel-img {
-  width: 100%;
-  max-height: 450px;
-}
-#carouselExampleFade .carousel-block .carousel-img h1{
-  position: absolute;
-  /*font-size: 48px;*/
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  top: 110px;
-  text-align: center;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  color: #fff;
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    #carouselExampleFade{
+    background-color: #fff;
+  }
+  #carouselExampleFade .carousel-block .carousel-img {
+    width: 100%;
+    max-height: 300px;
+  }
+  #carouselExampleFade .carousel-block .carousel-img h1{
+    position: absolute;
+    /*font-size: 48px;*/
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    top: 110px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #fff;
+  }
+
+  #carouselExampleFade .carousel-block .carousel-img img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 /* header.php text fadeInLeft START*/
@@ -282,14 +316,6 @@ SWIPER SLIDER START
 }
 /* header.php text fadeInLeft END*/
 
-#carouselExampleFade .carousel-block .carousel-img img{
-  width: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 /*
 ===============================================
 SWIPER SLIDER END
@@ -444,15 +470,27 @@ page-main.php APIE MUS START
 }
 
 #feature-one .container .feature-row .feature-content {
-  padding: 1rem ;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
+
+#feature-one .container .feature-row .feature-content .video-content {
+  margin-right: .4em;
+}
+
 #feature-one .container .feature-row .feature-content .video-content iframe {
   border-radius: .25em;
   padding: .25em;
   border: solid 1px #26a0da;
 }
 
-@media (min-width: 992px){
+/* Tablet Styles*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  #feature-one {
+    margin-bottom: 0;
+  }
+
   #feature-one .container .feature-row .feature-content .video-text {
     max-width: 49.666667%;
     display: inline-block;
@@ -466,6 +504,7 @@ page-main.php APIE MUS START
     display: inline-block;
   }
 }
+
 /*
 ===============================================
 page-main.php APIE MUS END
@@ -1244,194 +1283,6 @@ BACK TO TOP BUTTON END
 ===============================================
 */
 
-
-/*
-===============================================
-FOOTER START
-===============================================
-*/
-@media only screen and (min-width: 768px){
-  #footer-main {
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255, .40) 0%, rgba(0,0,0, .25) 200%);
-    background-blend-mode: multiply;
-    color: #fff;
-    font-size: .8rem;
-    padding: 2rem 0 0;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  #footer-main .container .row .solution .logo p {
-    text-transform: uppercase;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  #footer-main .container .row .solution .logo p img {
-    height: 70px;
-    width: 70px;
-  }
-    /*#footer-main .container .row .col-sm-2 .arrow-up {
-    position: absolute;
-    left: 79rem;
-    top: -16rem;
-  }
-  #footer-main .container .row .arrow-up .btn {
-    color: whitesmoke;
-    border-color: antiquewhite;
-    height: 30px;
-    width: 30px;
-    border-radius: 8px;
-  }
-  #footer-main .container .row .arrow-up .btn:hover {
-    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-  }*/
-   .solution .logo {
-    position: absolute;
-    bottom: -5em;
-    left: 92em;
-    opacity: .3;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  #footer-main {
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255, .40) 0%, rgba(0,0,0, .25) 200%);
-    background-blend-mode: multiply;
-    color: #fff;
-    font-size: .8rem;
-    padding: 2rem 0 0;
-    overflow: hidden;
-    /* position: fixed; */
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-    max-height: 100%;
-  }
-  #footer-main .container .row .solution .logo,
-  #footer-main .container .row .solution .logo p{
-    display: none;
-  }
-}
-
-#footer-main .container {
-  padding-left: 2.5em;
-}
-
-#footer-main .container #line-pulse {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  height: 1px;
-  /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));*/
-  /*background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);*/
-  background-image: linear-gradient(to right, #F44336 0%, #26a0da 51%, #F44336 100%);
-  box-shadow: 0 0 20px #fff;
-}
-
-#footer-main .container .row .title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-} 
-
-#footer-main .container .row .footer-content-1 #logo img {
-  width: 50%;
-  margin-top: 4em;
-}
-
-/*effect-underline START*/
-#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled {
-  height: 37px;
-  width: 50%;
-}
-#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a {
-  position: relative;
-  font-size: 20px;
-  font-weight: 300;
-  color: #fff;
-  transition: color .2s ease;
-  padding: 3px 0;
-  margin-bottom: 5px;
-  text-decoration: none;
-}
-#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover {
-  color: #aaa;
-}
-#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover::after,
-#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover::before {
-  width: 100%;
-  left: 0;
-}
-#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a::after,
-#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a::before {
-  content: ''; 
-  position: absolute;
-  top: calc(100% + 5px);
-  width: 0;
-  right: 0;
-  height: 3px;
-}
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::before {
-  transition: width .4s cubic-bezier(.51, .18, 0, .88) .1s;
-  background: #2196f3;
-}
-#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::after {
-  transition: width .2s cubic-bezier(.29, .18, .26, .83);
-  background: #F44336;
-}
-/*effect underline END*/
-
-#footer-main .container .row .footer-content-3 {
-  padding-right: 2em;
-}
-
-#footer-main .container .row .footer-content-3 h3 {
-  text-transform: uppercase;
-}
-
-#footer-main .container .col-lg-12 .rights {
-  text-align: center;
-  margin-bottom: 0;
-  padding-bottom: 20px;
-  font-size: 16px;
-}
-
-#menu-footer-menu {
-  font-size: 17px;
-  text-transform: uppercase;
-}
-
-#menu-footer-menu .list-unstyled a {
-  text-decoration: none;
-  margin-right: 1em;
-  color: #0f0f0f;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-#menu-footer-menu .list-unstyled a:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  /*box-shadow: 10px 15px 7px #C7C7C7;*/
-  box-shadow: 0 0 20px rgba(33,33,33,.2);
-}
-/*
-===============================================
-FOOTER END
-===============================================
-*/
-
-
 /*
 ===============================================
 gallery.html, page-gallery.php galerija START
@@ -2187,16 +2038,223 @@ content-archive.php END
 */
 
 
+/* Mobile Styles */
+  /*
+  @media only screen and (max-width: 400px) {
+    
+  }
+  */
+
+/* Tablet Styles */
+/*
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    
+  }
+*/
+
+/* Desktop Styles */
+/*
+  @media only screen and (min-width: 961px) {
+    
+  }
+*/
+
+
 /*
 ===============================================
-404.php START
+FOOTER START
+===============================================
+*/
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px){
+  #footer-main {
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255, .40) 0%, rgba(0,0,0, .25) 200%);
+    background-blend-mode: multiply;
+    color: #fff;
+    font-size: .8rem;
+    padding: 2rem 0 0;
+    overflow: hidden;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    max-height: 100%;
+/*
+    height: -moz-calc(100% - 44em);
+    height: -webkit-calc(100% - 44em);
+    height: calc(100% - 44em);*/
+  }
+  #footer-main .container .row .solution .logo,
+  #footer-main .container .row .solution .logo p{
+    display: none;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px){
+  #footer-main {
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255, .40) 0%, rgba(0,0,0, .25) 200%);
+    background-blend-mode: multiply;
+    color: #fff;
+    font-size: .8rem;
+    padding: 2rem 0 0;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  #footer-main .container .row .solution .logo p {
+    text-transform: uppercase;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  #footer-main .container .row .solution .logo p img {
+    height: 70px;
+    width: 70px;
+  }
+    #footer-main .container .row .col-sm-2 .arrow-up {
+    position: absolute;
+    left: 79rem;
+    top: -16rem;
+  }
+  #footer-main .container .row .arrow-up .btn {
+    color: whitesmoke;
+    border-color: antiquewhite;
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+  }
+  #footer-main .container .row .arrow-up .btn:hover {
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+  }
+   .solution .logo {
+    position: absolute;
+    bottom: -5em;
+    left: 92em;
+    opacity: .3;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+#footer-main .container {
+  padding-left: 2.5em;
+}
+
+#footer-main .container #line-pulse {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  height: 1px;
+  /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));*/
+  /*background-image: linear-gradient(to right, #16A085 0%, #F4D03F 51%, #16A085 100%);*/
+  background-image: linear-gradient(to right, #F44336 0%, #26a0da 51%, #F44336 100%);
+  box-shadow: 0 0 20px #fff;
+}
+
+#footer-main .container .row .title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+} 
+
+#footer-main .container .row .footer-content-1 #logo img {
+  width: 50%;
+  margin-top: 4em;
+}
+
+/*effect-underline START*/
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled {
+  height: 37px;
+  width: 50%;
+}
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a {
+  position: relative;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  transition: color .2s ease;
+  padding: 3px 0;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover {
+  color: #aaa;
+}
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover::after,
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a:hover::before {
+  width: 100%;
+  left: 0;
+}
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a::after,
+#footer-main .container .row .footer-content-2 #menu-footer-menu .list-unstyled a::before {
+  content: ''; 
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 0;
+  right: 0;
+  height: 3px;
+}
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::before {
+  transition: width .4s cubic-bezier(.51, .18, 0, .88) .1s;
+  background: #2196f3;
+}
+#footer-main .container .row .col-sm-4 #menu-footer-menu .list-unstyled a::after {
+  transition: width .2s cubic-bezier(.29, .18, .26, .83);
+  background: #F44336;
+}
+/*effect underline END*/
+
+#footer-main .container .row .footer-content-3 {
+  padding-right: 2em;
+}
+
+#footer-main .container .row .footer-content-3 h3 {
+  text-transform: uppercase;
+}
+
+#footer-main .container .col-lg-12 .rights {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+#menu-footer-menu {
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+#menu-footer-menu .list-unstyled a {
+  text-decoration: none;
+  margin-right: 1em;
+  color: #0f0f0f;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#menu-footer-menu .list-unstyled a:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  /*box-shadow: 10px 15px 7px #C7C7C7;*/
+  box-shadow: 0 0 20px rgba(33,33,33,.2);
+}
+/*
+===============================================
+FOOTER END
 ===============================================
 */
 
 
 
-/*
-===============================================
-404.php END
-===============================================
-*/
+/*PUT THIS IN THE WEBSITE CONSOLE AND PRESS ENTER TO SEE WHY ALL CONTENT GOES RIGHT AND THAN TAKE OFF ALL MARGINS BELOW ZERO*/
+/*[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)})*/

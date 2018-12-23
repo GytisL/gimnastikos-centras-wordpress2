@@ -132,7 +132,7 @@ $(function() {
 /* grid row cards END*/
 
 
-/*#id map content-contacts.php GOOGLE MAPS START
+/*#id map content-contacts.php GOOGLE MAPS START*/
 function initMap() {
 	var location = {lat: 54.892813, lng: 23.916402};
 	var map = new google.maps.Map(document.getElementById("map"), {
@@ -148,7 +148,7 @@ function initMap() {
 //*#id map GOOGLE MAPS END*/
 
 
-/*page-gallery.php picture gallery START
+/*page-gallery.php picture gallery START*/
 let modalId = $('#image-gallery');
 
 $(document).ready(function () {
@@ -157,36 +157,30 @@ $(document).ready(function () {
 
     //This function disables buttons when needed
     function disableButtons(counter_max, counter_current) {
-      $('#show-previous-image, #show-next-image')
-        .show();
+      $('#show-previous-image, #show-next-image').show();
       if (counter_max === counter_current) {
-        $('#show-next-image')
-          .hide();
+        $('#show-next-image').hide();
       } else if (counter_current === 1) {
-        $('#show-previous-image')
-          .hide();
+        $('#show-previous-image').hide();
       }
     }
 
     /*
      * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
      * @param setClickAttr  Sets the attribute for the click handler.
-    
+    */
 
     function loadGallery(setIDs, setClickAttr) {
       let current_image,
         selector,
         counter = 0;
 
-      $('#show-next-image, #show-previous-image')
-        .click(function () {
-          if ($(this)
-            .attr('id') === 'show-previous-image') {
+      $('#show-next-image, #show-previous-image').click(function () {
+          if ($(this).attr('id') === 'show-previous-image') {
             current_image--;
           } else {
             current_image++;
           }
-
           selector = $('[data-image-id="' + current_image + '"]');
           updateGallery(selector);
         });
@@ -202,11 +196,9 @@ $(document).ready(function () {
       }
 
       if (setIDs == true) {
-        $('[data-image-id]')
-          .each(function () {
+        $('[data-image-id]').each(function () {
             counter++;
-            $(this)
-              .attr('data-image-id', counter);
+            $(this).attr('data-image-id', counter);
           });
       }
       $(setClickAttr).on('click', function () {
@@ -220,15 +212,13 @@ $(document).keydown(function (e) {
     switch (e.which) {
       case 37: // left
         if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-          $('#show-previous-image')
-            .click();
+          $('#show-previous-image').click();
         }
         break;
 
       case 39: // right
         if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-          $('#show-next-image')
-            .click();
+          $('#show-next-image').click();
         }
         break;
 
@@ -298,7 +288,7 @@ $(document).keydown(function (e) {
 
 
 
-/*AJAX function load more on scroll archive.php START*/
+/*AJAX function load more on scroll archive.php START
 $(window).scroll(function(){
   
   var that = $(this);
