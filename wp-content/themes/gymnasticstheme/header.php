@@ -3,7 +3,8 @@
 	<head>
 		<meta charset=" <?php bloginfo('charset'); ?> ">
 		<title> <?php bloginfo('Gimnastikos centras'); ?><?php wp_title('|'); ?> </title>
-		<meta name="Gimnastikos centras" content=" <?php bloginfo('Gimnastikos centras'); ?> ">
+		<!-- <meta name="Gimnastikos centras" content=" <?php //bloginfo('Gimnastikos centras'); ?> "> -->
+		<meta name="Gimnastikos centras" content="width=device-width, initial-scale=1.0">  
 		<?php wp_head(); ?>
 	</head>
 	
