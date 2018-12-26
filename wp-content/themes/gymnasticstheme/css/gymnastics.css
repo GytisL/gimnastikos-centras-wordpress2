@@ -558,6 +558,62 @@ page-main.php APIE MUS END
   padding: .4em 0 0 0;
 }
 
+.flex-container {
+  padding: 2em;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-container .flex-item {
+  padding: 15px;
+  height: 180px;
+  width: 280px;
+  transform: rotate(-1deg);
+  margin: 1em;
+  text-align: center;
+  background-color: #fff;
+  border-color: #eee;
+  border: solid 1px #505050;
+}
+
+.flex-container .flex-item a:hover {
+  text-decoration: none;
+}
+
+.flex-container .flex-item .relative1 {
+  height: 170px;
+  width: 270px;
+}
+
+.flex-container .flex-item a .relative1 .card-title {
+  padding-top: 10px;
+}
+
+.flex-container .flex-item a .relative1 .card-title strong {
+  color: #fff;
+  text-decoration: none;
+}
+
+.flex-container .flex-item a .relative1 .card-title strong:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
+.flex-container .flex-item .rel1 {
+  transform: rotate(0deg);
+  margin: -11px 0 0 -11px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*
 #gallery-list .container .card-deck {
   padding: 1em 0;
 }
@@ -593,7 +649,7 @@ page-main.php APIE MUS END
 #gallery-list .container .card-deck .card .relative1 {
   position: relative;
   height: 204px;
-  /*width: 245px;*/
+  /*width: 245px;
   width: calc(100% - 30px);
   background-color: #cfc;
   border-color: #eee;
@@ -601,7 +657,7 @@ page-main.php APIE MUS END
 #gallery-list .container .card-deck .card .relative2 {
   position: absolute;
   height: 185px;
-  /*width: 270px;*/
+  /*width: 270px;
   width: calc(100% - 20px);
   background-color: #cfc;
   border-color: #eee;
@@ -609,7 +665,7 @@ page-main.php APIE MUS END
 #gallery-list .container .card-deck .card .relative3 {
   position: absolute;
   height: 192px;
-  /*width: 255px;*/
+  /*width: 255px;
   width: calc(100% - 20px);
   background-color: #cfc;
   border-color: #eee;
@@ -634,20 +690,7 @@ page-main.php APIE MUS END
   margin: 0px 50px 0px 50px;
   border: solid 1px #505050;
 }
-
-
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px){
-  #gallery-list .container .card-deck .card {
-    display: flex;
-    /*text-align: center;
-    box-sizing: border-box;*/
-  }
-  #gallery-list .container .card-deck .card .card-body .card-title{
-    justify-content: space-around;
-  }
-}
-
+*/
 /*page-gallery-list.php END*/
 
 /*
