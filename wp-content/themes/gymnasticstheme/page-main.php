@@ -73,6 +73,19 @@ get_header(); ?>
 		</div>
 	</section><!-- multi-gallery -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<section id="contacts">
 		<div class="container">
 			<!-- <div class="row"> -->
