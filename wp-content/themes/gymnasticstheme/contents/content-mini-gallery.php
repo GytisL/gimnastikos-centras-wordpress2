@@ -17,7 +17,7 @@
 							function get_media_library_imgs() {
 							    $args = array(
 							        'post_type' => 'attachment',
-							        'posts_per_page' => 3,
+							        'posts_per_page' => 6,
 							        'post_mime_type' =>'image',
 							        'post_status' => 'inherit',
 							        'orderby' => 'rand'
@@ -48,42 +48,9 @@
 						<?php echo display_media_library_imgs(); ?>
 					</div>
 
-					<div class="row">
-						<?php 
-							/* images from WP dashboard -> media library*/
-							function get_media_library_imgs2() {
-							    $args = array(
-							        'post_type' => 'attachment',
-							        'posts_per_page' => 3,
-							        'post_mime_type' =>'image',
-							        'post_status' => 'inherit',
-							        'orderby' => 'date'
-							    );
-							    $query_images = new WP_Query( $args );
-							    $images = array();
-							    foreach ($query_images->posts as $image) {
-							        $images[] = $image->guid;
-							    }
-							    return $images;
-							}
+					<!-- <a href="gallery"><button class="to-gallery">Į galeriją &rarr;</button></a> -->
+					<a href="<?php echo get_permalink(220); ?>"><button class="to-gallery"><?php _e( 'Į galeriją &rarr;' ); ?></button></a>
 
-							function display_media_library_imgs2() {
-
-							    $imgs = get_media_library_imgs2();
-							    $html = '<div id="media-gallery2">';
-
-							    foreach($imgs as $img) {
-							        $html .= '<img src="' . $img . '" alt="" />';
-							    }
-
-							    $html .= '</div>';
-
-							    return $html;
-							}
-						?>
-						 
-						<?php echo display_media_library_imgs2(); ?>
-					</div>
 				</div>
 
 				<div class="col-lg-6 video-gallery">
@@ -150,23 +117,23 @@
 				transform: scale(1.1);
 			}
 
-			#media-gallery2 img{
-				transition: .5s all;
-				/* max-width: 15%; */
-				width: 140px;
-				height: 130px;
-				padding: .25rem;
-				margin: 1em;
-				background-size: cover;
-				background-repeat: no-repeat;
-				object-fit: fill;
+			#library-images #video-carousel-example .pics-list {
+				padding: .25em;
 				background-color: #fff;
-				border: 1px solid #dee2e6;
-				border-radius: .25rem;
+			}
+			
+			#library-images #video-carousel-example .pics-list .pics-gallery {
+				width: 100%;
+				height: 400px;
 			}
 
-			#media-gallery2 img:hover{
-				transform: scale(1.1);
+			#library-images #video-carousel-example .pics-list .pics-gallery iframe {
+				width: 100%;
+				height: 400px;
+			}
+			
+			#library-images .container .row .video-gallery #video-carousel-example .modal-body {
+				top: -210px;
 			}
 
 			/*#library-images .container .row .video-gallery {
@@ -202,7 +169,7 @@
 			<!-- Grid row -->
 			<div class="row col-lg-12 section">
 				<div class="col-lg-6 picture-section">
-					<!-- Grid row -->
+					<!-- Grid row 
 					<div class="gallery" id="gallery">
 					    <!-- Grid column -->
 					    <!-- <div class="mb-3 pics animation all 2">
@@ -212,7 +179,7 @@
 					    <!-- Grid column -->
 					    <!-- <div class="mb-3 pics animation all 1">
 					        <a href="gallery"><img class="img-fluid" src="<?php //echo get_stylesheet_directory_uri(); ?>/pictures/sport-gymnastics.jpg" alt="Nepavyko atvaizduoti nuotraukos" /></a>
-					    </div> --><!-- Grid column -->
+					    </div> --><!-- Grid column
 					    
 						<div class="row column1">
 							<div class="image pics all 2">
@@ -264,17 +231,17 @@
 				                </div>
 				            </div>
 		        		</div>
--->
+
 
 					</div>
-					<!-- Grid row -->
+					<!-- Grid row 
 					
-					<!-- <a href="gallery"><button class="to-gallery">Į galeriją &rarr;</button></a> -->
+					<!-- <a href="gallery"><button class="to-gallery">Į galeriją &rarr;</button></a>
 					<a href="<?php echo get_permalink(220); ?>"><button class="to-gallery"><?php _e( 'Į galeriją &rarr;' ); ?></button></a>
 				</div>
 
 				<div class="col-lg-6 video-gallery">
-					<!--Carousel Wrapper-->
+					<!-- Carousel Wrapper 
 					<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
 					    <!--Indicators
 					    <ol class="carousel-indicators">
@@ -282,44 +249,44 @@
 					        <li data-target="#video-carousel-example" data-slide-to="1"></li>
 					        <li data-target="#video-carousel-example" data-slide-to="2"></li>
 					    </ol>-->
-					    <!--/.Indicators-->
-					    <!--Slides-->
+					    <!-- /.Indicators -->
+					    <!-- Slides
 					    <div class="carousel-inner pics-list" role="listbox">
-					        <div class="carousel-item active pics-gallery"> <!--susikurti nauja klase ir ideti i css-->
-					            <!-- <video loop="" muted="" autoplay="" playsinline=""> -->
+					        <div class="carousel-item active pics-gallery"> <!--susikurti nauja klase ir ideti i css
+					            <!-- <video loop="" muted="" autoplay="" playsinline=""> 
 					            	<?php echo get_post_meta( get_the_ID(), 'video-1', true); ?> <!-- video  -  custom field'o name-->
-						        <!-- </video>  -->
+						        <!-- </video>  
 					        </div>
 					        <div class="carousel-item pics-gallery">
-					            <!-- <video loop="" muted="" autoplay="" playsinline=""> -->
+					            <!-- <video loop="" muted="" autoplay="" playsinline=""> 
 					                <?php echo get_post_meta( get_the_ID(), 'video-2', true); ?>
-					            <!-- </video> -->
+					            <!-- </video> 
 					        </div>
 					        <div class="carousel-item pics-gallery">
 					            <video loop="" muted="" autoplay="" playsinline="">
 					                <?php echo get_post_meta( get_the_ID(), 'video-3', true); ?>
 					            </video>
 					            <!-- <iframe width="100%" height="360" src="https://player.vimeo.com/video/253404002"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-								<iframe width="100%" height="320" src="https://www.youtube.com/embed/4h02IJMTvFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+								<iframe width="100%" height="320" src="https://www.youtube.com/embed/4h02IJMTvFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 					        </div>
 					        <div class="carousel-item pics-gallery">
 					                <?php echo get_post_meta( get_the_ID(), 'video-4', true); ?>
 					        </div>
 					    </div>
 					    <!--/.Slides-->
-					    <!--Controls-->
+					    <!--Controls
 					    <div class="modal-body">
 						    <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
 						        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						        <span class="sr-only">Ankstesnis</span> -->
+						        <span class="sr-only">Ankstesnis</span> 
 						        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i></button>
 						    </a>
 						    <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
 						        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-						        <span class="sr-only">Kitas</span> -->
+						        <span class="sr-only">Kitas</span> 
 						        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i></button>
 						    </a>
-						</div><!--/.Controls-->
-					</div><!--Carousel Wrapper-->
+						</div><!--/.Controls
+					</div><!--Carousel Wrapper
 				</div> <!-- video-gallery -->
 			</div><!-- section -->

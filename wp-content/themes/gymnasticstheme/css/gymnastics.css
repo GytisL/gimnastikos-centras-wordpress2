@@ -506,7 +506,7 @@ page-main.php APIE MUS START
 */
 #feature-one {
   background-color: #fff;
-  margin-bottom: -1em;
+  /*margin-bottom: -1em;*/
 }
 
 #feature-one h1 {
@@ -742,6 +742,7 @@ PAGRINDINIO PSL GALERIJA START
   background-attachment: fixed;
   /*height:600px;*/
   z-index: -1;
+  margin-top: -1em;
 }
 
 /*Grid row cards START*/
