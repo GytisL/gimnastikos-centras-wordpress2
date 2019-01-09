@@ -1,11 +1,5 @@
 		<h3 class="title"><?php the_title(); ?></h3>
 
-
-
-
-
-
-<!-- PAKEISTI IR PERKELTI I content-mini-gallery.php FUNKCIJAS PERKELTI I FUNCTIONS.PHP START-->
 	<section id="library-images">
 		<div class="container">
 			<div class="row col-lg-12">
@@ -93,62 +87,6 @@
 			</div>
 		</div>
 	</section>
-		
-
-
-
-		<style>
-			#media-gallery img{
-				transition: .5s all;
-				/* max-width: 15%; */
-				width: 140px;
-				height: 130px;
-				padding: .25rem;
-				margin: 1em;
-				background-size: cover;
-				background-repeat: no-repeat;
-				object-fit: fill;
-				background-color: #fff;
-				border: 1px solid #dee2e6;
-				border-radius: .25rem;
-			}
-			
-			#media-gallery img:hover{
-				transform: scale(1.1);
-			}
-
-			#library-images #video-carousel-example .pics-list {
-				padding: .25em;
-				background-color: #fff;
-			}
-			
-			#library-images #video-carousel-example .pics-list .pics-gallery {
-				width: 100%;
-				height: 400px;
-			}
-
-			#library-images #video-carousel-example .pics-list .pics-gallery iframe {
-				width: 100%;
-				height: 400px;
-			}
-			
-			#library-images .container .row .video-gallery #video-carousel-example .modal-body {
-				top: -210px;
-			}
-
-			/*#library-images .container .row .video-gallery {
-				flex: 0 0 100%;
-				max-width: 100%;
-				margin: 0 -1em;
-			}*/
-		</style>
-<!-- PAKEISTI IR PERKELTI I content-mini-gallery.php END-->
-
-
-
-
-
-
 
 
 

@@ -395,7 +395,7 @@ SOCIAL SITES START
 #sticky-social {
   position: absolute;
   top: 17em;
-  z-index: 1;
+  z-index: 2;
 }
 
 #sticky-social .social {
@@ -541,6 +541,7 @@ page-main.php APIE MUS START
 
 #feature-one .container .feature-row .feature-content .video-content {
   margin-right: .4em;
+  padding-left: 0;
 }
 
 #feature-one .container .feature-row .feature-content .video-content iframe {
@@ -734,6 +735,7 @@ page-main.php APIE MUS END
 PAGRINDINIO PSL GALERIJA START
 ===============================================
 */
+
 #multi-gallery {
   background:url(http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/gymnast.jpg) no-repeat;
   background-size: cover;
@@ -750,6 +752,7 @@ PAGRINDINIO PSL GALERIJA START
   margin: 0 .4em;
   padding-top: .4em;
   text-transform: uppercase;
+  margin-left: .3em;
 }
 
 #multi-gallery .container .title {
@@ -782,6 +785,73 @@ PAGRINDINIO PSL GALERIJA START
 #multi-gallery .container .to-gallery:hover { 
   background-position: right center;
 }
+
+#media-gallery img{
+  transition: .5s all;
+  width: 140px;
+  height: 130px;
+  padding: .25rem;
+  margin: 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+}
+
+#media-gallery img:hover{
+  transform: scale(1.2);
+}
+
+#library-images .container {
+  padding: 0 0 1em 0;
+}
+
+#library-images .container .row {
+  padding-right: 0;
+    margin-right: 0;
+}
+
+#library-images .container .row .video-gallery {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+#library-images #video-carousel-example {
+  background-color: #fff;
+  padding: .25em;
+  margin: 1em .5em 0em 1.5em;;
+  border-radius: .25em;
+  -moz-border-radius: .25em;
+  height: 360px;
+  border: solid 1px #26a0da;
+}
+
+#library-images #video-carousel-example .pics-list {
+  /*padding: .25em;*/
+  background-color: #fff;
+}
+
+#library-images #video-carousel-example .pics-list .pics-gallery {
+  width: 100%;
+  height: 350px;
+}
+
+#library-images #video-carousel-example .pics-list .pics-gallery iframe {
+  width: 100%;
+  height: 350px;
+}
+
+#library-images #video-carousel-example .pics-list .pics-gallery video {
+  height: 100%;
+}
+
+#library-images .container .row .video-gallery #video-carousel-example .modal-body {
+  top: -195px;
+}
+
+/*
 #multi-gallery .container .section .video-gallery {
   padding: 0;
   margin-right: 0;
@@ -804,20 +874,20 @@ PAGRINDINIO PSL GALERIJA START
   -moz-column-width: 33%;
   column-width: 33%;
 
-/*css for mozilla START*/
+/*css for mozilla START
   flex-wrap: nowrap;
   display: inline-block;
   flex-direction: column;
   display: flex;
-  /*css for mozilla END*/
+  /*css for mozilla END
 }
 
 #multi-gallery .container .section .picture-section #gallery .row {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) 
+  display: -ms-flexbox;      /* TWEENER - IE 10 
+  display: -webkit-flex;     /* NEW - Chrome 
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ 
   flex-wrap: nowrap;
 }
 
@@ -846,6 +916,7 @@ PAGRINDINIO PSL GALERIJA START
 #multi-gallery .container .section .picture-section #gallery .row a img:hover {
   transform: scale(1.1);
 }
+*/
 
 #multi-gallery .container .gallery .pics {
   -webkit-transition: all 350ms ease;
@@ -873,18 +944,28 @@ PAGRINDINIO PSL GALERIJA START
         padding-right: 1.1rem;
     }
 }*/
-@media (min-width: 768px){
+
+
+@media only screen and (max-width: 1200px){
+  #media-gallery{
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
 	/*.col-md-12*/ #multi-gallery .container .section {
     -webkit-box-flex: 0 0 100%; /* OLD - iOS 6-, Safari 3.1-6 */
     -moz-box-flex: 0 0 100%;    /* OLD - Firefox 19- */
     -webkit-flex: 0 0 100%;     /* Chrome */
 
-
     -ms-flex: 0 0 100%;         /* IE 10 */
     flex: 0 0 100%;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     max-width: 100%;
     margin: 0 -1em;
-	}                
+	}
+  #library-images #video-carousel-example {
+    margin: 1em .5em 0 .5em;
+  }
 }
 
 #multi-gallery .container .section .video-gallery #video-carousel-example{
@@ -1115,7 +1196,7 @@ KONTAKTAI START
 #contacts .container .row .map-column .block {
   text-align: right;
   max-width: 100%;
-  padding: 2em 1.3em 0 0;
+  padding: 0 1.4em 0 .3em;
 }
 #contacts .container .row .map-column .block a {
   border-radius: .25em;
@@ -1205,6 +1286,16 @@ content-contacts.php map-overlay END*/
   font-size: 3rem;
   margin-left: 1rem;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 960px) and (min-width: 401px){
+  #contacts .container {
+    max-height: 800px;
+  }
+  #contacts .container .row .map-column {
+    margin-bottom: 18em;
+  }
+  
 }
 
 /* ----------- iPad 1, 2, Mini and Air START----------- */
@@ -2235,6 +2326,9 @@ CONTACT-BAR START
   height: 200px;
 }
 
+@media only screen and (max-width: 960px) and (min-width: 401px) {
+  
+}
 
 /* ----------- iPad 1, 2, Mini and Air START----------- */
 /* Portrait and Landscape */
