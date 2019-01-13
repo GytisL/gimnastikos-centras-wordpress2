@@ -6,39 +6,6 @@
 
 				<div class="col-lg-6">
 					<div class="row">
-						<?php 
-							/* images from WP dashboard -> media library*/
-							function get_media_library_imgs() {
-							    $args = array(
-							        'post_type' => 'attachment',
-							        'posts_per_page' => 6,
-							        'post_mime_type' =>'image',
-							        'post_status' => 'inherit',
-							        'orderby' => 'rand'
-							    );
-							    $query_images = new WP_Query($args);
-							    $images = array();
-							    foreach ($query_images->posts as $image) {
-							        $images[] = $image->guid;
-							    }
-							    return $images;
-							}
-
-							function display_media_library_imgs() {
-
-							    $imgs = get_media_library_imgs();
-							    $html = '<div id="media-gallery">';
-
-							    foreach($imgs as $img) {
-							        $html .= '<img src="' . $img . '" alt="" />';
-							    }
-
-							    $html .= '</div>';
-
-							    return $html;
-							}
-						?>
-						 
 						<?php echo display_media_library_imgs(); ?>
 					</div>
 

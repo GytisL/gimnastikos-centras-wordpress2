@@ -39,7 +39,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
 			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#gymnasticsnavbarDiv" aria-controls="gymnasticsNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button><!-- NEVEIKE NES #gymnasticsNavbarDiv id buvo toks pats kaip aria-controls-->
+			</button>
 				<a class="navbar-brand" href="<?php echo site_url();?>"><!-- LOGO --><img src=http://localhost/gimnastikos-centras/wp-content/themes/gymnasticstheme/pictures/logo13-cropped.png></a>
 
 			<div class="collapse navbar-collapse justify-content-end gymnasticsNavbar" id="gymnasticsnavbarDiv">
