@@ -59,7 +59,7 @@
 						  opacity: 1;
 						}
 
-						#archives-dropdown--1 {
+						#archives-dropdown-3 {
 						  border-radius: 7px;
 						  height: 25px;
 						  background-color: #fff;
@@ -80,12 +80,12 @@
 
 						<?php //get_search_form(); ?>
 
-						<?php the_widget('WP_Widget_Recent_Posts'); ?>
+						<?php //the_widget('WP_Widget_Recent_Posts'); ?>
 
 						<!-- <div class="widget widget_categories">
 							<h3>Naujausi straipsniai</h3>
 							<ul>
-								<?php wp_list_categories(
+								<?php /*wp_list_categories(
 										array(
 											'orderby' => 'count',
 											'order' => 'DESC',
@@ -94,12 +94,17 @@
 											'number' => 5
 										) 
 									); 
+									*/
 								?>
 							</ul>
 
 						</div> -->
 
-						<?php the_widget('WP_Widget_Archives', 'dropdown=1'); ?> <!-- dropdown=0 takes off the dropdown menu -->
+						<?php //the_widget('WP_Widget_Archives', 'dropdown=1'); ?> <!-- dropdown=0 takes off the dropdown menu -->
+
+						<div id="sidebar" class="widgets-area">
+							<?php dynamic_sidebar('sidebar-1'); //function.php Sidebar function?>
+						</div>
 
 					</div>
 

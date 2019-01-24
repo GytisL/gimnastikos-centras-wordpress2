@@ -119,12 +119,16 @@
 			<div id="line-pulse"></div>
 
 			<div class="col-lg-12">
-				<p class="rights">Visos teisės saugomos &copy; Gimnastikos centras 2018</p>
+				<?php 
+					date_default_timezone_set('Europe/Vilnius'); 
+					$this_year = date('Y');
+				?>
+				<p class="rights">Visos teisės saugomos &copy; Gimnastikos centras <?php echo $this_year; ?></p>
 			</div>
 
 		</div>
 	</footer>
-	
+	<!-- !!!Responsive mode nuimti nuo contact bar margin ir nuo footer position relative!!! -->
 	<?php wp_footer(); ?>
 
 	</body>

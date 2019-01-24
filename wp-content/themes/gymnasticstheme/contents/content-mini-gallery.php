@@ -42,11 +42,12 @@
 					    
 					    <div class="modal-body">
 						    <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
-						        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i></button>
+						        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-angle-left"></i></button>
 						    </a>
 						    <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
-						        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i></button>
+						        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-angle-right"></i></button>
 						    </a>
+							
 						</div><!--/.Controls-->
 					</div><!--Carousel Wrapper-->
 				</div> <!-- video-gallery -->
